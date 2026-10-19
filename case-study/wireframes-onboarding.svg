@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520" fill="none" role="img" aria-label="Low-fidelity Wireframes for 5 Onboarding Screens">
+  <rect width="1000" height="520" rx="16" fill="#F4F2EE"/>
+  <rect x="2" y="2" width="996" height="516" rx="14" stroke="#D1C9BE" stroke-width="2"/>
+
+  <text x="40" y="40" font-family="Charter, serif" font-size="20" font-weight="700" fill="#11382B">Initial Low-Fidelity Wireframes: 5-Screen Onboarding Flow</text>
+  <text x="40" y="60" font-family="system-ui, sans-serif" font-size="12" fill="#55655D">Wireframed prior to final hi-fi. Focuses on single primary action per screen and emotional pacing.</text>
+
+  <!-- Screen 1: Welcome -->
+  <g transform="translate(40, 80)">
+    <rect width="170" height="340" rx="12" fill="#FFFFFF" stroke="#BAC2BA" stroke-width="1.5"/>
+    <text x="85" y="-8" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#11382B" text-anchor="middle">S1: WELCOME</text>
+    <circle cx="85" cy="45" r="20" fill="#E5DFD7"/>
+    <rect x="25" y="75" width="120" height="14" fill="#11382B"/>
+    <rect x="20" y="95" width="130" height="25" fill="#D1C9BE"/>
+    <rect x="20" y="130" width="130" height="90" rx="6" fill="#F6F1EA"/>
+    <rect x="20" y="230" width="130" height="30" rx="4" fill="#FDF1EE"/>
+    <rect x="20" y="285" width="130" height="32" rx="16" fill="#11382B"/>
+  </g>
+
+  <!-- Screen 2: Goals -->
+  <g transform="translate(230, 80)">
+    <rect width="170" height="340" rx="12" fill="#FFFFFF" stroke="#BAC2BA" stroke-width="1.5"/>
+    <text x="85" y="-8" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#11382B" text-anchor="middle">S2: INTENT</text>
+    <circle cx="35" cy="35" r="14" fill="#E5DFD7"/>
+    <rect x="60" y="30" width="90" height="12" fill="#11382B"/>
+    <!-- 4 Goal Radio Boxes -->
+    <rect x="20" y="65" width="130" height="34" rx="6" fill="#F6F1EA" stroke="#11382B"/>
+    <rect x="20" y="108" width="130" height="34" rx="6" fill="#FFFFFF" stroke="#D1C9BE"/>
+    <rect x="20" y="151" width="130" height="34" rx="6" fill="#FFFFFF" stroke="#D1C9BE"/>
+    <rect x="20" y="194" width="130" height="34" rx="6" fill="#FFFFFF" stroke="#D1C9BE"/>
+    <rect x="20" y="240" width="130" height="25" rx="4" fill="#FEF3C7"/>
+    <rect x="20" y="285" width="130" height="32" rx="16" fill="#11382B"/>
+  </g>
+
+  <!-- Screen 3: Keep Ready -->
+  <g transform="translate(420, 80)">
+    <rect width="170" height="340" rx="12" fill="#FFFFFF" stroke="#BAC2BA" stroke-width="1.5"/>
+    <text x="85" y="-8" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#11382B" text-anchor="middle">S3: DOC PREP</text>
+    <circle cx="35" cy="35" r="14" fill="#E5DFD7"/>
+    <rect x="60" y="30" width="90" height="12" fill="#11382B"/>
+    <rect x="20" y="55" width="70" height="14" rx="7" fill="#FEF3C7"/>
+    <!-- 3 Checklist Items -->
+    <rect x="20" y="78" width="130" height="42" rx="6" fill="#F6F1EA"/>
+    <rect x="20" y="128" width="130" height="42" rx="6" fill="#F6F1EA"/>
+    <rect x="20" y="178" width="130" height="42" rx="6" fill="#F6F1EA"/>
+    <rect x="20" y="270" width="130" height="28" rx="14" fill="#11382B"/>
+    <text x="85" y="315" font-family="system-ui, sans-serif" font-size="9" fill="#11382B" text-anchor="middle">Remind me later</text>
+  </g>
+
+  <!-- Screen 4: Verification -->
+  <g transform="translate(610, 80)">
+    <rect width="170" height="340" rx="12" fill="#FFFFFF" stroke="#BAC2BA" stroke-width="1.5"/>
+    <text x="85" y="-8" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#11382B" text-anchor="middle">S4: VERIFICATION</text>
+    <!-- Sub-stepper -->
+    <rect x="20" y="20" width="130" height="14" fill="#F6F1EA"/>
+    <rect x="20" y="45" width="130" height="50" rx="4" fill="#FDFBF7" stroke="#D1C9BE"/>
+    <!-- Input Field -->
+    <rect x="20" y="105" width="130" height="10" fill="#11382B"/>
+    <rect x="20" y="120" width="130" height="26" rx="4" fill="#FFFFFF" stroke="#8B9890"/>
+    <!-- State overlay note -->
+    <rect x="20" y="160" width="130" height="90" rx="4" fill="#F0F6F2" stroke="#86EFAC"/>
+    <text x="85" y="195" font-family="system-ui, sans-serif" font-size="8" fill="#166534" text-anchor="middle">[Wait state with</text>
+    <text x="85" y="207" font-family="system-ui, sans-serif" font-size="8" fill="#166534" text-anchor="middle">calm mascot & timer]</text>
+    <rect x="20" y="285" width="130" height="32" rx="16" fill="#11382B"/>
+  </g>
+
+  <!-- Screen 5: First 100 -->
+  <g transform="translate(800, 80)">
+    <rect width="170" height="340" rx="12" fill="#FFFFFF" stroke="#BAC2BA" stroke-width="1.5"/>
+    <text x="85" y="-8" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#11382B" text-anchor="middle">S5: FIRST ₹100</text>
+    <circle cx="85" cy="40" r="16" fill="#E5DFD7"/>
+    <rect x="35" y="65" width="100" height="12" fill="#11382B"/>
+    <!-- Amount buttons -->
+    <rect x="20" y="90" width="38" height="24" rx="4" fill="#11382B"/>
+    <rect x="66" y="90" width="38" height="24" rx="4" fill="#F6F1EA"/>
+    <rect x="112" y="90" width="38" height="24" rx="4" fill="#F6F1EA"/>
+    <rect x="20" y="125" width="130" height="30" rx="4" fill="#FDFBF7"/>
+    <rect x="20" y="165" width="130" height="30" rx="4" fill="#FDF1EE"/>
+    <rect x="20" y="210" width="130" height="50" rx="6" fill="#F0FDF4"/>
+    <rect x="20" y="285" width="130" height="32" rx="16" fill="#11382B"/>
+  </g>
+
+  <!-- Bottom Evolution Note -->
+  <g transform="translate(40, 440)">
+    <rect width="930" height="60" rx="8" fill="#FDFBF7" stroke="#11382B" stroke-width="1.5"/>
+    <text x="20" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">WHAT CHANGED FROM WIREFRAME TO HI-FI:</text>
+    <text x="20" y="44" font-family="system-ui, sans-serif" font-size="11" fill="#3F4E46">1. Screen 3: Added upfront "Remind me later" with permission modal instead of aggressive app-launch push prompts. 2. Screen 4: Added explicit consent block prior to PAN input and honest 45s wait state directly resolving CS complaint. 3. Screen 5: Replaced generic confetti explosion with restrained botanical seedling growth.</text>
+  </g>
+</svg>

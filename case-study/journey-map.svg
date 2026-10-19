@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" fill="none" role="img" aria-label="End-to-End User Journey Map: From Ad to First Investment">
+  <rect width="1000" height="600" rx="16" fill="#FDFBF7"/>
+  <rect x="2" y="2" width="996" height="596" rx="14" stroke="#D1C9BE" stroke-width="2"/>
+
+  <!-- Title & Header -->
+  <text x="40" y="50" font-family="Charter, serif" font-size="24" font-weight="700" fill="#11382B">Sprout: User Journey & Emotion Curve (Ad to First ₹100)</text>
+  <text x="40" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#55655D">Mapping emotional friction, drop-off vulnerabilities, and systematic UX responses.</text>
+
+  <!-- Journey Stages Columns -->
+  <!-- Col 1: Discovery -->
+  <g transform="translate(40, 110)">
+    <rect width="170" height="450" rx="8" fill="#FFFFFF" stroke="#E5DFD7"/>
+    <rect width="170" height="36" rx="8" fill="#11382B"/>
+    <text x="85" y="23" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">1. AD / DISCOVERY</text>
+    
+    <text x="15" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">User Goal:</text>
+    <text x="15" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#3F4E46">Curiosity about ₹100 micro-investing claim.</text>
+
+    <text x="15" y="125" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C3218">Drop-off Risk (78%):</text>
+    <text x="15" y="145" font-family="system-ui, sans-serif" font-size="11" fill="#9C3218">Low-intent ad bounce; fear of hidden fees or lock-ins.</text>
+
+    <text x="15" y="200" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#166534">Design Response:</text>
+    <text x="15" y="220" font-family="system-ui, sans-serif" font-size="11" fill="#166534">Plain language; immediate risk disclaimer; calm mascot; no pop-ups.</text>
+
+    <text x="15" y="300" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">Emotional State:</text>
+    <text x="15" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#D97706">Hesitant / Skeptical</text>
+  </g>
+
+  <!-- Col 2: Website Evaluation -->
+  <g transform="translate(225, 110)">
+    <rect width="170" height="450" rx="8" fill="#FFFFFF" stroke="#E5DFD7"/>
+    <rect width="170" height="36" rx="8" fill="#11382B"/>
+    <text x="85" y="23" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">2. HOMEPAGE</text>
+
+    <text x="15" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">User Goal:</text>
+    <text x="15" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#3F4E46">Validate whether ₹100 is real and understand safety.</text>
+
+    <text x="15" y="125" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C3218">Drop-off Risk:</text>
+    <text x="15" y="145" font-family="system-ui, sans-serif" font-size="11" fill="#9C3218">Confusing jargon; aggressive tickers; data-heavy load.</text>
+
+    <text x="15" y="200" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#166534">Design Response:</text>
+    <text x="15" y="220" font-family="system-ui, sans-serif" font-size="11" fill="#166534">Sub-100KB page; 4-step vertical journey identical to app; static example.</text>
+
+    <text x="15" y="300" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">Emotional State:</text>
+    <text x="15" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#D97706">Reassured / Receptive</text>
+  </g>
+
+  <!-- Col 3: Document Preparation -->
+  <g transform="translate(410, 110)">
+    <rect width="170" height="450" rx="8" fill="#FFFFFF" stroke="#E5DFD7"/>
+    <rect width="170" height="36" rx="8" fill="#11382B"/>
+    <text x="85" y="23" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">3. DOC PREP (SCREEN 3)</text>
+
+    <text x="15" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">User Goal:</text>
+    <text x="15" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#3F4E46">Know requirements before committing to forms.</text>
+
+    <text x="15" y="125" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C3218">Drop-off Risk (Top CS):</text>
+    <text x="15" y="145" font-family="system-ui, sans-serif" font-size="11" fill="#9C3218">"I didn't know I needed PAN & Aadhaar"; abandoning mid-way.</text>
+
+    <text x="15" y="200" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#166534">Design Response:</text>
+    <text x="15" y="220" font-family="system-ui, sans-serif" font-size="11" fill="#166534">Upfront checklist; "Remind me later" deferred push; Hindi toggle demo.</text>
+
+    <text x="15" y="300" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">Emotional State:</text>
+    <text x="15" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#166534">Prepared & Empowered</text>
+  </g>
+
+  <!-- Col 4: KYC Verification -->
+  <g transform="translate(595, 110)">
+    <rect width="170" height="450" rx="8" fill="#FFFFFF" stroke="#E5DFD7"/>
+    <rect width="170" height="36" rx="8" fill="#11382B"/>
+    <text x="85" y="23" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">4. KYC (SCREEN 4)</text>
+
+    <text x="15" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">User Goal:</text>
+    <text x="15" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#3F4E46">Pass identity check securely without delays.</text>
+
+    <text x="15" y="125" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C3218">Drop-off Risk (62%):</text>
+    <text x="15" y="145" font-family="system-ui, sans-serif" font-size="11" fill="#9C3218">"The app asked me to wait and I thought it crashed"; OTP delays.</text>
+
+    <text x="15" y="200" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#166534">Design Response:</text>
+    <text x="15" y="220" font-family="system-ui, sans-serif" font-size="11" fill="#166534">Calm mascot; 45s timer; "we'll notify you"; WhatsApp OTP fallback.</text>
+
+    <text x="15" y="300" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">Emotional State:</text>
+    <text x="15" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#166534">Trusting / Calm</text>
+  </g>
+
+  <!-- Col 5: First Investment -->
+  <g transform="translate(780, 110)">
+    <rect width="180" height="450" rx="8" fill="#FFFFFF" stroke="#E5DFD7"/>
+    <rect width="180" height="36" rx="8" fill="#11382B"/>
+    <text x="90" y="23" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">5. FIRST ₹100 (SCREEN 5)</text>
+
+    <text x="15" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">User Goal:</text>
+    <text x="15" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#3F4E46">Confirm order and understand where ₹100 goes.</text>
+
+    <text x="15" y="125" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C3218">Drop-off Risk (66.7% leak):</text>
+    <text x="15" y="145" font-family="system-ui, sans-serif" font-size="11" fill="#9C3218">Post-KYC inertia; sudden risk panic; high minimums.</text>
+
+    <text x="15" y="200" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#166534">Design Response:</text>
+    <text x="15" y="220" font-family="system-ui, sans-serif" font-size="11" fill="#166534">Default ₹100 selector; plain risk text; subtle sprout growth celebration.</text>
+
+    <text x="15" y="300" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">Emotional State:</text>
+    <text x="15" y="320" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#166534">Accomplished Investor</text>
+  </g>
+
+  <!-- Emotion Curve Overlay at Bottom -->
+  <path d="M125 490 C 210 460, 310 430, 495 400 C 680 430, 870 380, 870 370" fill="none" stroke="#D97706" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="125" cy="490" r="6" fill="#9C3218"/>
+  <circle cx="310" cy="445" r="6" fill="#D97706"/>
+  <circle cx="495" cy="405" r="6" fill="#166534"/>
+  <circle cx="680" cy="420" r="6" fill="#D97706"/>
+  <circle cx="870" cy="370" r="6" fill="#166534"/>
+  <text x="40" y="580" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#D97706">Orange line: Investor emotional trajectory from anxiety to confident ownership.</text>
+</svg>

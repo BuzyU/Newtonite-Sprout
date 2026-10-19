@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" fill="none" role="img" aria-label="Low-fidelity Wireframes for Homepage: Mobile and Desktop">
+  <rect width="1000" height="600" rx="16" fill="#F4F2EE"/>
+  <rect x="2" y="2" width="996" height="596" rx="14" stroke="#D1C9BE" stroke-width="2"/>
+
+  <text x="40" y="45" font-family="Charter, serif" font-size="20" font-weight="700" fill="#11382B">Initial Low-Fidelity Wireframes: Homepage (Mobile vs Desktop)</text>
+  <text x="40" y="68" font-family="system-ui, sans-serif" font-size="12" fill="#55655D">Wireframed prior to high-fidelity implementation. Note at bottom summarizes design changes.</text>
+
+  <!-- Mobile Wireframe Shell -->
+  <g transform="translate(60, 95)">
+    <rect width="240" height="420" rx="16" fill="#FFFFFF" stroke="#8B9890" stroke-width="1.5"/>
+    <text x="120" y="-10" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B" text-anchor="middle">MOBILE WIREFRAME (360px)</text>
+    
+    <!-- Top Nav -->
+    <rect x="15" y="15" width="60" height="12" fill="#D1C9BE"/>
+    <rect x="175" y="15" width="45" height="12" rx="6" fill="#D1C9BE"/>
+
+    <!-- Hero box -->
+    <circle cx="35" cy="50" r="12" fill="#E5DFD7"/>
+    <rect x="55" y="44" width="100" height="12" fill="#E5DFD7"/>
+    <rect x="15" y="75" width="200" height="20" fill="#11382B"/>
+    <rect x="15" y="102" width="160" height="12" fill="#D1C9BE"/>
+    
+    <!-- CTA Button -->
+    <rect x="15" y="125" width="210" height="28" rx="14" fill="#1B4D3E"/>
+
+    <!-- Disclaimer in First Viewport -->
+    <rect x="15" y="165" width="210" height="26" rx="4" fill="#FDF1EE" stroke="#FCA5A5"/>
+    <text x="25" y="181" font-family="system-ui, sans-serif" font-size="8" fill="#9C3218">[!] Disclaimer visible without scrolling</text>
+
+    <!-- 3 Points -->
+    <rect x="15" y="205" width="65" height="50" rx="4" fill="#F6F1EA"/>
+    <rect x="87" y="205" width="65" height="50" rx="4" fill="#F6F1EA"/>
+    <rect x="159" y="205" width="65" height="50" rx="4" fill="#F6F1EA"/>
+
+    <!-- Journey Stepper -->
+    <line x1="25" y1="270" x2="25" y2="350" stroke="#BAC2BA" stroke-width="2"/>
+    <circle cx="25" cy="275" r="5" fill="#11382B"/>
+    <circle cx="25" cy="300" r="5" fill="#11382B"/>
+    <circle cx="25" cy="325" r="5" fill="#11382B"/>
+    <circle cx="25" cy="350" r="5" fill="#11382B"/>
+    <rect x="38" y="270" width="180" height="18" rx="3" fill="#F6F1EA"/>
+    <rect x="38" y="295" width="180" height="18" rx="3" fill="#F6F1EA"/>
+    <rect x="38" y="320" width="180" height="18" rx="3" fill="#F6F1EA"/>
+    <rect x="38" y="345" width="180" height="18" rx="3" fill="#F6F1EA"/>
+
+    <!-- Sticky Bottom CTA -->
+    <rect x="0" y="380" width="240" height="40" fill="#FDFBF7" stroke="#E5DFD7"/>
+    <rect x="140" y="388" width="85" height="24" rx="12" fill="#11382B"/>
+  </g>
+
+  <!-- Desktop Wireframe Shell -->
+  <g transform="translate(360, 95)">
+    <rect width="580" height="350" rx="12" fill="#FFFFFF" stroke="#8B9890" stroke-width="1.5"/>
+    <text x="290" y="-10" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B" text-anchor="middle">DESKTOP CONSIDERED WIREFRAME (1280px)</text>
+
+    <!-- Top Nav -->
+    <rect x="25" y="15" width="80" height="16" fill="#D1C9BE"/>
+    <rect x="360" y="15" width="60" height="12" fill="#D1C9BE"/>
+    <rect x="435" y="15" width="40" height="12" fill="#D1C9BE"/>
+    <rect x="490" y="12" width="70" height="22" rx="11" fill="#11382B"/>
+
+    <!-- 2-Column Hero -->
+    <!-- Left Column: Copy & CTAs -->
+    <rect x="25" y="55" width="150" height="14" rx="7" fill="#E5DFD7"/>
+    <rect x="25" y="80" width="280" height="30" fill="#11382B"/>
+    <rect x="25" y="120" width="240" height="16" fill="#D1C9BE"/>
+    <rect x="25" y="150" width="140" height="34" rx="17" fill="#11382B"/>
+    <rect x="180" y="150" width="100" height="34" rx="4" fill="#F6F1EA"/>
+
+    <!-- Right Column: Visual Component -->
+    <rect x="340" y="55" width="210" height="160" rx="10" fill="#F6F1EA" stroke="#E5DFD7"/>
+    <rect x="360" y="75" width="170" height="20" rx="4" fill="#FFFFFF"/>
+    <rect x="360" y="105" width="120" height="24" fill="#FFFFFF"/>
+    <circle cx="380" cy="165" r="14" fill="#11382B"/>
+    <rect x="405" y="160" width="100" height="12" fill="#D1C9BE"/>
+
+    <!-- Disclaimer spanning bottom of first viewport -->
+    <rect x="25" y="235" width="530" height="30" rx="6" fill="#FDF1EE" stroke="#FCA5A5"/>
+    <text x="40" y="254" font-family="system-ui, sans-serif" font-size="10" fill="#9C3218">[!] Mandatory Compliance Disclaimer: visible without scrolling in first viewport</text>
+
+    <!-- 3 Reassurance Cards Grid -->
+    <rect x="25" y="280" width="165" height="50" rx="6" fill="#FDFBF7" stroke="#E5DFD7"/>
+    <rect x="205" y="280" width="165" height="50" rx="6" fill="#FDFBF7" stroke="#E5DFD7"/>
+    <rect x="385" y="280" width="165" height="50" rx="6" fill="#FDFBF7" stroke="#E5DFD7"/>
+  </g>
+
+  <!-- Evolution Note Banner -->
+  <g transform="translate(60, 525)">
+    <rect width="880" height="55" rx="8" fill="#FDFBF7" stroke="#11382B" stroke-width="1.5"/>
+    <text x="20" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">WHAT CHANGED FROM WIREFRAME TO HI-FI:</text>
+    <text x="20" y="40" font-family="system-ui, sans-serif" font-size="11" fill="#3F4E46">1. Cut marketing live-ticker & modal popups to reduce cognitive load and compliance risk. 2. Elevated first-viewport risk disclaimer to ensure zero-scroll compliance on 360px budget screens. 3. Added click-to-load video poster instead of heavy autoplay container.</text>
+  </g>
+</svg>

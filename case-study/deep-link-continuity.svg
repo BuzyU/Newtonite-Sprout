@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="900" height="360" fill="none" role="img" aria-label="Website-to-App Deferred Deep Link Architecture">
+  <rect width="900" height="360" rx="16" fill="#FDFBF7"/>
+  <rect x="2" y="2" width="896" height="356" rx="14" stroke="#D1C9BE" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="35" y="40" font-family="Charter, serif" font-size="20" font-weight="700" fill="#11382B">Website-to-App Continuity & Deferred Deep Link Architecture</text>
+  <text x="35" y="62" font-family="system-ui, sans-serif" font-size="12" fill="#55655D">Preserving user intent (chosen starting amount ₹100/₹250/₹500 & language) across app store install boundaries.</text>
+
+  <!-- Step 1: Website CTA -->
+  <g transform="translate(35, 95)">
+    <rect width="180" height="180" rx="10" fill="#FFFFFF" stroke="#BAC2BA" stroke-width="1.5"/>
+    <rect width="180" height="30" rx="10" fill="#11382B"/>
+    <text x="90" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1. WEB INTENT</text>
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#18221D">User clicks CTA:</text>
+    <rect x="15" y="65" width="150" height="30" rx="6" fill="#F6F1EA"/>
+    <text x="90" y="84" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#11382B" text-anchor="middle">"Start with ₹100"</text>
+    <text x="15" y="120" font-family="system-ui, sans-serif" font-size="10" fill="#55655D">URL parameters set:</text>
+    <text x="15" y="135" font-family="ui-monospace, monospace" font-size="9" fill="#D97706">?amount=100&amp;lang=hi</text>
+    <text x="15" y="155" font-family="system-ui, sans-serif" font-size="10" fill="#166534">Cookie / fingerprint logged</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(225, 175)">
+    <line x1="0" y1="0" x2="35" y2="0" stroke="#11382B" stroke-width="2"/>
+    <polygon points="35,-4 45,0 35,4" fill="#11382B"/>
+  </g>
+
+  <!-- Step 2: App Store / Play Store -->
+  <g transform="translate(280, 95)">
+    <rect width="180" height="180" rx="10" fill="#FFFFFF" stroke="#BAC2BA" stroke-width="1.5"/>
+    <rect width="180" height="30" rx="10" fill="#11382B"/>
+    <text x="90" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2. APP STORE / PLAY</text>
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#18221D">Install & First Open</text>
+    <text x="15" y="80" font-family="system-ui, sans-serif" font-size="10" fill="#55655D">Deferred deep link client (Branch / Firebase Dynamic Links):</text>
+    <rect x="15" y="105" width="150" height="26" rx="4" fill="#F6F1EA"/>
+    <text x="90" y="122" font-family="ui-monospace, monospace" font-size="9" fill="#11382B" text-anchor="middle">getDeferredIntent()</text>
+    <text x="15" y="155" font-family="system-ui, sans-serif" font-size="10" fill="#9C3218">[Dev Dependency]</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(470, 175)">
+    <line x1="0" y1="0" x2="35" y2="0" stroke="#11382B" stroke-width="2"/>
+    <polygon points="35,-4 45,0 35,4" fill="#11382B"/>
+  </g>
+
+  <!-- Step 3: App Initial Launch -->
+  <g transform="translate(525, 95)">
+    <rect width="180" height="180" rx="10" fill="#FFFFFF" stroke="#BAC2BA" stroke-width="1.5"/>
+    <rect width="180" height="30" rx="10" fill="#11382B"/>
+    <text x="90" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3. APP ONBOARDING</text>
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#166534">Intent Restored:</text>
+    <text x="15" y="75" font-family="system-ui, sans-serif" font-size="10" fill="#3F4E46">✓ Ankur waving greeting</text>
+    <text x="15" y="92" font-family="system-ui, sans-serif" font-size="10" fill="#3F4E46">✓ Hindi pre-selected</text>
+    <text x="15" y="109" font-family="system-ui, sans-serif" font-size="10" fill="#3F4E46">✓ Step 1-4 progress</text>
+    <text x="15" y="126" font-family="system-ui, sans-serif" font-size="10" fill="#3F4E46">✓ S5: ₹100 pre-filled</text>
+    <text x="15" y="155" font-family="system-ui, sans-serif" font-size="10" fill="#166534">Zero cognitive break</text>
+  </g>
+
+  <!-- Fallback Branch on Error -->
+  <g transform="translate(730, 95)">
+    <rect width="135" height="180" rx="10" fill="#FDF1EE" stroke="#FCA5A5" stroke-width="1.5"/>
+    <text x="67" y="25" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#9C3218" text-anchor="middle">FALLBACK STATE</text>
+    <text x="10" y="55" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#18221D">If link lost:</text>
+    <text x="10" y="80" font-family="system-ui, sans-serif" font-size="10" fill="#55655D">Default safely to English and ₹100 starting amount without blocking user.</text>
+    <text x="10" y="155" font-family="system-ui, sans-serif" font-size="9" fill="#166534">Never shows error to user</text>
+  </g>
+
+  <!-- Bottom Annotation -->
+  <text x="35" y="320" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">
+    NOTE: Marked as a development dependency. Requires native Android Play Install Referrer API and iOS Attribution Token integration.
+  </text>
+</svg>

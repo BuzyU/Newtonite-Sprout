@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520" fill="none" role="img" aria-label="Sprout User Personas (Labelled as Research Assumptions)">
+  <rect width="1000" height="520" rx="16" fill="#FDFBF7"/>
+  <rect x="2" y="2" width="996" height="516" rx="14" stroke="#D1C9BE" stroke-width="2"/>
+
+  <!-- Header -->
+  <text x="40" y="45" font-family="Charter, serif" font-size="22" font-weight="700" fill="#11382B">Sprout Target Personas [EXPLICITLY LABELLED AS ASSUMPTIONS]</text>
+  <text x="40" y="70" font-family="system-ui, sans-serif" font-size="12" fill="#55655D">Grounded in Tier-2/3 market realities; must be validated with 5-8 qualitative interviews with churned users.</text>
+
+  <!-- Persona 1: Rohit (Tier-2 Junior Technician) -->
+  <g transform="translate(40, 95)">
+    <rect width="290" height="390" rx="10" fill="#FFFFFF" stroke="#E5DFD7"/>
+    <rect width="290" height="32" rx="10" fill="#11382B"/>
+    <text x="145" y="21" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">PERSONA 1 [ASSUMPTION]</text>
+
+    <text x="20" y="60" font-family="Charter, serif" font-size="16" font-weight="700" fill="#11382B">Rohit Verma, 23</text>
+    <text x="20" y="78" font-family="system-ui, sans-serif" font-size="11" fill="#D97706" font-weight="600">Junior ITI Technician | Bhopal</text>
+    <text x="20" y="96" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Device: Redmi 9A (₹7,499, 2GB RAM)</text>
+    <text x="20" y="112" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Language: Hindi primary, simple English</text>
+
+    <line x1="20" y1="125" x2="270" y2="125" stroke="#E5DFD7"/>
+
+    <text x="20" y="145" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">Mental Model & Anxiety:</text>
+    <text x="20" y="165" font-family="system-ui, sans-serif" font-size="11" fill="#3F4E46">Earns ₹18,000/mo. Wants to save ₹200-500, but fears online fraud. Thinks "investing is only for rich Mumbai folks."</text>
+
+    <text x="20" y="225" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C3218">Key Drop-off Trigger:</text>
+    <text x="20" y="245" font-family="system-ui, sans-serif" font-size="11" fill="#9C3218">Unexplained loading spinners make him think the app crashed or took his data.</text>
+
+    <text x="20" y="300" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#166534">Sprout Design Solution:</text>
+    <text x="20" y="320" font-family="system-ui, sans-serif" font-size="11" fill="#166534">Native Hindi toggle; "Keep ready" prep; reassuring mascot on wait states; 86KB light payload.</text>
+  </g>
+
+  <!-- Persona 2: Priya (College Student) -->
+  <g transform="translate(355, 95)">
+    <rect width="290" height="390" rx="10" fill="#FFFFFF" stroke="#E5DFD7"/>
+    <rect width="290" height="32" rx="10" fill="#11382B"/>
+    <text x="145" y="21" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">PERSONA 2 [ASSUMPTION]</text>
+
+    <text x="20" y="60" font-family="Charter, serif" font-size="16" font-weight="700" fill="#11382B">Priya Nair, 20</text>
+    <text x="20" y="78" font-family="system-ui, sans-serif" font-size="11" fill="#D97706" font-weight="600">B.Com Final Year | Kochi</text>
+    <text x="20" y="96" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Device: Realme C21 (₹8,999, 3GB RAM)</text>
+    <text x="20" y="112" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Language: English & Malayalam</text>
+
+    <line x1="20" y1="125" x2="270" y2="125" stroke="#E5DFD7"/>
+
+    <text x="20" y="145" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">Mental Model & Anxiety:</text>
+    <text x="20" y="165" font-family="system-ui, sans-serif" font-size="11" fill="#3F4E46">Has ₹100-300 left from monthly allowance. Curious about finance after YouTube clips, but hates complex stock jargon.</text>
+
+    <text x="20" y="225" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C3218">Key Drop-off Trigger:</text>
+    <text x="20" y="245" font-family="system-ui, sans-serif" font-size="11" fill="#9C3218">Sudden demand for PAN and bank account details without clear explanation.</text>
+
+    <text x="20" y="300" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#166534">Sprout Design Solution:</text>
+    <text x="20" y="320" font-family="system-ui, sans-serif" font-size="11" fill="#166534">Screen 2 "I'm just curious" goal; explicit consent card; simple ₹100 starting default.</text>
+  </g>
+
+  <!-- Persona 3: Ananya (Nervous Family Consult First-Timer) -->
+  <g transform="translate(670, 95)">
+    <rect width="290" height="390" rx="10" fill="#FFFFFF" stroke="#E5DFD7"/>
+    <rect width="290" height="32" rx="10" fill="#11382B"/>
+    <text x="145" y="21" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">PERSONA 3 [ASSUMPTION]</text>
+
+    <text x="20" y="60" font-family="Charter, serif" font-size="16" font-weight="700" fill="#11382B">Ananya Sen, 27</text>
+    <text x="20" y="78" font-family="system-ui, sans-serif" font-size="11" fill="#D97706" font-weight="600">Customer Support Associate | Jaipur</text>
+    <text x="20" y="96" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Device: Samsung Galaxy M04 (₹8,499)</text>
+    <text x="20" y="112" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Language: English & Hindi</text>
+
+    <line x1="20" y1="125" x2="270" y2="125" stroke="#E5DFD7"/>
+
+    <text x="20" y="145" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#11382B">Mental Model & Anxiety:</text>
+    <text x="20" y="165" font-family="system-ui, sans-serif" font-size="11" fill="#3F4E46">Wants to start saving independently. Needs to ask elder brother or father before entering sensitive financial numbers.</text>
+
+    <text x="20" y="225" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9C3218">Key Drop-off Trigger:</text>
+    <text x="20" y="245" font-family="system-ui, sans-serif" font-size="11" fill="#9C3218">Forced instant completion; high-pressure countdown timers or pop-ups.</text>
+
+    <text x="20" y="300" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#166534">Sprout Design Solution:</text>
+    <text x="20" y="320" font-family="system-ui, sans-serif" font-size="11" fill="#166534">Screen 3 "Remind me later" with privacy reassurance; transparent FAQ; zero aggressive modals.</text>
+  </g>
+</svg>
