@@ -14,7 +14,7 @@ Sprout 2.0 resolves high onboarding friction (62% KYC drop-off, ~41% pre-KYC lea
 
 To bridge the CEO's demand for Apple-like minimalism with Marketing's desire for an engaging mascot, I designed "Ankur"—a geometric seedling serving as an ambient, reassuring guide. Ankur is strictly prohibited from appearing near risk disclaimers, high-stress errors, or promotional overlays. 
 
-Addressing low-end device constraints (40% on smartphones under ₹10,000 [brief baseline, assuming entry-level segment] facing 6.2s 4G loads), the interface is built without JavaScript frameworks or external CDN assets, achieving an 86.8 KB homepage payload (and 109.5 KB onboarding app payload). A dedicated "Keep these ready" preparation screen and an animated wait state [assumed 45-second duration based on typical registry turnaround] directly eradicate the two evidenced customer support complaints ("documents weren't ready" and "thought the app crashed"). 
+Addressing low-end device constraints (40% on smartphones under ₹10,000 [brief baseline, assuming entry-level segment] facing 6.2s 4G loads), the interface is built without JavaScript frameworks or external CDN assets, achieving an 87.3 KB homepage payload (and 112.3 KB onboarding app payload). A dedicated "Keep these ready" preparation screen and an animated wait state [assumed 45-second duration based on typical registry turnaround] directly eradicate the two evidenced customer support complaints ("documents weren't ready" and "thought the app crashed"). 
 
 All color pairs achieve 100% WCAG AA contrast (18/18 pairs verified mathematically), and every screen with investment content displays an unmissable 13px risk disclaimer visible in the first viewport without scrolling.
 

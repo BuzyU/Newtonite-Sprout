@@ -19,7 +19,7 @@
 | **Mascot (Ankur)** | **PASS** | 6 vector SVG poses, all < 3 KB each | Seedling character appears consistently across web and app; CSS-only micro-animations. |
 | **Compliance Disclosures** | **FAIL (P0)** | Floor: 13px ($\ge 12\text{px}$ pass), but Top: 780px on mobile | Disclaimer was placed below the hero action buttons, falling below the initial viewport on 320px and 360px. |
 | **Prohibited Guarantee Words** | **PASS** | 0 critical violations | No "guaranteed", "risk-free", "sure-shot", or "assured returns" in copy. Only CSS `env(safe-area-inset)`. |
-| **Performance Budget** | **PASS** | Homepage: 86.8 KB, App: 109.5 KB | Budget: 1,500 KB limit, 400 KB target. Achieved ~87 KB total homepage payload (well under target). |
+| **Performance Budget** | **PASS** | Homepage: 87.3 KB, App: 112.3 KB | Budget: 1,500 KB limit, 400 KB target. Achieved ~87 KB total homepage payload (well under target). |
 | **Animation Budget** | **PASS** | Total CSS animations: < 12 KB | Zero Lottie or JavaScript animation runtimes; pure CSS `transform` & `opacity`. |
 | **Feasibility (3-Week / 1 Dev)** | **PASS** | Vanilla HTML, CSS, JS; 0 build step | Standard browser primitives; no complex Webpack/Vite pipeline needed for production. |
 | **Accessibility (WCAG AA Contrast)** | **PASS** | 18/18 pairs pass WCAG AA (100%), 72% AAA | Deep Forest Green (`#11382B`) on White achieves 12.92:1; Body on Cream achieves 15.80:1; Primary on White achieves 16.33:1. |
@@ -103,7 +103,7 @@ Attributing the entire 77.5% drop-off solely to "KYC friction" is flawed product
 | **Risk Disclaimer Placement** | **Marketing:** Put the risk disclaimer at the very bottom of the page or in a collapsed accordion so it doesn't scare off first-time investors. | **Compliance:** SEBI/AMFI regulatory mandates require visible risk notices in the first viewport ($\ge 12\text{px}$) without requiring user interaction or scrolling. | **Resolution:** Design a calm, elegant reassurance box inside the hero viewport. Pair the risk disclosure ("Investments can lose value") with an empowering fact ("No lock-in, start with ₹100"). This builds authentic trust rather than hiding risk. |
 | **KYC Friction vs Completion** | **Growth/Product:** Make KYC 1-click; eliminate document warnings and let users invest before uploading PAN/Aadhaar. | **Compliance & Operations:** Unverified accounts cannot legally purchase mutual fund units in India under PMLA regulations. Delayed KYC leads to frozen accounts and high support volume. | **Resolution:** Introduce Screen 3 ("Keep these ready"). Pre-educate users on what is needed before they enter the registry flow. If network or OTP fails, provide explicit humane wait states and offline persistence. |
 | **Copy & Marketing Tone** | **Marketing:** Use high-conversion words like "Guaranteed returns", "Safe wealth growth", "Risk-free starting experience". | **Compliance & UX:** Prohibited by law. Financial instruments carry market risk. Misleading users destroys long-term retention. | **Resolution:** Absolute ban on all guarantee terms. Reframe the value proposition around controllable investor behaviors: starting small (₹100), understanding fund allocation, and learning with zero exit penalties. |
-| **Engineering Payload vs Visuals** | **Marketing/Design:** High-res 3D videos, animated Lottie banners, third-party analytics SDKs, Google Fonts webfonts. | **Engineering:** Budget Android devices [assumed entry segment, sub-₹10,000] have limited RAM and 3G/4G bandwidth. Budget strictly < 1.5 MB; target < 400 KB. | **Resolution:** 100% SVG vector illustrations, CSS-only keyframe animations respecting `prefers-reduced-motion`, native system font stack with Devanagari fallback. Total transferred payload: 86.8 KB (88,895 B)! |
+| **Engineering Payload vs Visuals** | **Marketing/Design:** High-res 3D videos, animated Lottie banners, third-party analytics SDKs, Google Fonts webfonts. | **Engineering:** Budget Android devices [assumed entry segment, sub-₹10,000] have limited RAM and 3G/4G bandwidth. Budget strictly < 1.5 MB; target < 400 KB. | **Resolution:** 100% SVG vector illustrations, CSS-only keyframe animations respecting `prefers-reduced-motion`, native system font stack with Devanagari fallback. Total transferred payload: 87.3 KB (89,347 B)! |
 
 ---
 
@@ -167,13 +167,60 @@ The prioritized fixes identified in Phase 1 were executed and re-measured using 
 | **Tap Targets < 44px (App Screens)** | 7–11 (Controls 32–38px) | **0 under 44px** (All $\ge 44\times 44\text{px}$) | **PASS** | Min-height/min-width 44px rules enforced |
 | **Prohibited Guarantee Words in Code** | 1 (Hindi "सुरक्षित" in strings) | **0** ("समझदारी भरी" / 0 banned terms) | **PASS** | `tools/copy-lint.js` regex scan over all files |
 | **Directory & UI Nomenclature** | Legacy folder with draft framing | `site/` with final design framing | **PASS** | Directory renamed; all links and CI updated |
-| **Homepage Total Payload Weight** | 86.6 KB | **86.8 KB** (Target: < 400 KB, Budget: 1,500 KB) | **PASS** | `tools/weight-check.js` filesystem measurement |
-| **Onboarding App Screens Total Weight** | 106.5 KB | **109.5 KB** (Budget: 1,500 KB) | **PASS** | `tools/weight-check.js` filesystem measurement |
+| **Homepage Total Payload Weight** | 86.6 KB | **87.3 KB** (Target: < 400 KB, Budget: 1,500 KB) | **PASS** | `tools/weight-check.js` filesystem measurement |
+| **Onboarding App Screens Total Weight** | 106.5 KB | **112.3 KB** (Budget: 1,500 KB) | **PASS** | `tools/weight-check.js` filesystem measurement |
 | **External Network Requests** | 0 requests | **0 requests** (Zero CDN, Zero Google Fonts) | **PASS** | Chrome DevTools Network inspection |
 | **Subpath URL Resilience** | Relative paths (`./`) | **100% relative paths** (Works under any subpath) | **PASS** | Static server verification at `/sprout-subpath/` |
 | **WCAG 2.1 AA Contrast Ratio** | 18/18 pairs PASS (100% AA, 72% AAA) | **18/18 pairs PASS** (100% AA, 72% AAA) | **PASS** | `tools/contrast-check.js` sRGB formula |
-| **Axe-Core Automated a11y Violations** | 0 violations | **0 violations** across all 5 viewports | **PASS** | `@axe-core/playwright` full tree audit |
+| **Axe-Core Automated a11y Violations** | 0 violations | **0 violations** across all viewports | **PASS** | `@axe-core/playwright` full tree audit |
 | **Footer Legal Notice Text** | Legacy draft notice | **"Design submission for an assignment. Not a real financial product."** | **PASS** | Verified on homepage and app simulator |
+
+### Complete Multi-Viewport Measurement Matrix (`tools/viewport-matrix-check.js`)
+
+| Page / Screen | Viewport | Horizontal Scroll | Disclaimer Top | Font Size | In 1st Viewport? | Tap < 44px | Overall Status |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Homepage | 320x568 | 0px (PASS) | 407.4px | 13px | YES (PASS) | 0 (<44px) | **PASS** |
+| Homepage | 360x640 | 0px (PASS) | 407.4px | 13px | YES (PASS) | 0 (<44px) | **PASS** |
+| Homepage | 360x740 | 0px (PASS) | 407.4px | 13px | YES (PASS) | 0 (<44px) | **PASS** |
+| Homepage | 390x844 | 0px (PASS) | 354.7px | 13px | YES (PASS) | 0 (<44px) | **PASS** |
+| Homepage | 768x1024 | 0px (PASS) | 427.5px | 13px | YES (PASS) | 0 (<44px) | **PASS** |
+| Homepage | 1280x80 | 0px (PASS) | 4.0px | 13px | YES (PASS) | 0 (<44px) | **PASS** |
+| Homepage | 1280x800 | 0px (PASS) | 453.1px | 13px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 1 (Welcome) | 320x568 | 0px (PASS) | 417.2px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 1 (Welcome) | 360x640 | 0px (PASS) | 375.3px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 1 (Welcome) | 360x740 | 0px (PASS) | 375.3px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 1 (Welcome) | 390x844 | 0px (PASS) | 363.8px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 1 (Welcome) | 768x1024 | 0px (PASS) | 361.6px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 1 (Welcome) | 1280x80 | 0px (PASS) | 4.0px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 1 (Welcome) | 1280x800 | 0px (PASS) | 325.5px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 2 (Intent) | 320x568 | 0px (PASS) | 421.9px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 2 (Intent) | 360x640 | 0px (PASS) | 401.7px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 2 (Intent) | 360x740 | 0px (PASS) | 401.7px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 2 (Intent) | 390x844 | 0px (PASS) | 342.1px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 2 (Intent) | 768x1024 | 0px (PASS) | 339.9px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 2 (Intent) | 1280x80 | 0px (PASS) | 4.0px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 2 (Intent) | 1280x800 | 0px (PASS) | 303.8px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 3 (Checklist) | 320x568 | 0px (PASS) | 417.2px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 3 (Checklist) | 360x640 | 0px (PASS) | 397.0px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 3 (Checklist) | 360x740 | 0px (PASS) | 397.0px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 3 (Checklist) | 390x844 | 0px (PASS) | 385.4px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 3 (Checklist) | 768x1024 | 0px (PASS) | 383.3px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 3 (Checklist) | 1280x80 | 0px (PASS) | 4.0px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 3 (Checklist) | 1280x800 | 0px (PASS) | 347.1px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 4 (Verification) | 320x568 | 0px (PASS) | 456.0px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 4 (Verification) | 360x640 | 0px (PASS) | 417.3px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 4 (Verification) | 360x740 | 0px (PASS) | 417.3px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 4 (Verification) | 390x844 | 0px (PASS) | 405.7px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 4 (Verification) | 768x1024 | 0px (PASS) | 403.5px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 4 (Verification) | 1280x80 | 0px (PASS) | 4.0px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 4 (Verification) | 1280x800 | 0px (PASS) | 367.4px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 5 (First ₹100) | 320x568 | 0px (PASS) | 391.5px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 5 (First ₹100) | 360x640 | 0px (PASS) | 371.3px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 5 (First ₹100) | 360x740 | 0px (PASS) | 371.3px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 5 (First ₹100) | 390x844 | 0px (PASS) | 359.8px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 5 (First ₹100) | 768x1024 | 0px (PASS) | 357.6px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 5 (First ₹100) | 1280x80 | 0px (PASS) | 4.0px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
+| Screen 5 (First ₹100) | 1280x800 | 0px (PASS) | 321.5px | 16px | YES (PASS) | 0 (<44px) | **PASS** |
 
 ---
 

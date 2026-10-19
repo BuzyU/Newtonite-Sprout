@@ -12,7 +12,8 @@ const tests = [
   { name: 'Semantic HTML & Landmark Validation', cmd: 'node tools/html-validate-check.js' },
   { name: 'Axe Core Accessibility Evaluation', cmd: 'node tools/a11y-check.js' },
   { name: 'Subpath Routing & Network Isolation Verification', cmd: 'node tools/test-subpath.js' },
-  { name: 'Markdown Image & Relative Link Target Integrity', cmd: 'node tools/check-links.js' }
+  { name: 'Markdown Image & Relative Link Target Integrity', cmd: 'node tools/check-links.js' },
+  { name: 'Multi-Viewport Compliance & Ergonomics Matrix', cmd: 'node tools/viewport-matrix-check.js' }
 ];
 
 let failed = false;

@@ -11,6 +11,7 @@
     "check:a11y": "node tools/a11y-check.js",
     "check:subpath": "node tools/test-subpath.js",
     "check:links": "node tools/check-links.js",
+    "check:matrix": "node tools/viewport-matrix-check.js",
     "screenshots": "node tools/screenshots.js",
     "build:pdf": "node tools/export-pdf.js",
     "test": "node tools/test-runner.js"

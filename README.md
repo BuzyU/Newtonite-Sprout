@@ -21,7 +21,7 @@
 | **Edge States (Wait, OTP, Error, Offline)** | [`site/app/index.html`](site/app/index.html) | [`screens/app-screen-4-wait-state.png`](screens/app-screen-4-wait-state.png) |
 | **Accessibility (WCAG AA Contrast)** | [`design-system/contrast.md`](design-system/contrast.md) | `tools/contrast-check.js` (18/18 PASS) |
 | **Automated a11y Audit (Axe-Core)** | [`tools/a11y-check.js`](tools/a11y-check.js) | 0 violations across mobile and desktop |
-| **Low-End Performance Budget** | [`design-system/performance.md`](design-system/performance.md) | `tools/weight-check.js` (86.8 KB measured) |
+| **Low-End Performance Budget** | [`design-system/performance.md`](design-system/performance.md) | `tools/weight-check.js` (87.3 KB measured) |
 | **Localisation (Hindi Demo)** | [`site/app/index.html?screen=3&lang=hi`](site/app/index.html) | [`screens/app-screen-3-keep-ready-hi.png`](screens/app-screen-3-keep-ready-hi.png) |
 | **Case Study (Markdown & PDF Export)** | [`case-study/CASE_STUDY.md`](case-study/CASE_STUDY.md) | [`case-study/case-study.pdf`](case-study/case-study.pdf) |
 | **Design Specification** | [`FIGMA_SPEC.md`](FIGMA_SPEC.md) | Token definitions and layout geometry codified |
@@ -36,7 +36,7 @@
 Sprout is a mobile-first micro-investing platform tailored for first-time retail investors in India. It addresses the critical friction points in the initial funnel:
 - **Reconciled Drop-off:** Of 40,000 downloads, **~41% (16,300 users) never reached KYC**, and **14,700 dropped mid-verification**.
 - **Evidence-Based Design:** Replaces blind forms with a dedicated **"Keep these ready"** preparation step and an **honest wait state** [with an assumed 45-second duration based on typical verification turnaround], directly targeting Customer Support's two biggest complaints.
-- **Low-End Hardware Respect:** Engineered without JavaScript frameworks to deliver an **86.8 KB total homepage payload** that loads in &lt; 1 second on budget entry smartphones [assumed sub-₹10,000 category] over 4G.
+- **Low-End Hardware Respect:** Engineered without JavaScript frameworks to deliver an **87.3 KB total homepage payload** that loads in &lt; 1 second on budget entry smartphones [assumed sub-₹10,000 category] over 4G.
 - **Zero-Scroll Regulatory Compliance:** Guarantees that every page with investment content displays an unmissable **13px risk disclaimer** visible in the first viewport without scrolling.
 
 ---

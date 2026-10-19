@@ -16,7 +16,7 @@
    Marketing demanded a cartoon mascot, video, live ticker, and three pop-ups to drive viral engagement; the CEO insisted on an Apple-like minimal interface with zero cartoons to protect investor trust. I broke the deadlock by designing **"Ankur" (Hindi for sprout)**: a geometric, flat seedling that acts as a quiet, respectful companion at moments of emotional friction (such as verification wait states), but is strictly banned from appearing near legal risk disclaimers, high-stress errors, or promotional pop-ups. Marketing's live ticker was cut entirely to prevent market anxiety, pop-ups were eliminated, and the video was converted into a lightweight, click-to-load poster.
 
 3. **Engineered Hard Compliance and Low-End Performance Baselines**  
-   With 91% of users on mobile and 40% on smartphones under ₹10,000 [brief data point, assuming sub-₹10k entry smartphone segment] facing 6.2-second average 4G loads [brief-cited unverified baseline], heavy JavaScript frameworks were rejected. The entire website and onboarding app is vanilla HTML/CSS/JS with zero external CDN dependencies, self-hosted system fonts with native Devanagari support, and sub-3 KB inline SVGs. Measured homepage payload is **86.8 KB** (well under the 400 KB target and 1.5 MB ceiling). Every screen featuring investment content presents a regulatory risk disclaimer rendered at **13px** (exceeding the 12px legal minimum) visible in the first viewport without scrolling.
+   With 91% of users on mobile and 40% on smartphones under ₹10,000 [brief data point, assuming sub-₹10k entry smartphone segment] facing 6.2-second average 4G loads [brief-cited unverified baseline], heavy JavaScript frameworks were rejected. The entire website and onboarding app is vanilla HTML/CSS/JS with zero external CDN dependencies, self-hosted system fonts with native Devanagari support, and sub-3 KB inline SVGs. Measured homepage payload is **87.3 KB** (well under the 400 KB target and 1.5 MB ceiling). Every screen featuring investment content presents a regulatory risk disclaimer rendered at **13px** (exceeding the 12px legal minimum) visible in the first viewport without scrolling.
 
 ---
 
@@ -117,7 +117,7 @@ While 65% of respondents stated "Investing feels scary", all 40 participants wer
    - *Hardware & Context:* Budget Android [Assumed working archetype: Redmi 9A, ~₹7,499, 2GB RAM] on prepaid 4G. Hindi primary speaker.
    - *Anxiety:* Earns ₹18,000/month; fears digital fraud and believes investing is only for wealthy metro elites.
    - *Drop-off Cliff:* Unexplained loading spinners cause him to believe the app crashed or compromised his data.
-   - *Design Response:* Native Hindi toggle, "Keep ready" prep screen, steady wait state mascot, 86.8 KB ultra-lightweight page weight.
+   - *Design Response:* Native Hindi toggle, "Keep ready" prep screen, steady wait state mascot, 87.3 KB ultra-lightweight page weight.
 
 2. **Priya Nair (20, College Student, Kochi) — Assumption 2:**
    - *Hardware & Context:* Budget Android [Assumed working archetype: Realme C21, ~₹8,999, 3GB RAM]. English and Malayalam speaker.
@@ -187,7 +187,7 @@ To validate whether the Sprout 2.0 interface eradicates the evidenced customer s
 | **CEO** | "Minimal, Apple-like, no cartoon characters. Investors won't trust a cartoon." | Financial apps must convey institutional credibility and stability; childlike cartoons undermine serious trust. | **The mascot stays, but as a restrained geometric seedling.** Calm, grounded vector; flat colors; no 3D, no sparkles. | Humanizes cold financial onboarding without feeling like a children's game. Prohibited from appearing near legal risk text. |
 | **Head of Marketing** | Mascot, video, live ticker, 3 pop-up modals, and referral banner. | Social proof, clear product demonstration, and viral referral loops are proven acquisition levers. | **Cut the ticker and all pop-ups.** Video converted to a click-to-load poster. Referral placed as a quiet footer strip and after first investment. | Tickers induce anxiety for beginners; modals cause immediate mobile abandonment. Click-to-load video saves 4G data. |
 | **Compliance Officer**| Risk disclaimer $\ge$12px visible without scrolling in first viewport. Banned terms: "guaranteed", "safe", "risk-free". | Regulatory mandates under SEBI are non-negotiable; violations risk platform suspension. | **Implemented 13px disclaimer component in the first viewport** across all investment screens. Automated copy linter runs in CI. | Disclaimer placed right below the primary CTA so users see risk transparency immediately before acting. |
-| **Lead Developer** | Page weight $<1.5\text{ MB}$, CSS animations only, 1 front-end engineer for 3 weeks. | A single engineer cannot build complex state engines or debug heavy animation libraries within 21 days. | **Pure vanilla HTML/CSS/JS with zero build step.** System fonts with Devanagari fallback; total payload is **86.8 KB**. | 3-week delivery plan with strict cut list protects engineering sanity and guarantees lightning performance. |
+| **Lead Developer** | Page weight $<1.5\text{ MB}$, CSS animations only, 1 front-end engineer for 3 weeks. | A single engineer cannot build complex state engines or debug heavy animation libraries within 21 days. | **Pure vanilla HTML/CSS/JS with zero build step.** System fonts with Devanagari fallback; total payload is **87.3 KB**. | 3-week delivery plan with strict cut list protects engineering sanity and guarantees lightning performance. |
 | **Customer Support Lead** | Complaints: "Didn't know I needed documents ready" and "Thought app crashed during wait". | Unprepared users drop off permanently; blank loading spinners look like software deadlocks. | **Added "Keep these ready" prep screen** and an animated 45-second wait state with reassurance text. | Directly targets and eliminates the two largest evidenced sources of user friction and support churn. |
 
 ---
@@ -323,9 +323,9 @@ All metrics reported below were generated through automated scripts executed in 
 - Terracotta Error Text (`#9C3218` on `#FDF1EE`): **6.58:1** (WCAG AA)
 
 ### 2. Asset Weight Audit (`tools/weight-check.js`)
-- **Homepage Total Transferred Weight:** **86.8 KB** (88,895 bytes)  
-  *Budget: 1.5 MB limit; Target: 400 KB.* **Passed at 22.2% of target budget.**
-- **Onboarding App Screens Total Weight:** **109.5 KB** (112,095 bytes)  
+- **Homepage Total Transferred Weight:** **87.3 KB** (89,347 bytes)  
+  *Budget: 1.5 MB limit; Target: 400 KB.* **Passed at 21.8% of target budget.**
+- **Onboarding App Screens Total Weight:** **112.3 KB** (114,969 bytes)  
   *Budget: 1.5 MB limit.* **Passed at 7.5% of maximum budget.**
 - **External Network Requests:** **0** (Zero CDN calls, zero Google Fonts lookups).
 

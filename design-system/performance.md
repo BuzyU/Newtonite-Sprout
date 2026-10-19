@@ -12,8 +12,8 @@
 
 | Page View | Transferred Assets | Total Weight | Budget Limit | Homepage Target | Status |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Homepage (Mobile & Desktop)** | 29 requests | **86.8 KB** (88895 B) | 1,500 KB | 400 KB | **PASS (Well Under Target)** |
-| **Onboarding App (5 Screens)** | 28 requests | **109.5 KB** (112095 B) | 1,500 KB | N/A | **PASS (Well Under Budget)** |
+| **Homepage (Mobile & Desktop)** | 29 requests | **87.3 KB** (89347 B) | 1,500 KB | 400 KB | **PASS (Well Under Target)** |
+| **Onboarding App (5 Screens)** | 31 requests | **112.3 KB** (114969 B) | 1,500 KB | N/A | **PASS (Well Under Budget)** |
 
 ---
 
@@ -24,7 +24,7 @@
 | Document (HTML) | `index.html` | 20.57 KB (21061 B) |
 | Stylesheet (CSS) | `./css/reset.css` | 1.07 KB (1098 B) |
 | Stylesheet (CSS) | `./css/tokens.css` | 3.34 KB (3419 B) |
-| Stylesheet (CSS) | `./css/homepage.css` | 15.08 KB (15446 B) |
+| Stylesheet (CSS) | `./css/homepage.css` | 15.53 KB (15898 B) |
 | Script (JS) | `./js/strings.js` | 30.66 KB (31394 B) |
 | Script (JS) | `./js/homepage.js` | 2.18 KB (2237 B) |
 | Image/Vector (SVG) | `./assets/logo.svg` | 0.89 KB (912 B) |
@@ -57,10 +57,10 @@
 
 | Asset Type | File Path | Transferred Bytes |
 | :--- | :--- | :---: |
-| Document (HTML) | `app/index.html` | 32.13 KB (32897 B) |
+| Document (HTML) | `app/index.html` | 33.53 KB (34336 B) |
 | Stylesheet (CSS) | `../css/reset.css` | 1.07 KB (1098 B) |
 | Stylesheet (CSS) | `../css/tokens.css` | 3.34 KB (3419 B) |
-| Stylesheet (CSS) | `../css/app.css` | 16.21 KB (16601 B) |
+| Stylesheet (CSS) | `../css/app.css` | 16.89 KB (17295 B) |
 | Script (JS) | `../js/strings.js` | 30.66 KB (31394 B) |
 | Script (JS) | `../js/app.js` | 9.27 KB (9492 B) |
 | Image/Vector (SVG) | `../assets/icons/arrow-right.svg` | 0.26 KB (270 B) |
@@ -68,17 +68,20 @@
 | Image/Vector (SVG) | `../assets/icons/clock.svg` | 0.26 KB (264 B) |
 | Image/Vector (SVG) | `../assets/icons/lock.svg` | 0.28 KB (288 B) |
 | Image/Vector (SVG) | `../assets/mascot/ankur-waving.svg` | 1.66 KB (1695 B) |
-| Image/Vector (SVG) | `../assets/icons/clock.svg` | 0.26 KB (264 B) |
 | Image/Vector (SVG) | `../assets/icons/shield.svg` | 0.24 KB (247 B) |
+| Image/Vector (SVG) | `../assets/icons/clock.svg` | 0.26 KB (264 B) |
 | Image/Vector (SVG) | `../assets/mascot/ankur-thinking.svg` | 1.75 KB (1789 B) |
+| Image/Vector (SVG) | `../assets/icons/shield.svg` | 0.24 KB (247 B) |
 | Image/Vector (SVG) | `../assets/icons/leaf.svg` | 0.34 KB (347 B) |
 | Image/Vector (SVG) | `../assets/mascot/ankur-checklist.svg` | 2.58 KB (2645 B) |
+| Image/Vector (SVG) | `../assets/icons/shield.svg` | 0.24 KB (247 B) |
 | Image/Vector (SVG) | `../assets/icons/clock.svg` | 0.26 KB (264 B) |
 | Image/Vector (SVG) | `../assets/icons/user.svg` | 0.27 KB (278 B) |
 | Image/Vector (SVG) | `../assets/icons/document.svg` | 0.41 KB (418 B) |
 | Image/Vector (SVG) | `../assets/icons/building.svg` | 0.33 KB (335 B) |
 | Image/Vector (SVG) | `../assets/icons/warning.svg` | 0.35 KB (363 B) |
 | Image/Vector (SVG) | `../assets/icons/check.svg` | 0.22 KB (229 B) |
+| Image/Vector (SVG) | `../assets/icons/shield.svg` | 0.24 KB (247 B) |
 | Image/Vector (SVG) | `../assets/icons/shield.svg` | 0.24 KB (247 B) |
 | Image/Vector (SVG) | `../assets/mascot/ankur-reassured.svg` | 2.05 KB (2100 B) |
 | Image/Vector (SVG) | `../assets/mascot/ankur-celebrating.svg` | 2.04 KB (2091 B) |

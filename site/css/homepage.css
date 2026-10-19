@@ -748,3 +748,23 @@
     font-size: 3rem;
   }
 }
+
+/* Ultra-Short Viewport Handling (e.g. 1280x80 window) */
+@media (max-height: 200px) {
+  .site-header {
+    display: none !important;
+  }
+  .hero-section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .disclaimer-box {
+    position: fixed !important;
+    top: 4px !important;
+    left: 8px !important;
+    right: 8px !important;
+    z-index: 99999 !important;
+    margin: 0 !important;
+    padding: 4px 8px !important;
+  }
+}
