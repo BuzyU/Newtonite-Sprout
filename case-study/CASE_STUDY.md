@@ -206,6 +206,16 @@ The journey map below traces the emotional transition of a first-time investor f
 5. **Verification Wait (Screen 4):** Displayed a calm Ankur mascot with an honest 45-second countdown and clear guidance that users can background the app without losing progress.
 6. **First Investment (Screen 5):** Pre-selected ₹100 as the starting default, paired with a subtle botanical sprout animation rather than cheap gamified confetti.
 
+### Website-to-App Continuity & Deferred Deep Link Architecture
+
+To ensure a continuous story from website to first investment, user intent formed on the homepage (selected starting amount ₹100, language preference, and reassurance framing) must survive across app store installation boundaries.
+
+![Website-to-App Continuity and Deferred Deep Link Architecture](./deep-link-continuity.svg)
+
+- **Identical Stepper Nomenclature:** The 4 steps on the homepage ("Tell us your goal", "Keep documents ready", "Simple verification", "Invest your first ₹100") match the in-app progress indicator 1:1, so the user experiences zero cognitive break upon launching the app.
+- **Direct Entry Point:** The homepage primary CTA ("Start with ₹100") passes intent parameters (`?amount=100&lang=hi`) directly into the onboarding entry point.
+- **Development Dependency Status:** Preserving this state across Google Play or Apple App Store installation requires a deferred deep linking attribution mechanism (such as Google Play Install Referrer API, Branch, or Firebase Dynamic Links). This is formally documented in our architecture as an **external development dependency** to be wired during native mobile wrapper assembly, while our static web screens provide complete front-end fallback handling if parameters are dropped.
+
 ---
 
 ## 9. Homepage Design Decisions
@@ -332,7 +342,7 @@ All metrics reported below were generated through automated scripts executed in 
 ### 3. Automated Accessibility Audit (`tools/a11y-check.js` & `tools/test-subpath.js`)
 - **Axe-Core Automated WCAG 2.1 AA Checks:** **0 violations** across Mobile Homepage (360px), Desktop Homepage (1280px), and Onboarding Screens (1 to 5).
 - **Automated Scripted Keyboard Navigation:** Validated via headless Playwright Tab-order sequence (`tools/test-subpath.js`), verifying focus ring visibility, logical tab order, and interactive actuation.
-- **Manual Screen-Reader Testing:** *Not conducted.* Automated tools verify markup, DOM hierarchy, and contrast, but cannot replace live testing with assistive technologies (TalkBack, NVDA, VoiceOver) with human participants. This is formally listed under Section 16 "Not verified".
+- **Manual Screen-Reader Testing:** *Not conducted.* Automated tools verify markup, DOM hierarchy, and contrast, but cannot replace live testing with assistive technologies (TalkBack, NVDA, VoiceOver) with human participants. This is formally listed under Section 17 "Not verified".
 - **Tap Targets < 44px:** **0** across all audited viewports.
 - **Horizontal Overflow:** **0 px** across all audited viewports.
 
@@ -343,7 +353,49 @@ All metrics reported below were generated through automated scripts executed in 
 
 ---
 
-## 13. Localisation Architecture (English & Hindi)
+## 13. Qualitative Usability Test Plan
+
+To validate our core UX hypotheses and ensure that the redesigned flow eliminates drop-off cliffs before public rollout, a lightweight 5-participant usability test protocol was specified.
+
+### Participant Profile & Recruitment
+- **Cohort Size:** 5 participants matching our target demographic in non-metro areas.
+- **Target Profiles:** 
+  - *Participant 1 & 2:* First-time earners (ages 21–24), Junior ITI technician / junior sales clerk (Bhopal, Indore), native Hindi speakers.
+  - *Participant 3:* College student (age 20), small monthly savings allowance (Kochi), bilingual Malayalam/English.
+  - *Participant 4:* Operations associate (age 26), cautious saver (Jaipur), English/Hindi bilingual.
+  - *Participant 5:* Non-tech savvy retail worker (age 28), skeptical of online banking (Kanpur).
+- **Hardware & Network Environment:** Tested on participants' own budget Android smartphones [assumed archetypes: Redmi 9A, Realme C21, Samsung Galaxy M04 with 2GB–3GB RAM] over mobile prepaid 4G connections to observe real-world performance under resource constraints.
+
+### Test Structure & Think-Aloud Methodology
+- **Format:** 45-minute moderated 1-on-1 sessions (in-person and remote screen share via low-bandwidth video).
+- **Approach:** Concurrent think-aloud protocol where participants articulate their feelings, hesitations, and expectations as they interact with the screens. Moderators remain neutral and do not assist during task execution.
+
+### Core Test Tasks
+1. **Task 1: Value Proposition & Capital Discovery (Homepage)**
+   - *Prompt:* "You have heard about Sprout from a friend. Explore the website and tell me what the service does, how much money you need to start, and what risks are involved."
+   - *Observation Target:* Does the user notice the 13px first-viewport risk disclaimer? Do they recognize that starting capital is only ₹100?
+2. **Task 2: Intent & Expectation Alignment (Screens 1 & 2)**
+   - *Prompt:* "Begin the signup process and indicate why you want to start investing today."
+   - *Observation Target:* Does Ankur's intro feel welcoming or patronizing? Does the "I'm just curious" option reduce pressure?
+3. **Task 3: Document Readiness & Deferral (Screen 3)**
+   - *Prompt:* "You are about to start identity verification. What documents do you need right now? What would you do if you don't have your physical PAN card with you?"
+   - *Observation Target:* Do users understand why PAN, Aadhaar, and Bank are mandated? Do they notice and comprehend the "Remind me later" action?
+4. **Task 4: Registry Wait State & Reassurance (Screen 4)**
+   - *Prompt:* "Enter a simulated PAN number and proceed with verification."
+   - *Observation Target:* During the simulated 45-second background registry check, observe user reaction. Do they tap frantically, assume the app crashed, or stay calm with Ankur's breathing animation and message?
+5. **Task 5: First Investment Allocation (Screen 5)**
+   - *Prompt:* "Your account is verified. Complete your first investment of ₹100."
+   - *Observation Target:* Do users understand the asset distribution? Does the botanical celebration feel reassuring and respectful?
+
+### Success Metrics & Evaluation Criteria
+- **Unassisted Task Completion Rate:** Target $\ge 80\%$ across all 5 tasks without moderator intervention.
+- **Wait-State Panic Rate:** 0 instances of participant navigating away or force-closing during the 45-second registry verification state.
+- **System Usability Scale (SUS):** Target post-test SUS score $\ge 82/100$ (Grade A, acceptable for financial software).
+- **Subjective Anxiety Rating:** Average anxiety score $\le 2.0$ (on a 1 to 5 scale, where 5 is high anxiety) upon reaching the identity verification step.
+
+---
+
+## 14. Localisation Architecture (English & Hindi)
 
 ### Devanagari Accommodations
 1. **Font Metric Stacks:** Uses system humanist typography with Devanagari companions:
@@ -356,7 +408,7 @@ All metrics reported below were generated through automated scripts executed in 
 
 ---
 
-## 14. Realistic 3-Week Engineering Plan & Cut List
+## 15. Realistic 3-Week Engineering Plan & Cut List
 
 *Resource constraint: 1 Front-End Developer for 3 Weeks.*
 
@@ -397,7 +449,7 @@ WEEK 3: Hardening, Accessibility, QA & Deployment
 
 ---
 
-## 15. Metrics & Experimentation (A/B Testing Plan)
+## 16. Metrics & Experimentation (A/B Testing Plan)
 
 ### Proposed Post-Launch A/B Tests
 1. **Experiment 1: Document Prep Screen vs Direct KYC Entry**  
@@ -416,7 +468,7 @@ WEEK 3: Hardening, Accessibility, QA & Deployment
 
 ---
 
-## 16. Assumptions, Risks & Questions for Stakeholders
+## 17. Assumptions, Risks & Questions for Stakeholders
 
 ### Assumptions Log
 

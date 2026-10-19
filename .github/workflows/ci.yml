@@ -30,5 +30,26 @@ jobs:
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Run Quality Test Suite (Copy Lint, Contrast, Weight, HTML, a11y)
-        run: npm test
+      - name: Run Regulatory Copy & Compliance Linter
+        run: npm run check:copy
+
+      - name: Run Color Token Contrast Audit
+        run: npm run check:contrast
+
+      - name: Run Performance & Asset Weight Budgeting
+        run: npm run check:weight
+
+      - name: Run Semantic HTML Validation
+        run: npm run check:html
+
+      - name: Run Axe-Core Accessibility Evaluation
+        run: npm run check:a11y
+
+      - name: Run Subpath Routing & Network Isolation Verification
+        run: npm run check:subpath
+
+      - name: Run Markdown Link & Image Target Integrity
+        run: npm run check:links
+
+      - name: Run Multi-Viewport Compliance & Ergonomics Matrix
+        run: npm run check:matrix
