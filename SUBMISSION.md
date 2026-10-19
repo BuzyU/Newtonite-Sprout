@@ -22,6 +22,7 @@ All color pairs achieve 100% WCAG AA contrast (18/18 pairs verified mathematical
 
 ### Figma / Interactive Prototype URL
 The interactive prototype is a fully functional, self-contained, responsive coded prototype located in the `/prototype` folder of this repository. When deployed, it runs from root `/prototype` on Vercel or any static host:
+- **GitHub Repository:** [https://github.com/BuzyU/Newtonite-Sprout](https://github.com/BuzyU/Newtonite-Sprout)
 - **Local Path:** `./prototype/index.html` (Homepage) and `./prototype/app/index.html` (5-Screen Onboarding Simulator)
 - **Live Deployment URL:** `[To be updated upon Vercel deployment; see DEPLOY.md for 60-second setup]`
 - **Figma Specification:** See `FIGMA_SPEC.md` for frame dimensions, component token bindings, Auto Layout constraints, and exact UI copy.
