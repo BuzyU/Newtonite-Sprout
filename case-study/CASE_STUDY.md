@@ -74,13 +74,13 @@ The quantitative telemetry reports a 62% drop-off but fails to log drop-off reas
 
 *Hypotheses & Instrumentation Plan:*
 1. **Unprepared Documents:** Users hit the PAN/Aadhaar prompt, don't have cards in hand, exit the app, and forget to return. *Instrumentation:* Log time-on-screen for Screen 3 and track click rate on "Remind me later".
-2. **Registry Latency Mistaken for Crash:** UIDAI/government registry verification taking 30-60 seconds causes users to force-quit. *Instrumentation:* Track exit timestamps against registry response latency.
+2. **Registry Latency Mistaken for Crash:** UIDAI/government registry verification latency [assumed 30–60 seconds based on typical KYC gateway SLAs] causes users to force-quit. *Instrumentation:* Track exit timestamps against registry response latency.
 3. **Low-End Hardware Failure:** Camera crashing during document scan or slow 4G timeouts. *Instrumentation:* Track network socket error codes and device RAM telemetry.
 4. **Distrust of PAN Collection:** Reluctance to share tax IDs on an unfamiliar app. *Instrumentation:* Track click-through on the privacy and regulatory consent disclosures.
 
 ### 3. Device & Connectivity Realities
-- **91% Mobile, 40% on Devices < ₹10,000:** Budget Android handsets (e.g. Redmi 9A, Realme C-series, Samsung M04) operate with 2GB to 3GB RAM and low single-core CPU speeds.
-- **6.2s Average Load on 4G:** Heavy single-page frameworks (React/Vue with 300KB+ runtime bundles) stall main-thread parsing on budget chipsets.
+- **91% Mobile, 40% on Devices < ₹10,000 [Brief Baseline, Assumed Entry Segment]:** Budget Android handsets (working archetype: entry devices with 2GB to 3GB RAM, such as Redmi 9A or Realme C-series [assumed ~₹7,499–₹8,999 segment]) operate with low single-core CPU speeds.
+- **6.2s Average Load on 4G [Brief Baseline]:** Heavy single-page frameworks (React/Vue with 300KB+ runtime bundles) stall main-thread parsing on budget chipsets.
 *Design Response:* Absolute rejection of heavy JavaScript frameworks, client-side hydration, and uncompressed assets.
 
 ### 4. Localisation Demand is Directional ("Many" Prefer Hindi)
@@ -114,19 +114,19 @@ While 65% of respondents stated "Investing feels scary", all 40 participants wer
 
 ### Persona Archetypes Summary
 1. **Rohit Verma (23, Junior ITI Technician, Bhopal) — Assumption 1:**
-   - *Hardware & Context:* Redmi 9A (₹7,499, 2GB RAM) on prepaid 4G. Hindi primary speaker.
+   - *Hardware & Context:* Budget Android [Assumed working archetype: Redmi 9A, ~₹7,499, 2GB RAM] on prepaid 4G. Hindi primary speaker.
    - *Anxiety:* Earns ₹18,000/month; fears digital fraud and believes investing is only for wealthy metro elites.
    - *Drop-off Cliff:* Unexplained loading spinners cause him to believe the app crashed or compromised his data.
    - *Design Response:* Native Hindi toggle, "Keep ready" prep screen, steady wait state mascot, 86.8 KB ultra-lightweight page weight.
 
 2. **Priya Nair (20, College Student, Kochi) — Assumption 2:**
-   - *Hardware & Context:* Realme C21 (₹8,999, 3GB RAM). English and Malayalam speaker.
+   - *Hardware & Context:* Budget Android [Assumed working archetype: Realme C21, ~₹8,999, 3GB RAM]. English and Malayalam speaker.
    - *Anxiety:* Has ₹100–300 saved from monthly pocket money. Intrigued by financial literacy videos but intimidated by jargon.
    - *Drop-off Cliff:* Abrupt demand for PAN and Aadhaar without an explanation of purpose.
    - *Design Response:* Screen 2 "I'm just curious" entry, explicit regulatory consent card, ₹100 pre-selected default.
 
 3. **Ananya Sharma (27, Operations Associate, Jaipur) — Assumption 3:**
-   - *Hardware & Context:* Samsung Galaxy M04 (₹8,499, 3GB RAM). English and Hindi speaker.
+   - *Hardware & Context:* Budget Android [Assumed working archetype: Samsung Galaxy M04, ~₹8,499, 3GB RAM]. English and Hindi speaker.
    - *Anxiety:* Cautious saver; fears sudden penalties or lock-ins preventing her from withdrawing emergency money.
    - *Drop-off Cliff:* Inability to verify whether funds can be liquidated instantly.
    - *Design Response:* Prominent "No minimum lock-in" badge, transparent portfolio breakdown, ₹100 micro-investing.
@@ -154,7 +154,7 @@ To validate whether the Sprout 2.0 interface eradicates the evidenced customer s
    - *Target:* Spontaneous discovery and use of the "Remind me later" permission drawer without abandoning.
 4. **Verification Latency & Error States (Screen 4):**
    - *Prompt:* "Enter your details and press verify. The screen is now loading."
-   - *Target:* Zero participants force-quitting or stating "the app crashed" during the 45-second animated registry check.
+   - *Target:* Zero participants force-quitting or stating "the app crashed" during the animated registry wait state [using an assumed 45-second duration guideline based on typical verification turnaround].
 5. **First Investment Settlement (Screen 5):**
    - *Prompt:* "Review your starting order and complete the action."
    - *Target:* Confidence in order placement without fear of hidden recurring debits.
@@ -174,7 +174,7 @@ To validate whether the Sprout 2.0 interface eradicates the evidenced customer s
 2. **One Job Per Screen**  
    New investors experience cognitive overload when confronted with multi-input forms. Each screen has a single purpose, a clear progress indicator, and an unmistakable primary action.
 3. **Respect for Low-End Hardware**  
-   Design for the user on a ₹7,500 phone with 2GB RAM on an intermittent 4G connection. Every millisecond of latency is an invitation to abandon.
+   Design for the user on an entry-level smartphone [assumed sub-₹10,000 segment with 2GB RAM] on an intermittent 4G connection. Every millisecond of latency is an invitation to abandon.
 4. **Human Guidance Without Condescension**  
    Acknowledge that financial fear is normal. Never blame the user for system errors, failed document lookups, or network drops.
 
@@ -323,19 +323,18 @@ All metrics reported below were generated through automated scripts executed in 
 - Terracotta Error Text (`#9C3218` on `#FDF1EE`): **6.58:1** (WCAG AA)
 
 ### 2. Asset Weight Audit (`tools/weight-check.js`)
-- **Homepage Total Transferred Weight:** **86.8 KB** (88,883 bytes)  
-  *Budget: 1.5 MB limit; Target: 400 KB.* **Passed at 21.7% of target budget.**
-- **Onboarding App Screens Total Weight:** **109.5 KB** (112,130 bytes)  
-  *Budget: 1.5 MB limit.* **Passed at 7.3% of maximum budget.**
+- **Homepage Total Transferred Weight:** **86.8 KB** (88,895 bytes)  
+  *Budget: 1.5 MB limit; Target: 400 KB.* **Passed at 22.2% of target budget.**
+- **Onboarding App Screens Total Weight:** **109.5 KB** (112,095 bytes)  
+  *Budget: 1.5 MB limit.* **Passed at 7.5% of maximum budget.**
 - **External Network Requests:** **0** (Zero CDN calls, zero Google Fonts lookups).
 
-### 3. Automated Accessibility Audit (`tools/a11y-check.js` via Axe-Core)
-- **Homepage Mobile (360px):** **0 violations**
-- **Homepage Desktop (1280px):** **0 violations**
-- **Onboarding App Screens (1 to 5):** **0 violations**
-- **Tap Targets < 44px:** **0** across all viewports (320px, 360px, 390px, 768px, 1280px).
-- **Horizontal Overflow:** **0 px** across all 5 viewports.
-- *Disclaimer:* Automated testing verifies markup and contrast but cannot guarantee full human accessibility. Manual testing with screen readers and keyboard navigation was conducted.
+### 3. Automated Accessibility Audit (`tools/a11y-check.js` & `tools/test-subpath.js`)
+- **Axe-Core Automated WCAG 2.1 AA Checks:** **0 violations** across Mobile Homepage (360px), Desktop Homepage (1280px), and Onboarding Screens (1 to 5).
+- **Automated Scripted Keyboard Navigation:** Validated via headless Playwright Tab-order sequence (`tools/test-subpath.js`), verifying focus ring visibility, logical tab order, and interactive actuation.
+- **Manual Screen-Reader Testing:** *Not conducted.* Automated tools verify markup, DOM hierarchy, and contrast, but cannot replace live testing with assistive technologies (TalkBack, NVDA, VoiceOver) with human participants. This is formally listed under Section 16 "Not verified".
+- **Tap Targets < 44px:** **0** across all audited viewports.
+- **Horizontal Overflow:** **0 px** across all audited viewports.
 
 ### 4. Regulatory Copy Audit (`tools/copy-lint.js`)
 - **Prohibited Marketing Claims Detected:** **0** (Scanned for guarantee/guaranteed, safe/safer, risk-free, assured, sure-shot, no-risk, can't lose, and Hindi सुरक्षित across all HTML, CSS, JS, JSON, and SVG files).
@@ -388,13 +387,13 @@ WEEK 3: Hardening, Accessibility, QA & Deployment
 1. **Cut: Live Market Ticker**  
    *Why:* Real-time websocket data feeds consume battery, increase payload, add compliance risk, and trigger acute anxiety in first-time investors during market dips.
 2. **Cut: Automatic Modal Pop-ups (Marketing's 3 Modals)**  
-   *Why:* Aggressive modals on mobile browsers cause immediate bounce and violate Google interstitial guidelines.
+   *Why:* Aggressive modals on mobile browsers obstruct the primary user path, cause immediate bounce, and frustrate first-time users.
 3. **Cut: Autoplay Video Stream**  
-   *Why:* Would consume 5-10 MB of mobile data on budget plans. Replaced with an 18 KB SVG poster that only loads on user interaction.
+   *Why:* Would consume substantial mobile data [assumed 5–10 MB estimate for an auto-played 720p video on budget mobile data plans]. Replaced with an 18 KB SVG poster that only loads on explicit user interaction.
 4. **Cut: Complex Confetti / Physics Animations**  
    *Why:* Confetti trivializes real financial capital. Replaced with a lightweight, 600ms CSS botanical seedling growth animation.
 5. **Cut: Heavy Third-Party Analytics SDKs during Initial Launch**  
-   *Why:* Prevents main-thread blocking and data leakage. To be replaced with lightweight privacy-first server-side event tracking post-launch.
+   *Why:* Prevents main-thread blocking on budget mobile hardware (assumed working archetype: budget Android with 2GB RAM, e.g. Redmi 9A at ~₹7,499) and data leakage. To be replaced with lightweight privacy-first server-side event tracking post-launch.
 
 ---
 
@@ -426,14 +425,15 @@ WEEK 3: Hardening, Accessibility, QA & Deployment
 | **A1** | Users abandon KYC because they don't have physical documents nearby. | Drop-off might be driven by fear of sharing tax data rather than physical absence. | Run 5-8 drop-off interviews during Week 1 of launch. | Product Design |
 | **A2** | ₹100 is low enough to eliminate first-time deposit hesitation. | Users may perceive ₹100 as "not worth investing" or fear hidden account opening charges. | Test messaging: "Zero opening fees, invest what you spend on tea." | Product Marketing |
 | **A3** | Hindi is the primary regional language required for Tier-2 pilot. | Target demographic in western/southern states might prefer Marathi, Tamil, or Telugu. | Instrument language preference telemetry on app download. | Data Engineering |
-| **A4** | Registry delays average 45-60 seconds. | Government portal outages can exceed 5 minutes, triggering drop-off despite wait state. | Implement asynchronous SMS fallback if wait exceeds 90 seconds. | Lead Developer |
+| **A4** | Registry delays average 45-60 seconds [assumed based on typical KYC gateway SLAs]. | Government portal outages can exceed 5 minutes, triggering drop-off despite wait state. | Implement asynchronous SMS fallback if wait exceeds 90 seconds. | Lead Developer |
 
-### Unverified Compliance Items (Placeholders Requiring Formal Sign-off)
+### Unverified Compliance & Accessibility Items
 1. `[verify with Compliance: Registered with SEBI as Mutual Fund Distributor ARN-XXXXX]`
 2. `[verify with Compliance: Bank-grade 256-bit encryption for all identity documents]`
 3. `[verify with Compliance: Regulated depository partner for automated clearing]`
 4. `[verify with Compliance: Exact risk disclosure wording and scheme document links]`
 5. `[verify with Legal: Explicit Aadhaar e-KYC consent language and privacy notice URL]`
+6. **Manual Screen-Reader Testing:** While automated Axe-core checks (0 violations) and a scripted headless keyboard Tab test (`tools/test-subpath.js`) were executed and verified, manual assistive technology testing with live screen readers (Android TalkBack, Windows NVDA, iOS VoiceOver) with real human subjects has not been conducted.
 
 ### Questions I Would Ask Each Stakeholder
 - **To the CEO:** *"If we prove through user testing that Ankur increases verification completion without diminishing brand prestige, will you support retaining him across product touchpoints?"*

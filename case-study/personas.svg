@@ -14,7 +14,7 @@
 
     <text x="20" y="60" font-family="Charter, serif" font-size="16" font-weight="700" fill="#11382B">Rohit Verma, 23</text>
     <text x="20" y="78" font-family="system-ui, sans-serif" font-size="11" fill="#D97706" font-weight="600">Junior ITI Technician | Bhopal</text>
-    <text x="20" y="96" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Device: Redmi 9A (₹7,499, 2GB RAM)</text>
+    <text x="20" y="96" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Device: Budget Android [Assumed ~₹7,499 segment, 2GB]</text>
     <text x="20" y="112" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Language: Hindi primary, simple English</text>
 
     <line x1="20" y1="125" x2="270" y2="125" stroke="#E5DFD7"/>
@@ -37,7 +37,7 @@
 
     <text x="20" y="60" font-family="Charter, serif" font-size="16" font-weight="700" fill="#11382B">Priya Nair, 20</text>
     <text x="20" y="78" font-family="system-ui, sans-serif" font-size="11" fill="#D97706" font-weight="600">B.Com Final Year | Kochi</text>
-    <text x="20" y="96" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Device: Realme C21 (₹8,999, 3GB RAM)</text>
+    <text x="20" y="96" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Device: Budget Android [Assumed ~₹8,999 segment, 3GB]</text>
     <text x="20" y="112" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Language: English & Malayalam</text>
 
     <line x1="20" y1="125" x2="270" y2="125" stroke="#E5DFD7"/>
@@ -60,7 +60,7 @@
 
     <text x="20" y="60" font-family="Charter, serif" font-size="16" font-weight="700" fill="#11382B">Ananya Sen, 27</text>
     <text x="20" y="78" font-family="system-ui, sans-serif" font-size="11" fill="#D97706" font-weight="600">Customer Support Associate | Jaipur</text>
-    <text x="20" y="96" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Device: Samsung Galaxy M04 (₹8,499)</text>
+    <text x="20" y="96" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Device: Budget Android [Assumed ~₹8,499 segment, 3GB]</text>
     <text x="20" y="112" font-family="system-ui, sans-serif" font-size="11" fill="#55655D">Language: English & Hindi</text>
 
     <line x1="20" y1="125" x2="270" y2="125" stroke="#E5DFD7"/>

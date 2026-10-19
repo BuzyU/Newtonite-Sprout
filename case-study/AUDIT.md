@@ -19,10 +19,10 @@
 | **Mascot (Ankur)** | **PASS** | 6 vector SVG poses, all < 3 KB each | Seedling character appears consistently across web and app; CSS-only micro-animations. |
 | **Compliance Disclosures** | **FAIL (P0)** | Floor: 13px ($\ge 12\text{px}$ pass), but Top: 780px on mobile | Disclaimer was placed below the hero action buttons, falling below the initial viewport on 320px and 360px. |
 | **Prohibited Guarantee Words** | **PASS** | 0 critical violations | No "guaranteed", "risk-free", "sure-shot", or "assured returns" in copy. Only CSS `env(safe-area-inset)`. |
-| **Performance Budget** | **PASS** | Homepage: 86.6 KB, App: 106.5 KB | Budget: 1,500 KB limit, 400 KB target. Achieved ~87 KB total payload (well under target). |
+| **Performance Budget** | **PASS** | Homepage: 86.8 KB, App: 109.5 KB | Budget: 1,500 KB limit, 400 KB target. Achieved ~87 KB total homepage payload (well under target). |
 | **Animation Budget** | **PASS** | Total CSS animations: < 12 KB | Zero Lottie or JavaScript animation runtimes; pure CSS `transform` & `opacity`. |
 | **Feasibility (3-Week / 1 Dev)** | **PASS** | Vanilla HTML, CSS, JS; 0 build step | Standard browser primitives; no complex Webpack/Vite pipeline needed for production. |
-| **Accessibility (WCAG AA Contrast)** | **PASS** | 18/18 pairs pass WCAG AA (100%), 72% AAA | Deep Forest Green (`#11382B`) on White achieves 12.01:1; Body on Cream achieves 14.18:1. |
+| **Accessibility (WCAG AA Contrast)** | **PASS** | 18/18 pairs pass WCAG AA (100%), 72% AAA | Deep Forest Green (`#11382B`) on White achieves 12.92:1; Body on Cream achieves 15.80:1; Primary on White achieves 16.33:1. |
 | **Accessibility (Tap Targets)** | **FAIL (P0)** | 1 target on Homepage < 44px; 7-11 on App frame/controls | Header CTA (32px), language toggle (32px), and desktop simulator controls (38px) under 44px minimum. |
 | **Bilingual Support (EN / HI)** | **PASS** | Instant toggle via JSON dictionary | English-first with instant client-side Hindi translation for Screen 3 and navigation. |
 | **External Dependencies** | **PASS** | 0 external requests | Zero CDNs, zero Google Fonts, zero tracking beacons. 100% self-contained. |
@@ -103,7 +103,7 @@ Attributing the entire 77.5% drop-off solely to "KYC friction" is flawed product
 | **Risk Disclaimer Placement** | **Marketing:** Put the risk disclaimer at the very bottom of the page or in a collapsed accordion so it doesn't scare off first-time investors. | **Compliance:** SEBI/AMFI regulatory mandates require visible risk notices in the first viewport ($\ge 12\text{px}$) without requiring user interaction or scrolling. | **Resolution:** Design a calm, elegant reassurance box inside the hero viewport. Pair the risk disclosure ("Investments can lose value") with an empowering fact ("No lock-in, start with ₹100"). This builds authentic trust rather than hiding risk. |
 | **KYC Friction vs Completion** | **Growth/Product:** Make KYC 1-click; eliminate document warnings and let users invest before uploading PAN/Aadhaar. | **Compliance & Operations:** Unverified accounts cannot legally purchase mutual fund units in India under PMLA regulations. Delayed KYC leads to frozen accounts and high support volume. | **Resolution:** Introduce Screen 3 ("Keep these ready"). Pre-educate users on what is needed before they enter the registry flow. If network or OTP fails, provide explicit humane wait states and offline persistence. |
 | **Copy & Marketing Tone** | **Marketing:** Use high-conversion words like "Guaranteed returns", "Safe wealth growth", "Risk-free starting experience". | **Compliance & UX:** Prohibited by law. Financial instruments carry market risk. Misleading users destroys long-term retention. | **Resolution:** Absolute ban on all guarantee terms. Reframe the value proposition around controllable investor behaviors: starting small (₹100), understanding fund allocation, and learning with zero exit penalties. |
-| **Engineering Payload vs Visuals** | **Marketing/Design:** High-res 3D videos, animated Lottie banners, third-party analytics SDKs, Google Fonts webfonts. | **Engineering:** Budget Android devices (sub-₹10,000) have limited RAM and 3G/4G bandwidth. Budget strictly < 1.5 MB; target < 400 KB. | **Resolution:** 100% SVG vector illustrations, CSS-only keyframe animations respecting `prefers-reduced-motion`, native system font stack with Devanagari fallback. Total transferred payload: 86.6 KB! |
+| **Engineering Payload vs Visuals** | **Marketing/Design:** High-res 3D videos, animated Lottie banners, third-party analytics SDKs, Google Fonts webfonts. | **Engineering:** Budget Android devices [assumed entry segment, sub-₹10,000] have limited RAM and 3G/4G bandwidth. Budget strictly < 1.5 MB; target < 400 KB. | **Resolution:** 100% SVG vector illustrations, CSS-only keyframe animations respecting `prefers-reduced-motion`, native system font stack with Devanagari fallback. Total transferred payload: 86.8 KB (88,895 B)! |
 
 ---
 
@@ -199,6 +199,9 @@ In strict adherence to product honesty rules, the following items cannot be math
    - `[verify with Compliance: Regulated depository partner for automated clearing]`
    - `[verify with Compliance: Exact risk disclosure text and statutory notice placements]`
    - `[verify with Legal: Explicit Aadhaar e-KYC consent language and privacy notice URL]`
+6. **Manual Screen-Reader Testing:**
+   - *Status:* Unverified.
+   - *Reason:* While automated Axe-core checks (0 violations) and a scripted headless keyboard Tab test (`tools/test-subpath.js`) were executed and verified, manual assistive technology testing with live screen readers (Android TalkBack, Windows NVDA, iOS VoiceOver) with real human subjects has not been conducted.
 
 ---
 
@@ -209,13 +212,13 @@ To maintain feasibility for a single front-end developer over a 3-week delivery 
 1. **Cut: Live Market Growth Ticker (Marketing Request)**
    - *Why Cut:* Real-time ticker feeds consume mobile battery, require continuous WebSocket connections, inflate payload, and induce acute panic among first-time investors during normal market dips.
 2. **Cut: Automatic Modal Pop-ups (Marketing Request: 3 Pop-ups)**
-   - *Why Cut:* Aggressive promotional pop-ups on mobile viewports cause immediate user drop-off and trigger Google mobile interstitial search penalties.
+   - *Why Cut:* Aggressive promotional pop-ups on mobile viewports obstruct the primary onboarding flow, cause immediate user drop-off, and frustrate first-time users.
 3. **Cut: Autoplay Video Stream (Marketing Request)**
-   - *Why Cut:* Streaming auto-playing video consumes 5–10 MB of mobile data on prepaid 4G plans. Replaced with an 18 KB SVG poster that only streams media on explicit user tap.
+   - *Why Cut:* Streaming auto-playing video consumes substantial mobile data [assumed 5–10 MB estimate for an auto-played 720p stream on prepaid 4G plans]. Replaced with an 18 KB SVG poster that only streams media on explicit user tap.
 4. **Cut: Casino-Style Confetti & Physics Animations (Growth Request)**
    - *Why Cut:* Gamified confetti trivializes real money and diminishes institutional trust. Replaced with a restrained 600ms CSS botanical seedling growth animation.
 5. **Cut: Third-Party Client-Side Analytics SDKs (Mixpanel/Segment SDKs)**
-   - *Why Cut:* Heavy third-party trackers block the browser main thread on budget hardware (e.g. Redmi 9A with 2GB RAM). Replaced with lightweight, privacy-preserving server-side event pings.
+   - *Why Cut:* Heavy third-party trackers block the browser main thread on budget hardware (assumed working archetype: budget Android with 2GB RAM, e.g. Redmi 9A at ~₹7,499). Replaced with lightweight, privacy-preserving server-side event pings.
 
 ---
 

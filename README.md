@@ -35,8 +35,8 @@
 
 Sprout is a mobile-first micro-investing platform tailored for first-time retail investors in India. It addresses the critical friction points in the initial funnel:
 - **Reconciled Drop-off:** Of 40,000 downloads, **~41% (16,300 users) never reached KYC**, and **14,700 dropped mid-verification**.
-- **Evidence-Based Design:** Replaces blind forms with a dedicated **"Keep these ready"** preparation step and an **honest 45-second wait state**, directly targeting Customer Support's two biggest complaints.
-- **Low-End Hardware Respect:** Engineered without JavaScript frameworks to deliver an **86.8 KB total homepage payload** that loads in &lt; 1 second on ₹7,500 budget smartphones over 4G.
+- **Evidence-Based Design:** Replaces blind forms with a dedicated **"Keep these ready"** preparation step and an **honest wait state** [with an assumed 45-second duration based on typical verification turnaround], directly targeting Customer Support's two biggest complaints.
+- **Low-End Hardware Respect:** Engineered without JavaScript frameworks to deliver an **86.8 KB total homepage payload** that loads in &lt; 1 second on budget entry smartphones [assumed sub-₹10,000 category] over 4G.
 - **Zero-Scroll Regulatory Compliance:** Guarantees that every page with investment content displays an unmissable **13px risk disclaimer** visible in the first viewport without scrolling.
 
 ---
@@ -161,3 +161,4 @@ In accordance with strict honesty rules, the following items cannot be independe
    - `[verify with Compliance: Regulated depository partner for automated clearing]`
    - `[verify with Compliance: Exact risk disclaimer text and statutory notice placements]`
    - `[verify with Legal: Aadhaar e-KYC consent language and privacy notice URL]`
+6. **Manual Screen-Reader Testing:** While automated Axe-Core checks (0 violations) and a scripted headless keyboard Tab test (`tools/test-subpath.js`) were executed and verified, manual assistive technology testing with live screen readers (TalkBack on Android, NVDA on Windows, VoiceOver on iOS) with real human subjects has not been conducted.

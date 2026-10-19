@@ -33,15 +33,17 @@
 - **WCAG AAA Compliance:** 13 / 18 (72%)
 - **Status:** **ALL PASS**
 
-## Key Decisions
+## Key Decisions & Measured Baselines
 
-1. **Brand Primary (#11382B on #FFFFFF): 12.01:1 (WCAG AAA)**
-   Deep ink forest green provides exceptional legibility and trust without resorting to harsh pure black (#000000) or generic tech-blue gradients.
-2. **Body Text (#18221D on #FDFBF7): 14.18:1 (WCAG AAA)**
-   Warm cream background (#FDFBF7) reduces glare and eye fatigue on budget mobile screens under harsh Indian daylight, while dark soot text (#18221D) maintains crisp clarity.
-3. **Secondary (#3F4E46) and Muted (#55655D) Text: >= 4.5:1 (WCAG AA)**
-   All supporting labels, metadata, and disclaimer text strictly exceed the 4.5:1 normal-text requirement.
-4. **Marigold Accent (#D97706 / #92400E):**
-   Bright marigold (#D97706) is reserved for non-text accents, illustrations, and decorative badges. For text and interactive icons on light surfaces, the deeper Amber (#92400E) is used, achieving **5.23:1**, fully passing WCAG AA.
-5. **Terracotta Error (#9C3218): 6.13:1 (WCAG AA)**
-   Muted brick terracotta replaces aggressive neon red. It communicates errors with human clarity without creating panic.
+1. **Brand Primary on Card White (`#11382B` on `#FFFFFF`): 12.92:1 (WCAG AAA)**
+   Deep ink forest green provides exceptional legibility and trust without resorting to harsh pure black (`#000000`) or generic tech-blue gradients.
+2. **Primary Body Text on Cream (`#18221D` on `#FDFBF7`): 15.80:1 (WCAG AAA)**
+   Warm cream background (`#FDFBF7`) reduces glare and eye fatigue on budget mobile screens under harsh Indian daylight, while dark soot text (`#18221D`) maintains crisp clarity.
+3. **Primary Text on Card White (`#18221D` on `#FFFFFF`): 16.33:1 (WCAG AAA)**
+   Card white surfaces ensure maximum contrast for critical data inputs.
+4. **Secondary Text on Cream (`#3F4E46` on `#FDFBF7`): 8.50:1 (WCAG AAA)**
+   Subtitles and roadmap timelines exceed both the 4.5:1 AA standard and 7.0:1 AAA standard.
+5. **Marigold Accent (`#92400E` on `#FFFFFF`): 7.09:1 (WCAG AA)**
+   For text and interactive icons on light surfaces, deep Amber (`#92400E`) is used, fully passing WCAG AA.
+6. **Terracotta Error on Tint (`#9C3218` on `#FDF1EE`): 6.58:1 (WCAG AA)**
+   Muted brick terracotta replaces aggressive neon red, communicating errors with human clarity without creating panic.

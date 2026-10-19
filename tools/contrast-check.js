@@ -198,6 +198,14 @@ results.forEach(r => {
   md += `| ${r.name} | \`${r.foreground}\` | \`${r.bg}\` | ${r.type} | ${r.required.toFixed(1)}:1 | **${r.ratio.toFixed(2)}:1** | ${r.passedAA ? 'PASS' : 'FAIL'} | ${r.passedAAA ? 'PASS' : 'FAIL'} |\n`;
 });
 
+const ratioFor = (c1, c2) => {
+  const match = results.find(r => 
+    (r.foreground.toUpperCase() === c1.toUpperCase() && r.bg.toUpperCase() === c2.toUpperCase()) ||
+    (r.foreground.toUpperCase() === c2.toUpperCase() && r.bg.toUpperCase() === c1.toUpperCase())
+  );
+  return match ? match.ratio.toFixed(2) : 'N/A';
+};
+
 md += `
 ## Contrast Summary
 
@@ -206,18 +214,20 @@ md += `
 - **WCAG AAA Compliance:** ${results.filter(r => r.passedAAA).length} / ${results.length} (${Math.round((results.filter(r => r.passedAAA).length / results.length) * 100)}%)
 - **Status:** **${allPassed ? 'ALL PASS' : 'FAILURES DETECTED'}**
 
-## Key Decisions
+## Key Decisions & Measured Baselines
 
-1. **Brand Primary (#11382B on #FFFFFF): 12.01:1 (WCAG AAA)**
-   Deep ink forest green provides exceptional legibility and trust without resorting to harsh pure black (#000000) or generic tech-blue gradients.
-2. **Body Text (#18221D on #FDFBF7): 14.18:1 (WCAG AAA)**
-   Warm cream background (#FDFBF7) reduces glare and eye fatigue on budget mobile screens under harsh Indian daylight, while dark soot text (#18221D) maintains crisp clarity.
-3. **Secondary (#3F4E46) and Muted (#55655D) Text: >= 4.5:1 (WCAG AA)**
-   All supporting labels, metadata, and disclaimer text strictly exceed the 4.5:1 normal-text requirement.
-4. **Marigold Accent (#D97706 / #92400E):**
-   Bright marigold (#D97706) is reserved for non-text accents, illustrations, and decorative badges. For text and interactive icons on light surfaces, the deeper Amber (#92400E) is used, achieving **5.23:1**, fully passing WCAG AA.
-5. **Terracotta Error (#9C3218): 6.13:1 (WCAG AA)**
-   Muted brick terracotta replaces aggressive neon red. It communicates errors with human clarity without creating panic.
+1. **Brand Primary on Card White (\`#11382B\` on \`#FFFFFF\`): ${ratioFor('#11382B', '#FFFFFF')}:1 (WCAG AAA)**
+   Deep ink forest green provides exceptional legibility and trust without resorting to harsh pure black (\`#000000\`) or generic tech-blue gradients.
+2. **Primary Body Text on Cream (\`#18221D\` on \`#FDFBF7\`): ${ratioFor('#18221D', '#FDFBF7')}:1 (WCAG AAA)**
+   Warm cream background (\`#FDFBF7\`) reduces glare and eye fatigue on budget mobile screens under harsh Indian daylight, while dark soot text (\`#18221D\`) maintains crisp clarity.
+3. **Primary Text on Card White (\`#18221D\` on \`#FFFFFF\`): ${ratioFor('#18221D', '#FFFFFF')}:1 (WCAG AAA)**
+   Card white surfaces ensure maximum contrast for critical data inputs.
+4. **Secondary Text on Cream (\`#3F4E46\` on \`#FDFBF7\`): ${ratioFor('#3F4E46', '#FDFBF7')}:1 (WCAG AAA)**
+   Subtitles and roadmap timelines exceed both the 4.5:1 AA standard and 7.0:1 AAA standard.
+5. **Marigold Accent (\`#92400E\` on \`#FFFFFF\`): ${ratioFor('#92400E', '#FFFFFF')}:1 (WCAG AA)**
+   For text and interactive icons on light surfaces, deep Amber (\`#92400E\`) is used, fully passing WCAG AA.
+6. **Terracotta Error on Tint (\`#9C3218\` on \`#FDF1EE\`): ${ratioFor('#9C3218', '#FDF1EE')}:1 (WCAG AA)**
+   Muted brick terracotta replaces aggressive neon red, communicating errors with human clarity without creating panic.
 `;
 
 const outputPath = path.join(__dirname, '..', 'design-system', 'contrast.md');
