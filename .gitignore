@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Brief PDF (per instructions: "Do not commit the brief PDF (gitignore it)")
+_Sprout 2.pdf
+_Sprout_2.pdf
+*_Sprout*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test artifacts and caches
+.playwright/
+test-results/
