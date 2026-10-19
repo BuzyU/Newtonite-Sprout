@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" fill="none" class="ankur-mascot ankur-reassured" role="img" aria-label="Ankur the Sprout mascot providing steady reassurance">
+  <g id="ankur-root">
+    <!-- Gentle pulse ring behind (for waiting reassurance) -->
+    <circle id="calm-halo" cx="40" cy="45" r="28" stroke="#86EFAC" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+    
+    <!-- Base seed -->
+    <path id="seed-base" d="M26 62C26 55.3726 31.3726 50 38 50H42C48.6274 50 54 55.3726 54 62C54 64.2091 52.2091 66 50 66H30C27.7909 66 26 64.2091 26 62Z" fill="#11382B"/>
+    
+    <!-- Short Stem -->
+    <path id="stem" d="M38 50V36C38 34.8954 38.8954 34 40 34C41.1046 34 42 34.8954 42 36V50H38Z" fill="#11382B"/>
+    
+    <!-- Left Leaf (comforting cupped posture) -->
+    <g id="leaf-left" class="ankur-part-leaf-calm">
+      <path d="M40 36C30 33 22 22 26 13C34 12 40 24 40 36Z" fill="#2E7D32"/>
+      <path d="M38 34C31 27 27 19 28 16" stroke="#A3D9A5" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Right Leaf (supportive tilt) -->
+    <g id="leaf-right" class="ankur-part-leaf-calm">
+      <path d="M40 36C50 33 58 22 54 13C46 12 40 24 40 36Z" fill="#4CAF50"/>
+      <path d="M42 34C49 27 53 19 52 16" stroke="#C8E6C9" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Face (serene, peaceful eyes, gentle reassured smile) -->
+    <g id="face">
+      <!-- Serene closed/smiling crescent eyes -->
+      <path id="eye-left" d="M33 57C34 55.5 36 55.5 37 57" stroke="#FDFBF7" stroke-width="1.5" stroke-linecap="round"/>
+      <path id="eye-right" d="M43 57C44 55.5 46 55.5 47 57" stroke="#FDFBF7" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Soft cheeks -->
+      <circle id="cheek-left" cx="31" cy="60" r="1.8" fill="#D97706" opacity="0.6"/>
+      <circle id="cheek-right" cx="49" cy="60" r="1.8" fill="#D97706" opacity="0.6"/>
+      <!-- Warm steady smile -->
+      <path id="mouth" d="M37 60.5C39 62.5 41 62.5 43 60.5" stroke="#FDFBF7" stroke-width="1.3" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

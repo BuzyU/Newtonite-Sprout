@@ -1,0 +1,741 @@
+/**
+ * Sprout 2.0 - Homepage Stylesheet
+ * Mobile-first responsive styling: 320px, 360px, 390px, 768px, 1280px.
+ * Zero external requests, CSS-only transitions, high-contrast accessible design.
+ */
+
+/* Layout Shell */
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-cream-bg);
+  color: var(--color-text-primary);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(253, 251, 247, 0.95);
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding: 0.75rem 1rem;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-logo {
+  height: 32px;
+  width: auto;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-links-desktop {
+  display: none;
+}
+
+.btn-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: var(--weight-medium);
+  color: var(--color-forest-primary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-white);
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.btn-lang:hover {
+  background-color: var(--color-cream-surface);
+  border-color: var(--color-forest-primary);
+}
+
+.header-cta {
+  display: none;
+}
+
+/* Hero First Viewport Section */
+.hero-section {
+  padding: 1.25rem 1rem 1rem;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-mascot-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--color-cream-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 0.85rem 0.35rem 0.5rem;
+  width: fit-content;
+}
+
+.hero-mascot-img {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  animation: ankur-gentle-sway 3s ease-in-out infinite;
+}
+
+@keyframes ankur-gentle-sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.hero-badge-text {
+  font-size: 0.875rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-forest-primary);
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  line-height: var(--leading-tight);
+  color: var(--color-forest-primary);
+  letter-spacing: -0.02em;
+}
+
+.hero-subline {
+  font-size: var(--text-body-lead);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+  max-width: 540px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-forest-primary);
+  color: var(--color-surface-white);
+  font-size: 1rem;
+  font-weight: var(--weight-semibold);
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-full);
+  min-height: var(--touch-target-min);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-forest-light);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: var(--color-forest-primary);
+  font-size: 0.9375rem;
+  font-weight: var(--weight-medium);
+  padding: 0.6rem 1rem;
+  min-height: var(--touch-target-min);
+}
+
+.btn-secondary:hover {
+  text-decoration: underline;
+}
+
+/* Regulatory Disclaimer Component (Strictly >= 12px, visible without scrolling) */
+.disclaimer-box {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-subtle);
+  border-left: 3px solid var(--color-forest-primary);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.85rem;
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.disclaimer-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-text-muted);
+}
+
+.disclaimer-text {
+  font-size: var(--text-disclaimer); /* 13px - strictly >= 12px requirement */
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+}
+
+/* Sections Common */
+.section {
+  padding: 3rem 1rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  line-height: var(--leading-snug);
+  color: var(--color-forest-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+/* Section 2: Reassurance Points */
+.reassurance-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.reassurance-card {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reassurance-illus {
+  width: 64px;
+  height: 64px;
+}
+
+.reassurance-card h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  color: var(--color-forest-primary);
+}
+
+.reassurance-card p {
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+/* Section 3: Step-by-Step Vertical Journey */
+.journey-stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.journey-step-item {
+  display: flex;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.journey-step-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 19px;
+  width: 2px;
+  height: calc(100% - 10px);
+  background-color: var(--color-border-default);
+}
+
+.step-number-bubble {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-forest-primary);
+  color: var(--color-surface-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--weight-bold);
+  font-size: 1rem;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.step-details-card {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  flex-grow: 1;
+}
+
+.step-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.step-title {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  color: var(--color-forest-primary);
+  font-weight: var(--weight-semibold);
+}
+
+.step-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-marigold-dark);
+  background-color: var(--color-marigold-subtle);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.step-desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+/* Section 4: Illustrative Example */
+.example-box {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.badge-example {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--color-cream-surface);
+  border: 1px solid var(--color-border-default);
+  color: var(--color-forest-primary);
+  font-size: 0.8125rem;
+  font-weight: var(--weight-semibold);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.example-breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.breakdown-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-cream-bg);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+}
+
+.breakdown-label {
+  color: var(--color-text-primary);
+  font-weight: var(--weight-medium);
+}
+
+.breakdown-val {
+  font-weight: var(--weight-bold);
+  color: var(--color-forest-primary);
+}
+
+/* Section 5: Trust & Regulatory Placeholders */
+.trust-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem;
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.trust-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-forest-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.trust-text {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+/* Section 6: Native Details FAQ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.faq-summary {
+  padding: 1.1rem 1.25rem;
+  font-size: 1rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-forest-primary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  min-height: var(--touch-target-min);
+}
+
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-chevron {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-fast);
+}
+
+.faq-item[open] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 1.25rem 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* Section 7: Final CTA & Quiet Referral Strip */
+.final-cta-box {
+  background-color: var(--color-forest-primary);
+  color: var(--color-surface-white);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.final-cta-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  color: var(--color-surface-white);
+}
+
+.final-cta-desc {
+  font-size: var(--text-body);
+  color: #D1E0D7;
+  max-width: 500px;
+}
+
+.btn-cta-light {
+  background-color: var(--color-surface-white);
+  color: var(--color-forest-primary);
+  font-weight: var(--weight-bold);
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-full);
+  min-height: var(--touch-target-min);
+  box-shadow: var(--shadow-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-cta-light:hover {
+  background-color: var(--color-cream-surface);
+}
+
+.referral-strip {
+  background-color: var(--color-marigold-subtle);
+  border: 1px solid #FDE68A;
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.referral-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-marigold-dark);
+  flex-shrink: 0;
+}
+
+.referral-text {
+  font-size: 0.875rem;
+  color: var(--color-marigold-dark);
+  font-weight: var(--weight-medium);
+}
+
+/* Video Component (Marketing compromise: poster image, click to load, no autoplay) */
+.video-preview-card {
+  margin-top: 2rem;
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.video-poster-btn {
+  position: relative;
+  width: 100%;
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.video-poster-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.video-caption {
+  padding: 0.85rem 1rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+/* Sticky Bottom Mobile CTA (Does NOT cover disclaimer or content) */
+.mobile-sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(253, 251, 247, 0.98);
+  border-top: 1px solid var(--color-border-subtle);
+  padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sticky-text {
+  font-size: 0.875rem;
+}
+
+.sticky-label {
+  font-weight: var(--weight-semibold);
+  color: var(--color-forest-primary);
+  display: block;
+}
+
+.sticky-note {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Site Footer */
+.site-footer {
+  background-color: #F3EFEA;
+  border-top: 1px solid var(--color-border-subtle);
+  padding: 2.5rem 1rem 5.5rem; /* bottom padding clears mobile sticky CTA */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-disclaimer-full {
+  font-size: var(--text-disclaimer); /* 13px >= 12px */
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+  padding: 1rem;
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.assignment-badge {
+  font-weight: var(--weight-semibold);
+  color: var(--color-forest-primary);
+}
+
+/* Desktop Breakpoints (768px and 1280px) */
+@media (min-width: 768px) {
+  .site-header {
+    padding: 1rem 2rem;
+  }
+
+  .nav-links-desktop {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.9375rem;
+    font-weight: var(--weight-medium);
+    color: var(--color-text-secondary);
+  }
+
+  .nav-link:hover {
+    color: var(--color-forest-primary);
+  }
+
+  .header-cta {
+    display: inline-flex;
+  }
+
+  .hero-section {
+    padding: 3.5rem 2rem 2.5rem;
+    min-height: 80vh;
+  }
+
+  .hero-grid-desktop {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .reassurance-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mobile-sticky-cta {
+    display: none; /* Hide sticky bar on desktop */
+  }
+
+  .site-footer {
+    padding-bottom: 2.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-section {
+    padding: 4.5rem 2rem 3rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+}

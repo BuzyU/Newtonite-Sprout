@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none" role="img" aria-label="Illustration of seeing what you own transparently">
+  <circle cx="60" cy="60" r="54" fill="#F6F1EA"/>
+  <!-- Magnifying glass / Inspection shield -->
+  <rect x="34" y="32" width="52" height="56" rx="6" fill="#FFFFFF" stroke="#D1C9BE" stroke-width="2"/>
+  <!-- Asset division lines -->
+  <rect x="42" y="42" width="24" height="6" rx="2" fill="#11382B"/>
+  <rect x="42" y="52" width="36" height="4" rx="2" fill="#E5DFD7"/>
+  <rect x="42" y="60" width="30" height="4" rx="2" fill="#E5DFD7"/>
+  <rect x="42" y="68" width="20" height="4" rx="2" fill="#E5DFD7"/>
+  <!-- Verified check badge -->
+  <circle cx="76" cy="45" r="9" fill="#166534"/>
+  <path d="M72 45L75 48L80 43" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

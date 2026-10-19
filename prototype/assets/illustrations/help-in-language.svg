@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none" role="img" aria-label="Illustration of multilingual language support in English and Hindi">
+  <circle cx="60" cy="60" r="54" fill="#F6F1EA"/>
+  <!-- Speech bubble 1 (English) -->
+  <rect x="28" y="34" width="42" height="30" rx="6" fill="#11382B"/>
+  <path d="M42 64L38 72L48 64Z" fill="#11382B"/>
+  <text x="49" y="54" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FDFBF7" text-anchor="middle">EN</text>
+  <!-- Speech bubble 2 (Hindi Devanagari) -->
+  <rect x="52" y="52" width="42" height="30" rx="6" fill="#FFFFFF" stroke="#11382B" stroke-width="2"/>
+  <path d="M78 82L82 90L72 82Z" fill="#FFFFFF"/>
+  <path d="M78 82L82 90L72 82Z" stroke="#11382B" stroke-width="2"/>
+  <text x="73" y="73" font-family="'Noto Sans Devanagari', 'Mukta', system-ui, sans-serif" font-size="15" font-weight="700" fill="#11382B" text-anchor="middle">हिं</text>
+</svg>

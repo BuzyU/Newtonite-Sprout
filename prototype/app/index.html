@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Sprout Onboarding - 5-Step Investor Journey Prototype</title>
+  <meta name="description" content="Sprout first-time investor onboarding flow in a 360x800 viewport with comprehensive state switcher.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <div class="app-simulator-layout">
+    <!-- Top Simulator Toolbar -->
+    <header class="simulator-top-bar" role="banner">
+      <div class="top-bar-left">
+        <a href="../index.html" class="back-to-site-link" aria-label="Return to Sprout Homepage">
+          <img src="../assets/icons/arrow-right.svg" alt="" width="16" height="16" style="transform: rotate(180deg);" aria-hidden="true">
+          <span>Back to Homepage</span>
+        </a>
+        <h1 class="simulator-title">Sprout Onboarding Prototype (360x800 Mobile Viewport)</h1>
+      </div>
+      <div style="font-size: 0.8125rem; color: var(--color-text-secondary);">
+        Interactive states testing suite for design & code review
+      </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="simulator-body" role="main">
+      <!-- 360x800 Mobile Phone Shell -->
+      <section class="phone-frame" aria-label="Sprout Mobile App Experience">
+        <!-- Phone Status Bar -->
+        <div class="phone-status-bar" aria-hidden="true">
+          <span>09:41</span>
+          <div class="status-camera-notch"></div>
+          <span>4G 92%</span>
+        </div>
+
+        <!-- In-Screen App Navigation Header with Back and Stepper -->
+        <nav class="app-nav-header" aria-label="Onboarding Progress">
+          <button type="button" class="app-back-btn" id="app-back-btn" aria-label="Go back to previous screen">
+            <img src="../assets/icons/arrow-right.svg" alt="" width="16" height="16" style="transform: rotate(180deg);" aria-hidden="true">
+            <span>Back</span>
+          </button>
+
+          <div class="stepper-indicator" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="5" aria-label="Step progress">
+            <div class="step-pill active" data-step="1"></div>
+            <div class="step-pill" data-step="2"></div>
+            <div class="step-pill" data-step="3"></div>
+            <div class="step-pill" data-step="4"></div>
+            <div class="step-pill" data-step="5"></div>
+            <span class="step-counter-text" id="step-counter-text">1/5</span>
+          </div>
+
+          <!-- Language toggle on app header -->
+          <button type="button" class="btn-lang app-lang-toggle" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; min-height: 32px;" aria-label="Toggle language">
+            <span data-i18n="nav.langToggle">हिंदी</span>
+          </button>
+        </nav>
+
+        <!-- Simulated Context Banners -->
+        <div id="slow-network-banner" class="state-banner warning" role="status">
+          <img src="../assets/icons/clock.svg" alt="" width="16" height="16" style="flex-shrink: 0;" aria-hidden="true">
+          <span>Slow 4G connection detected. We have reduced data usage and saved your session.</span>
+        </div>
+
+        <div id="offline-banner" class="state-banner info" role="status">
+          <img src="../assets/icons/lock.svg" alt="" width="16" height="16" style="flex-shrink: 0;" aria-hidden="true">
+          <div>
+            <strong data-i18n="app.screen4.offlineTitle">You're offline</strong>
+            <p data-i18n="app.screen4.offlineDesc">Your progress has been saved securely on your device. We will automatically reconnect when your signal returns.</p>
+          </div>
+        </div>
+
+        <!-- Scrollable Screen Content Area -->
+        <div class="screen-scroll-container">
+          <!-- ================= SCREEN 1: WELCOME ================= -->
+          <section class="onboarding-screen active" data-screen="1" aria-labelledby="screen1-heading">
+            <div class="screen-header-block">
+              <img src="../assets/mascot/ankur-waving.svg" alt="Ankur the Sprout mascot waving hello" class="screen-mascot" width="64" height="64">
+              <div>
+                <h2 id="screen1-heading" class="screen-heading" data-i18n="app.screen1.greeting">Hi, I'm Ankur</h2>
+                <p class="screen-subtext" data-i18n="app.screen1.intro">I'm your guide at Sprout. We help you take your very first step in investing, starting with just ₹100.</p>
+              </div>
+            </div>
+
+            <!-- What happens next card -->
+            <div style="background: var(--color-surface-white); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); padding: 1rem;">
+              <h3 style="font-size: 0.875rem; font-weight: var(--weight-semibold); color: var(--color-forest-primary); margin-bottom: 0.75rem;" data-i18n="app.screen1.whatsNextTitle">What happens next:</h3>
+              <ol style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.8125rem; color: var(--color-text-secondary);">
+                <li data-i18n="app.screen1.step1">1. Tell us your goal (~1 min)</li>
+                <li data-i18n="app.screen1.step2">2. Check your documents (~2 mins)</li>
+                <li data-i18n="app.screen1.step3">3. Simple identity check (~3 mins)</li>
+                <li data-i18n="app.screen1.step4">4. Invest your first ₹100 (~1 min)</li>
+              </ol>
+              <div style="margin-top: 0.75rem; padding-top: 0.5rem; border-top: 1px solid var(--color-border-subtle); display: flex; align-items: center; gap: 0.35rem; font-size: 0.75rem; font-weight: var(--weight-semibold); color: var(--color-marigold-dark);">
+                <img src="../assets/icons/clock.svg" alt="" width="14" height="14" aria-hidden="true">
+                <span data-i18n="app.screen1.timeEstimate">Total time: about 7 minutes</span>
+              </div>
+            </div>
+
+            <!-- Mandatory First-Viewport Risk Disclaimer (>= 12px) -->
+            <div class="disclaimer-box" role="note" style="margin-top: 0.25rem;">
+              <img src="../assets/icons/shield.svg" alt="" class="disclaimer-icon" width="16" height="16" aria-hidden="true">
+              <p class="disclaimer-text" data-i18n="app.screen1.disclaimer">
+                Investments can lose value. No minimum lock-in. [verify with Compliance]
+              </p>
+            </div>
+
+            <div class="phone-bottom-actions">
+              <button type="button" class="btn-primary" data-action="next-screen" data-i18n="app.screen1.cta">Get Started</button>
+            </div>
+          </section>
+
+          <!-- ================= SCREEN 2: GOALS ================= -->
+          <section class="onboarding-screen" data-screen="2" aria-labelledby="screen2-heading">
+            <div class="screen-header-block">
+              <img src="../assets/mascot/ankur-thinking.svg" alt="Ankur the Sprout mascot thinking thoughtfully" class="screen-mascot" width="64" height="64">
+              <div>
+                <h2 id="screen2-heading" class="screen-heading" data-i18n="app.screen2.heading">What brings you here?</h2>
+                <p class="screen-subtext" data-i18n="app.screen2.subheading">Pick the option closest to your mind right now. You can change this anytime.</p>
+              </div>
+            </div>
+
+            <!-- Goal Options with Native Radios for Keyboard Accessibility -->
+            <fieldset class="card-option-group" style="border: none;">
+              <legend class="sr-only" style="position: absolute; width: 1px; height: 1px; overflow: hidden;">Select your primary financial intent</legend>
+
+              <label class="option-card-label">
+                <input type="radio" name="invest-goal" value="rainy-day" class="option-radio-input" checked>
+                <div class="option-text-wrapper">
+                  <span class="option-main-title" data-i18n="app.screen2.option1">Building a rainy day fund</span>
+                  <span class="option-subtitle" data-i18n="app.screen2.option1Sub">A small safety cushion for unexpected needs</span>
+                </div>
+              </label>
+
+              <label class="option-card-label">
+                <input type="radio" name="invest-goal" value="learning" class="option-radio-input">
+                <div class="option-text-wrapper">
+                  <span class="option-main-title" data-i18n="app.screen2.option2">Learning how investing works</span>
+                  <span class="option-subtitle" data-i18n="app.screen2.option2Sub">Hands-on experience with ₹100</span>
+                </div>
+              </label>
+
+              <label class="option-card-label">
+                <input type="radio" name="invest-goal" value="saving-goal" class="option-radio-input">
+                <div class="option-text-wrapper">
+                  <span class="option-main-title" data-i18n="app.screen2.option3">Saving for a specific goal</span>
+                  <span class="option-subtitle" data-i18n="app.screen2.option3Sub">A phone, course, or upcoming purchase</span>
+                </div>
+              </label>
+
+              <label class="option-card-label">
+                <input type="radio" name="invest-goal" value="curious" class="option-radio-input">
+                <div class="option-text-wrapper">
+                  <span class="option-main-title" data-i18n="app.screen2.option4">I'm just curious</span>
+                  <span class="option-subtitle" data-i18n="app.screen2.option4Sub">Exploring before making any decisions</span>
+                </div>
+              </label>
+            </fieldset>
+
+            <!-- Gentle Reassurance line (Normalising hesitation) -->
+            <div style="background: var(--color-cream-surface); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 0.65rem 0.75rem; font-size: 0.8125rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+              <img src="../assets/icons/leaf.svg" alt="" width="16" height="16" style="color: var(--color-forest-primary); flex-shrink: 0;" aria-hidden="true">
+              <span data-i18n="app.screen2.reassurance">It is completely normal to feel unsure when starting. We take things one step at a time.</span>
+            </div>
+
+            <div class="phone-bottom-actions">
+              <button type="button" class="btn-primary" data-action="next-screen" data-i18n="app.screen2.cta">Continue</button>
+            </div>
+          </section>
+
+          <!-- ================= SCREEN 3: KEEP THESE READY ================= -->
+          <section class="onboarding-screen" data-screen="3" aria-labelledby="screen3-heading">
+            <div class="screen-header-block">
+              <img src="../assets/mascot/ankur-checklist.svg" alt="Ankur holding a checklist" class="screen-mascot" width="64" height="64">
+              <div>
+                <h2 id="screen3-heading" class="screen-heading" data-i18n="app.screen3.heading">Keep these ready</h2>
+                <p class="screen-subtext" data-i18n="app.screen3.subheading">Identity verification is mandated by financial regulations. Having these three items nearby makes the process smooth.</p>
+              </div>
+            </div>
+
+            <div style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.75rem; font-weight: var(--weight-semibold); color: var(--color-marigold-dark); background: var(--color-marigold-subtle); padding: 0.25rem 0.6rem; border-radius: var(--radius-full); width: fit-content;">
+              <img src="../assets/icons/clock.svg" alt="" width="14" height="14" aria-hidden="true">
+              <span data-i18n="app.screen3.timeTag">Takes about 5 minutes</span>
+            </div>
+
+            <!-- The 3 Evidenced Document Needs -->
+            <div class="checklist-container">
+              <div class="checklist-card">
+                <div class="checklist-icon-wrap" aria-hidden="true">
+                  <img src="../assets/icons/user.svg" alt="" width="18" height="18">
+                </div>
+                <div>
+                  <h3 class="checklist-title" data-i18n="app.screen3.item1Title">PAN Card</h3>
+                  <p class="checklist-desc" data-i18n="app.screen3.item1Desc">Required by income tax rules to create your investment portfolio.</p>
+                </div>
+              </div>
+
+              <div class="checklist-card">
+                <div class="checklist-icon-wrap" aria-hidden="true">
+                  <img src="../assets/icons/document.svg" alt="" width="18" height="18">
+                </div>
+                <div>
+                  <h3 class="checklist-title" data-i18n="app.screen3.item2Title">Mobile linked to Aadhaar</h3>
+                  <p class="checklist-desc" data-i18n="app.screen3.item2Desc">You will receive a 6-digit OTP from the government UIDAI portal.</p>
+                </div>
+              </div>
+
+              <div class="checklist-card">
+                <div class="checklist-icon-wrap" aria-hidden="true">
+                  <img src="../assets/icons/building.svg" alt="" width="18" height="18">
+                </div>
+                <div>
+                  <h3 class="checklist-title" data-i18n="app.screen3.item3Title">Bank Account Details</h3>
+                  <p class="checklist-desc" data-i18n="app.screen3.item3Desc">Account number and IFSC to link where your ₹100 investments and withdrawals flow.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="phone-bottom-actions">
+              <button type="button" class="btn-primary" data-action="next-screen" data-i18n="app.screen3.ctaReady">I have them ready</button>
+              <button type="button" class="btn-secondary" id="btn-remind-later" data-i18n="app.screen3.ctaLater">Remind me later</button>
+            </div>
+          </section>
+
+          <!-- ================= SCREEN 4: VERIFICATION ================= -->
+          <section class="onboarding-screen" data-screen="4" aria-labelledby="screen4-heading">
+            <div class="sub-stepper" aria-label="Verification sub-steps">
+              <div class="sub-step-node completed">
+                <span class="sub-step-dot">✓</span>
+                <span data-i18n="app.screen4.step1">Phone & OTP</span>
+              </div>
+              <div class="sub-step-node active">
+                <span class="sub-step-dot">2</span>
+                <span data-i18n="app.screen4.step2">PAN Details</span>
+              </div>
+              <div class="sub-step-node">
+                <span class="sub-step-dot">3</span>
+                <span data-i18n="app.screen4.step3">Aadhaar e-KYC</span>
+              </div>
+            </div>
+
+            <!-- Error Banner (Error State) -->
+            <div id="error-banner" class="state-banner warning" role="alert">
+              <img src="../assets/icons/warning.svg" alt="" width="18" height="18" style="flex-shrink: 0;" aria-hidden="true">
+              <div>
+                <strong data-i18n="app.screen4.errorTitle">We couldn't verify this PAN</strong>
+                <p data-i18n="app.screen4.errorDesc">The name or number entered did not match official records. Please double-check for typos or ensure the name matches your tax document.</p>
+                <a href="#help" style="text-decoration: underline; font-weight: var(--weight-semibold); display: inline-block; margin-top: 0.25rem;" data-i18n="app.screen4.errorHelp">Need help? Contact support via chat.</a>
+              </div>
+            </div>
+
+            <!-- Success Banner (Success State) -->
+            <div id="success-banner" class="state-banner success" role="status">
+              <img src="../assets/icons/check.svg" alt="" width="18" height="18" style="flex-shrink: 0;" aria-hidden="true">
+              <div>
+                <strong data-i18n="app.screen4.successTitle">Verification complete</strong>
+                <p data-i18n="app.screen4.successDesc">Your investment account has been verified and registered. You are ready to invest.</p>
+              </div>
+            </div>
+
+            <!-- Default KYC Input Form View -->
+            <div id="kyc-default-state" style="display: flex; flex-direction: column; gap: 1rem;">
+              <div>
+                <h2 id="screen4-heading" class="screen-heading" data-i18n="app.screen4.heading">Verification</h2>
+                <p class="screen-subtext">Step 2: Enter your 10-character Permanent Account Number (PAN).</p>
+              </div>
+
+              <!-- Explicit Consent & Purpose Block Before Data Collection -->
+              <div class="consent-card" role="region" aria-label="Consent and Privacy Information">
+                <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: var(--weight-bold); color: var(--color-forest-primary);">
+                  <img src="../assets/icons/shield.svg" alt="" width="16" height="16" aria-hidden="true">
+                  <span data-i18n="app.screen4.consentTitle">Why we collect this information</span>
+                </div>
+                <p data-i18n="app.screen4.consentBody">
+                  Financial regulations require KYC verification to confirm your identity and prevent financial fraud. Your records are encrypted with 256-bit security and never shared with advertisers. [verify with Compliance/Legal]
+                </p>
+                <label class="consent-label">
+                  <input type="checkbox" class="consent-checkbox" id="kyc-consent-cb" checked>
+                  <span data-i18n="app.screen4.consentCheckbox">I authorize Sprout to fetch my verification records in compliance with SEBI and UIDAI guidelines.</span>
+                </label>
+                <a href="#privacy" style="color: var(--color-forest-primary); text-decoration: underline; font-weight: var(--weight-semibold);" data-i18n="app.screen4.privacyLink">Read Privacy Notice</a>
+              </div>
+
+              <!-- Input Form -->
+              <div class="form-field">
+                <label for="pan-input" class="field-label" data-i18n="app.screen4.panLabel">PAN Number</label>
+                <input type="text" id="pan-input" class="text-input" placeholder="e.g. ABCDE1234F" maxlength="10" autocomplete="off" style="text-transform: uppercase;">
+              </div>
+
+              <!-- OTP Delay Helper Card (Visible in OTP delay state) -->
+              <div id="otp-delay-card" style="display: none; background: var(--color-cream-surface); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 0.75rem;">
+                <p style="font-size: 0.8125rem; font-weight: var(--weight-semibold); color: var(--color-forest-primary); margin-bottom: 0.35rem;" data-i18n="app.screen4.otpDelayNotice">OTP taking longer than usual?</p>
+                <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.75rem;">
+                  <button type="button" style="text-align: left; color: var(--color-text-secondary); cursor: pointer;" data-i18n="app.screen4.resendOtp">Resend OTP (available in 24s)</button>
+                  <button type="button" style="text-align: left; color: var(--color-forest-primary); font-weight: var(--weight-semibold); cursor: pointer;" data-i18n="app.screen4.otpAlternative">Receive OTP via WhatsApp or Call</button>
+                </div>
+              </div>
+
+              <div class="phone-bottom-actions">
+                <button type="button" class="btn-primary" data-action="next-screen" data-i18n="app.screen4.ctaVerify">Verify & Continue</button>
+              </div>
+            </div>
+
+            <!-- In-Progress Wait State View (Addresses Support Complaint: "I thought it crashed") -->
+            <div id="kyc-wait-state" style="display: none; flex-direction: column; align-items: center; text-align: center; gap: 1.25rem; padding: 1.5rem 0.5rem;" role="status" aria-live="polite">
+              <img src="../assets/mascot/ankur-reassured.svg" alt="Ankur the Sprout mascot providing steady reassurance" width="88" height="88" style="animation: ankur-gentle-sway 2.5s ease-in-out infinite;">
+
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--color-forest-primary); margin-bottom: 0.35rem;" data-i18n="app.screen4.waitTitle">Checking official records...</h3>
+                <p style="font-size: 0.8125rem; color: var(--color-text-secondary); max-width: 280px; margin: 0 auto;" data-i18n="app.screen4.waitDesc">
+                  Connecting securely with the verification registry. This typically takes about 45 seconds.
+                </p>
+              </div>
+
+              <!-- Animated high-contrast progress bar -->
+              <div style="width: 100%; max-width: 260px; height: 8px; background: var(--color-border-subtle); border-radius: var(--radius-full); overflow: hidden; position: relative;">
+                <div style="width: 65%; height: 100%; background: var(--color-forest-primary); border-radius: var(--radius-full); transition: width 0.4s ease;"></div>
+              </div>
+
+              <!-- Honest reassurance: you do not have to stare; we'll notify you -->
+              <div style="background: var(--color-surface-white); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 0.85rem; font-size: 0.75rem; color: var(--color-text-secondary); line-height: 1.45; text-align: left;">
+                <strong style="color: var(--color-forest-primary); display: block; margin-bottom: 0.25rem;">Active Registry Connection</strong>
+                <span data-i18n="app.screen4.waitNote">You do not need to stare at this screen. If the agency registry is slow, we will save your progress and notify you via SMS when complete.</span>
+              </div>
+
+              <button type="button" class="btn-secondary" style="font-size: 0.8125rem;" data-action="next-screen">
+                Simulate Registry Verified (Next) →
+              </button>
+            </div>
+          </section>
+
+          <!-- ================= SCREEN 5: FIRST ₹100 ================= -->
+          <section class="onboarding-screen" data-screen="5" aria-labelledby="screen5-heading">
+            <div id="screen5-form" style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="screen-header-block">
+                <img src="../assets/mascot/ankur-celebrating.svg" alt="Ankur celebrating" class="screen-mascot" width="64" height="64">
+                <div>
+                  <h2 id="screen5-heading" class="screen-heading" data-i18n="app.screen5.heading">Your first ₹100</h2>
+                  <p class="screen-subtext" data-i18n="app.screen5.subheading">Your money is allocated into a diversified basket of top Indian enterprises.</p>
+                </div>
+              </div>
+
+              <!-- Amount Selector -->
+              <div class="form-field">
+                <label for="custom-amount-input" class="field-label" data-i18n="app.screen5.amountLabel">Choose your starting amount</label>
+                <div class="amount-selector-grid">
+                  <button type="button" class="amount-btn selected" data-amount="100">₹100</button>
+                  <button type="button" class="amount-btn" data-amount="250">₹250</button>
+                  <button type="button" class="amount-btn" data-amount="500">₹500</button>
+                </div>
+                <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-size: 0.8125rem; color: var(--color-text-muted);">Custom:</span>
+                  <input type="number" id="custom-amount-input" class="text-input" value="100" min="100" step="50" style="padding: 0.4rem 0.65rem; font-size: 0.875rem;" aria-label="Custom starting investment amount in rupees">
+                </div>
+              </div>
+
+              <!-- Real Risk in Plain Language -->
+              <div style="background: var(--color-surface-white); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 0.75rem; font-size: 0.75rem; color: var(--color-text-secondary); line-height: 1.45;">
+                <strong style="color: var(--color-forest-primary); display: block; margin-bottom: 0.25rem;">Market Understanding</strong>
+                <span data-i18n="app.screen5.riskWarning">Market investments fluctuate. Your account balance can rise or fall with market movements. [verify with Compliance]</span>
+              </div>
+
+              <!-- Mandatory Risk Disclaimer Visible Without Scrolling (>= 12px) -->
+              <div class="disclaimer-box" role="note" style="margin-top: 0;">
+                <img src="../assets/icons/shield.svg" alt="" class="disclaimer-icon" width="16" height="16" aria-hidden="true">
+                <p class="disclaimer-text" data-i18n="app.screen5.disclaimer">
+                  Investments are subject to market risk and can lose value. [verify with Compliance]
+                </p>
+              </div>
+
+              <div class="phone-bottom-actions">
+                <button type="submit" class="btn-primary" id="invest-confirm-btn" data-i18n="app.screen5.ctaInvest">Confirm and Invest ₹100</button>
+              </div>
+            </div>
+
+            <!-- Post-Investment Restrained CSS-Only Celebration -->
+            <div id="screen5-celebration" class="celebration-box" role="status">
+              <img src="../assets/mascot/ankur-celebrating.svg" alt="Ankur celebrating your first step" width="80" height="80">
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--color-forest-primary);" data-i18n="app.screen5.celebrationTitle">Your first step is taken</h3>
+                <p style="font-size: 0.8125rem; color: var(--color-text-secondary); max-width: 260px; margin: 0.25rem auto 0;" data-i18n="app.screen5.celebrationDesc">
+                  Your order for ₹100 is scheduled for the upcoming market cycle.
+                </p>
+              </div>
+
+              <!-- What happens next card -->
+              <div style="background: var(--color-surface-white); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 0.75rem; font-size: 0.75rem; text-align: left; width: 100%;">
+                <strong style="color: var(--color-forest-primary);" data-i18n="app.screen5.nextStepTitle">What happens next?</strong>
+                <p style="color: var(--color-text-secondary); margin-top: 0.2rem;" data-i18n="app.screen5.nextStepDesc">Funds are allocated to your mutual fund folio. Units will reflect in your portfolio within 2 business days.</p>
+              </div>
+
+              <!-- Referral Moment (Quiet and non-blocking after first investment) -->
+              <div style="background: var(--color-marigold-subtle); border: 1px solid #FDE68A; border-radius: var(--radius-md); padding: 0.75rem; font-size: 0.75rem; text-align: left; width: 100%;">
+                <strong style="color: var(--color-marigold-dark);" data-i18n="app.screen5.referralTitle">Learn together</strong>
+                <p style="color: var(--color-marigold-dark); margin-top: 0.2rem;" data-i18n="app.screen5.referralDesc">Know someone curious about investing? Share a ₹100 learning credit with a friend.</p>
+              </div>
+
+              <a href="../index.html" class="btn-secondary" style="font-size: 0.8125rem;">Return to Homepage</a>
+            </div>
+          </section>
+        </div>
+
+        <!-- Notification Permission Drawer / Modal ("Remind me later") -->
+        <div id="remind-dialog-backdrop" class="app-dialog-backdrop" role="dialog" aria-modal="true" aria-labelledby="remind-modal-title">
+          <div class="app-dialog-drawer">
+            <h3 id="remind-modal-title" style="font-family: var(--font-heading); font-size: 1.125rem; color: var(--color-forest-primary);">When should we remind you?</h3>
+            <p style="font-size: 0.8125rem; color: var(--color-text-secondary); line-height: 1.45;" data-i18n="app.screen3.reminderNote">
+              We will only send a reminder notification when you are ready. We respect your privacy.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <button type="button" class="btn-primary" id="confirm-reminder-btn">Remind me tomorrow morning</button>
+              <button type="button" class="btn-secondary" id="close-remind-dialog">Dismiss</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Footer Line -->
+        <footer style="background: var(--color-cream-surface); border-top: 1px solid var(--color-border-subtle); padding: 0.4rem 0.75rem; text-align: center; font-size: 0.6875rem; color: var(--color-text-muted); flex-shrink: 0;">
+          Design prototype for an assignment. Not a real financial product.
+        </footer>
+      </section>
+
+      <!-- Outside Phone Frame: Comprehensive States & Navigation Switcher -->
+      <aside class="simulator-controls-panel" aria-label="Simulator Controls Panel">
+        <h2 class="control-panel-heading">Interactive States Switcher</h2>
+        <p style="font-size: 0.8125rem; color: var(--color-text-secondary); line-height: 1.4;">
+          Test how Sprout handles edge cases, low-end device constraints, support issues, and localisation.
+        </p>
+
+        <div>
+          <div class="control-group-title">Prototype States</div>
+          <div class="control-btn-grid">
+            <button type="button" class="control-btn state-ctrl-btn active" data-state="default">
+              <span>Default Flow</span>
+              <span>✓</span>
+            </button>
+            <button type="button" class="control-btn state-ctrl-btn" data-state="loading">
+              <span>Wait / Registry</span>
+              <span>⏳</span>
+            </button>
+            <button type="button" class="control-btn state-ctrl-btn" data-state="slow network">
+              <span>Slow Network</span>
+              <span>📶</span>
+            </button>
+            <button type="button" class="control-btn state-ctrl-btn" data-state="otp delay">
+              <span>OTP Delay</span>
+              <span>⏱️</span>
+            </button>
+            <button type="button" class="control-btn state-ctrl-btn" data-state="error">
+              <span>Human Error</span>
+              <span>⚠️</span>
+            </button>
+            <button type="button" class="control-btn state-ctrl-btn" data-state="offline">
+              <span>Offline</span>
+              <span>🔌</span>
+            </button>
+            <button type="button" class="control-btn state-ctrl-btn" data-state="success">
+              <span>Success State</span>
+              <span>🎉</span>
+            </button>
+            <button type="button" class="control-btn state-ctrl-btn" data-state="hindi">
+              <span>Hindi Mode</span>
+              <span>हिं</span>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <div class="control-group-title">Direct Screen Jumper</div>
+          <div class="screen-jump-list">
+            <button type="button" class="screen-jump-btn active" data-jump-screen="1">
+              <span>Screen 1: Welcome (Ankur)</span>
+              <span>1/5</span>
+            </button>
+            <button type="button" class="screen-jump-btn" data-jump-screen="2">
+              <span>Screen 2: What brings you here?</span>
+              <span>2/5</span>
+            </button>
+            <button type="button" class="screen-jump-btn" data-jump-screen="3">
+              <span>Screen 3: Keep these ready</span>
+              <span>3/5</span>
+            </button>
+            <button type="button" class="screen-jump-btn" data-jump-screen="4">
+              <span>Screen 4: Verification & KYC</span>
+              <span>4/5</span>
+            </button>
+            <button type="button" class="screen-jump-btn" data-jump-screen="5">
+              <span>Screen 5: Your first ₹100</span>
+              <span>5/5</span>
+            </button>
+          </div>
+        </div>
+
+        <div style="padding-top: 0.5rem; border-top: 1px solid var(--color-border-subtle); font-size: 0.75rem; color: var(--color-text-muted);">
+          All states testable without backend or network dependencies.
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="../js/strings.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

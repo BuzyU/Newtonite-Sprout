@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" fill="none" class="ankur-mascot ankur-neutral" role="img" aria-label="Ankur the Sprout mascot standing calmly">
+  <g id="ankur-root">
+    <!-- Base seed / earth mound -->
+    <path id="seed-base" d="M26 62C26 55.3726 31.3726 50 38 50H42C48.6274 50 54 55.3726 54 62C54 64.2091 52.2091 66 50 66H30C27.7909 66 26 64.2091 26 62Z" fill="#11382B"/>
+    
+    <!-- Short Stem -->
+    <path id="stem" d="M38 50V36C38 34.8954 38.8954 34 40 34C41.1046 34 42 34.8954 42 36V50H38Z" fill="#11382B"/>
+    
+    <!-- Left Leaf -->
+    <g id="leaf-left" class="ankur-part-leaf-left">
+      <path d="M40 36C28 34 20 22 24 12C32 10 40 24 40 36Z" fill="#2E7D32"/>
+      <path d="M38 34C30 26 26 18 27 15" stroke="#A3D9A5" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Right Leaf -->
+    <g id="leaf-right" class="ankur-part-leaf-right">
+      <path d="M40 36C52 34 60 22 56 12C48 10 40 24 40 36Z" fill="#4CAF50"/>
+      <path d="M42 34C50 26 54 18 53 15" stroke="#C8E6C9" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Face on Seed Base -->
+    <g id="face">
+      <!-- Eyes -->
+      <circle id="eye-left" cx="35" cy="58" r="2" fill="#FDFBF7"/>
+      <circle id="eye-right" cx="45" cy="58" r="2" fill="#FDFBF7"/>
+      <!-- Subtle warm cheeks -->
+      <circle id="cheek-left" cx="31" cy="60" r="1.5" fill="#D97706" opacity="0.6"/>
+      <circle id="cheek-right" cx="49" cy="60" r="1.5" fill="#D97706" opacity="0.6"/>
+      <!-- Calm, gentle smile -->
+      <path id="mouth" d="M38 61C39.2 62.2 40.8 62.2 42 61" stroke="#FDFBF7" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

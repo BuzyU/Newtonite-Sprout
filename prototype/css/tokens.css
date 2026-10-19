@@ -1,0 +1,114 @@
+/**
+ * Sprout Design System - Core CSS Tokens
+ * WCAG AA compliant, 4px grid, system font stack with Devanagari support.
+ */
+
+:root {
+  /* Brand Palette - Deep forest green, warm cream, restrained marigold */
+  --color-forest-primary: #11382B;
+  --color-forest-light: #1B4D3E;
+  --color-forest-deep: #0A241B;
+  --color-cream-bg: #FDFBF7;
+  --color-cream-surface: #F6F1EA;
+  --color-surface-white: #FFFFFF;
+  --color-marigold-accent: #D97706;
+  --color-marigold-dark: #92400E;
+  --color-marigold-subtle: #FEF3C7;
+
+  /* Neutral Text & Borders */
+  --color-text-primary: #18221D;
+  --color-text-secondary: #3F4E46;
+  --color-text-muted: #55655D;
+  --color-border-subtle: #E5DFD7;
+  --color-border-default: #D1C9BE;
+  --color-border-strong: #8B9890;
+
+  /* Feedback Colors */
+  --color-success-text: #166534;
+  --color-success-bg: #F0FDF4;
+  --color-success-border: #86EFAC;
+  --color-warning-text: #9C3218;
+  --color-warning-bg: #FDF1EE;
+  --color-warning-border: #FCA5A5;
+  --color-info-text: #075985;
+  --color-info-bg: #F0F9FF;
+  --color-info-border: #BAE6FD;
+
+  /* Focus Indicator - High Contrast */
+  --color-focus: #0D5C3A;
+  --focus-ring: 2px solid var(--color-focus);
+  --focus-offset: 2px;
+
+  /* Typography Scale */
+  --font-heading: Charter, "Bitstream Charter", "Sitka Text", Cambria, "Noto Serif Devanagari", serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Devanagari", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  --text-caption: 0.75rem;     /* 12px */
+  --text-disclaimer: 0.8125rem; /* 13px - strictly >= 12px requirement */
+  --text-body-sm: 0.875rem;    /* 14px */
+  --text-body: 1rem;           /* 16px */
+  --text-body-lead: 1.125rem;  /* 18px */
+  --text-h4: 1.25rem;          /* 20px */
+  --text-h3: 1.5rem;           /* 24px */
+  --text-h2: 1.75rem;          /* 28px mobile, 32px desktop */
+  --text-h1: 2rem;             /* 32px mobile, 44px desktop */
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.55;
+  --leading-relaxed: 1.65;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Spacing Scale (4px base) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+
+  /* Border Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Elevation / Shadows (CSS-only, high performance, no heavy blurs) */
+  --shadow-sm: 0 1px 2px rgba(17, 56, 43, 0.05);
+  --shadow-md: 0 4px 12px rgba(17, 56, 43, 0.08);
+  --shadow-lg: 0 8px 24px rgba(17, 56, 43, 0.10);
+
+  /* Touch Targets */
+  --touch-target-min: 44px;
+
+  /* Motion */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --text-h2: 2rem;     /* 32px */
+    --text-h1: 2.75rem;  /* 44px */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

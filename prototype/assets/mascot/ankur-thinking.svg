@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" fill="none" class="ankur-mascot ankur-thinking" role="img" aria-label="Ankur the Sprout mascot thinking thoughtfully">
+  <g id="ankur-root">
+    <!-- Base seed -->
+    <path id="seed-base" d="M26 62C26 55.3726 31.3726 50 38 50H42C48.6274 50 54 55.3726 54 62C54 64.2091 52.2091 66 50 66H30C27.7909 66 26 64.2091 26 62Z" fill="#11382B"/>
+    
+    <!-- Short Stem with slight thoughtful lean -->
+    <path id="stem" d="M37 50V36C37 34.8954 37.8954 34 39 34C40.1046 34 41 34.8954 41 36V50H37Z" fill="#11382B"/>
+    
+    <!-- Left Leaf (curled inwards thoughtfully) -->
+    <g id="leaf-left" class="ankur-part-leaf-think">
+      <path d="M39 35C29 32 23 20 28 12C36 11 41 22 39 35Z" fill="#2E7D32"/>
+      <path d="M37 33C32 25 28 18 30 15" stroke="#A3D9A5" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Right Leaf (tilted inquisitive angle) -->
+    <g id="leaf-right" class="ankur-part-leaf-tilt">
+      <path d="M40 36C50 38 62 26 60 16C51 14 42 25 40 36Z" fill="#4CAF50"/>
+      <path d="M42 34C51 29 57 21 56 18" stroke="#C8E6C9" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Face (eyes looking up inquisitively) -->
+    <g id="face">
+      <!-- Thoughtful eyes looking slightly up and right -->
+      <circle id="eye-left" cx="37" cy="55" r="2.2" fill="#FDFBF7"/>
+      <circle id="eye-right" cx="47" cy="55" r="2.2" fill="#FDFBF7"/>
+      <!-- Cheeks -->
+      <circle id="cheek-left" cx="32" cy="60" r="1.5" fill="#D97706" opacity="0.6"/>
+      <circle id="cheek-right" cx="50" cy="60" r="1.5" fill="#D97706" opacity="0.6"/>
+      <!-- Tiny thoughtful 'o' mouth -->
+      <ellipse id="mouth" cx="42" cy="61" rx="1.5" ry="1.2" fill="#FDFBF7"/>
+    </g>
+  </g>
+</svg>
