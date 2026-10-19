@@ -1,0 +1,1403 @@
+{
+  "timestamp": "2026-10-19T05:20:46.394Z",
+  "viewportsTested": [
+    {
+      "name": "Mobile Mini",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "name": "Mobile Android Standard",
+      "width": 360,
+      "height": 740
+    },
+    {
+      "name": "Mobile iPhone Standard",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "Tablet / Foldable",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "Desktop Large",
+      "width": 1280,
+      "height": 800
+    }
+  ],
+  "pageResults": [
+    {
+      "page": "Homepage",
+      "url": "/index.html",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 13,
+        "top": 418.8125,
+        "bottom": 519.515625,
+        "visibleInFirstViewport": true,
+        "textSnippet": "Investments in mutual funds and securities are subject to market risks and can lose value."
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Homepage",
+      "url": "/index.html",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 13,
+        "top": 418.8125,
+        "bottom": 499.375,
+        "visibleInFirstViewport": true,
+        "textSnippet": "Investments in mutual funds and securities are subject to market risks and can lose value."
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Homepage",
+      "url": "/index.html",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 13,
+        "top": 366.125,
+        "bottom": 446.6875,
+        "visibleInFirstViewport": true,
+        "textSnippet": "Investments in mutual funds and securities are subject to market risks and can lose value."
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Homepage",
+      "url": "/index.html",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 13,
+        "top": 438.9375,
+        "bottom": 499.359375,
+        "visibleInFirstViewport": true,
+        "textSnippet": "Investments in mutual funds and securities are subject to market risks and can lose value."
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Homepage",
+      "url": "/index.html",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 13,
+        "top": 464.53125,
+        "bottom": 504.8125,
+        "visibleInFirstViewport": true,
+        "textSnippet": "Investments in mutual funds and securities are subject to market risks and can lose value."
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 1 (Welcome)",
+      "url": "/app/index.html?screen=1",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 665.015625,
+        "bottom": 739.40625,
+        "visibleInFirstViewport": false,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 1 (Welcome)",
+      "url": "/app/index.html?screen=1",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 623.1875,
+        "bottom": 672.78125,
+        "visibleInFirstViewport": true,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 1 (Welcome)",
+      "url": "/app/index.html?screen=1",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 611.59375,
+        "bottom": 661.1875,
+        "visibleInFirstViewport": true,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 1 (Welcome)",
+      "url": "/app/index.html?screen=1",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 609.4375,
+        "bottom": 659.03125,
+        "visibleInFirstViewport": true,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 1 (Welcome)",
+      "url": "/app/index.html?screen=1",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 573.296875,
+        "bottom": 622.890625,
+        "visibleInFirstViewport": true,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 2 (Goals)",
+      "url": "/app/index.html?screen=2",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 2 (Goals)",
+      "url": "/app/index.html?screen=2",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 2 (Goals)",
+      "url": "/app/index.html?screen=2",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 2 (Goals)",
+      "url": "/app/index.html?screen=2",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 2 (Goals)",
+      "url": "/app/index.html?screen=2",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 3 (Keep Ready EN)",
+      "url": "/app/index.html?screen=3&lang=en",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 3 (Keep Ready EN)",
+      "url": "/app/index.html?screen=3&lang=en",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 3 (Keep Ready EN)",
+      "url": "/app/index.html?screen=3&lang=en",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 3 (Keep Ready EN)",
+      "url": "/app/index.html?screen=3&lang=en",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 3 (Keep Ready EN)",
+      "url": "/app/index.html?screen=3&lang=en",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 3 (Keep Ready HI)",
+      "url": "/app/index.html?screen=3&lang=hi",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 3 (Keep Ready HI)",
+      "url": "/app/index.html?screen=3&lang=hi",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 3 (Keep Ready HI)",
+      "url": "/app/index.html?screen=3&lang=hi",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 3 (Keep Ready HI)",
+      "url": "/app/index.html?screen=3&lang=hi",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 3 (Keep Ready HI)",
+      "url": "/app/index.html?screen=3&lang=hi",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Verify Default)",
+      "url": "/app/index.html?screen=4&state=default",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Verify Default)",
+      "url": "/app/index.html?screen=4&state=default",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Verify Default)",
+      "url": "/app/index.html?screen=4&state=default",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Verify Default)",
+      "url": "/app/index.html?screen=4&state=default",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Verify Default)",
+      "url": "/app/index.html?screen=4&state=default",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Wait State)",
+      "url": "/app/index.html?screen=4&state=loading",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Wait State)",
+      "url": "/app/index.html?screen=4&state=loading",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Wait State)",
+      "url": "/app/index.html?screen=4&state=loading",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Wait State)",
+      "url": "/app/index.html?screen=4&state=loading",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Wait State)",
+      "url": "/app/index.html?screen=4&state=loading",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (OTP Delay)",
+      "url": "/app/index.html?screen=4&state=otp%20delay",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (OTP Delay)",
+      "url": "/app/index.html?screen=4&state=otp%20delay",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (OTP Delay)",
+      "url": "/app/index.html?screen=4&state=otp%20delay",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (OTP Delay)",
+      "url": "/app/index.html?screen=4&state=otp%20delay",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (OTP Delay)",
+      "url": "/app/index.html?screen=4&state=otp%20delay",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Error State)",
+      "url": "/app/index.html?screen=4&state=error",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Error State)",
+      "url": "/app/index.html?screen=4&state=error",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Error State)",
+      "url": "/app/index.html?screen=4&state=error",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Error State)",
+      "url": "/app/index.html?screen=4&state=error",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Error State)",
+      "url": "/app/index.html?screen=4&state=error",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Offline State)",
+      "url": "/app/index.html?screen=4&state=offline",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Offline State)",
+      "url": "/app/index.html?screen=4&state=offline",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Offline State)",
+      "url": "/app/index.html?screen=4&state=offline",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Offline State)",
+      "url": "/app/index.html?screen=4&state=offline",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Offline State)",
+      "url": "/app/index.html?screen=4&state=offline",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Success State)",
+      "url": "/app/index.html?screen=4&state=success",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Success State)",
+      "url": "/app/index.html?screen=4&state=success",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Success State)",
+      "url": "/app/index.html?screen=4&state=success",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Success State)",
+      "url": "/app/index.html?screen=4&state=success",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 4 (Success State)",
+      "url": "/app/index.html?screen=4&state=success",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 5 (Amount Selector)",
+      "url": "/app/index.html?screen=5&state=default",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 5 (Amount Selector)",
+      "url": "/app/index.html?screen=5&state=default",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 5 (Amount Selector)",
+      "url": "/app/index.html?screen=5&state=default",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 5 (Amount Selector)",
+      "url": "/app/index.html?screen=5&state=default",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 5 (Amount Selector)",
+      "url": "/app/index.html?screen=5&state=default",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 5 (Celebration)",
+      "url": "/app/index.html?screen=5&state=success",
+      "viewport": "320x568 (Mobile Mini)",
+      "overflow": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 5 (Celebration)",
+      "url": "/app/index.html?screen=5&state=success",
+      "viewport": "360x740 (Mobile Android Standard)",
+      "overflow": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 5 (Celebration)",
+      "url": "/app/index.html?screen=5&state=success",
+      "viewport": "390x844 (Mobile iPhone Standard)",
+      "overflow": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 5 (Celebration)",
+      "url": "/app/index.html?screen=5&state=success",
+      "viewport": "768x1024 (Tablet / Foldable)",
+      "overflow": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    },
+    {
+      "page": "Onboarding Screen 5 (Celebration)",
+      "url": "/app/index.html?screen=5&state=success",
+      "viewport": "1280x800 (Desktop Large)",
+      "overflow": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "hasHorizontalOverflow": false
+      },
+      "disclaimerMetrics": {
+        "fontSizePx": 16,
+        "top": 0,
+        "bottom": 0,
+        "visibleInFirstViewport": false,
+        "textSnippet": "निवेश का मूल्य घट सकता है। कोई न्यूनतम लॉक-इन नहीं। [verify with Compliance]"
+      },
+      "axeA11yViolations": 0,
+      "violationsList": [],
+      "smallTapTargetsCount": 0,
+      "smallTapTargets": []
+    }
+  ],
+  "externalRequestsDetected": [],
+  "absoluteUrlIssues": [],
+  "currencyFormatIssues": [],
+  "bannedWordOccurrences": [],
+  "tapTargetIssues": [],
+  "disclaimerAudits": []
+}

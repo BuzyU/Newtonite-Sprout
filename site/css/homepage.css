@@ -31,9 +31,11 @@
 }
 
 .brand-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
 }
 
 .brand-logo {
@@ -54,8 +56,9 @@
 .btn-lang {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.35rem;
-  padding: 0.4rem 0.75rem;
+  padding: 0.5rem 0.85rem;
   font-size: 0.875rem;
   font-weight: var(--weight-medium);
   color: var(--color-forest-primary);
@@ -64,6 +67,7 @@
   background-color: var(--color-surface-white);
   min-height: var(--touch-target-min);
   min-width: var(--touch-target-min);
+  box-sizing: border-box;
   transition: background-color var(--transition-fast), border-color var(--transition-fast);
 }
 
@@ -677,9 +681,14 @@
   }
 
   .nav-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch-target-min);
+    padding: 0.5rem 0.5rem;
     font-size: 0.9375rem;
     font-weight: var(--weight-medium);
     color: var(--color-text-secondary);
+    box-sizing: border-box;
   }
 
   .nav-link:hover {

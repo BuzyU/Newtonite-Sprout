@@ -8,9 +8,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const prototypeDir = path.join(__dirname, '..', 'prototype');
+const siteDir = path.join(__dirname, '..', 'site');
 
-function getFileSize(relPath, baseDir = prototypeDir) {
+function getFileSize(relPath, baseDir = siteDir) {
   const fullPath = path.resolve(baseDir, relPath);
   if (fs.existsSync(fullPath)) {
     return fs.statSync(fullPath).size;
@@ -19,7 +19,7 @@ function getFileSize(relPath, baseDir = prototypeDir) {
 }
 
 function analyzePage(htmlRelativePath, pageName) {
-  const fullHtmlPath = path.join(prototypeDir, htmlRelativePath);
+  const fullHtmlPath = path.join(siteDir, htmlRelativePath);
   const htmlContent = fs.readFileSync(fullHtmlPath, 'utf-8');
   const baseDir = path.dirname(fullHtmlPath);
 

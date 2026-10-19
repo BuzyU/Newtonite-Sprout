@@ -10,7 +10,8 @@ const tests = [
   { name: 'WCAG 2.1 AA Contrast Ratio Audit', cmd: 'node tools/contrast-check.js' },
   { name: 'Performance & Asset Weight Budgeting', cmd: 'node tools/weight-check.js' },
   { name: 'Semantic HTML & Landmark Validation', cmd: 'node tools/html-validate-check.js' },
-  { name: 'Axe Core Accessibility Evaluation', cmd: 'node tools/a11y-check.js' }
+  { name: 'Axe Core Accessibility Evaluation', cmd: 'node tools/a11y-check.js' },
+  { name: 'Subpath Routing & Network Isolation Verification', cmd: 'node tools/test-subpath.js' }
 ];
 
 let failed = false;

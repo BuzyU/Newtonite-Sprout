@@ -18,8 +18,8 @@ const htmlValidate = new HtmlValidate({
 });
 
 const filesToValidate = [
-  path.join(__dirname, '..', 'prototype', 'index.html'),
-  path.join(__dirname, '..', 'prototype', 'app', 'index.html')
+  path.join(__dirname, '..', 'site', 'index.html'),
+  path.join(__dirname, '..', 'site', 'app', 'index.html')
 ];
 
 async function run() {

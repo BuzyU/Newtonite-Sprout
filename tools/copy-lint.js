@@ -26,7 +26,7 @@ const ALLOWED_EXCEPTIONS = [
   /safeguard/i
 ];
 
-const SCAN_DIRS = ['prototype', 'assets', 'design-system'];
+const SCAN_DIRS = ['site', 'assets', 'design-system'];
 const SCAN_EXTENSIONS = ['.html', '.css', '.js', '.json', '.svg'];
 
 let errorsFound = 0;

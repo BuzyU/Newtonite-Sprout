@@ -10,7 +10,7 @@ const path = require('path');
 const { chromium } = require('playwright');
 
 const PORT = 8091;
-const prototypeDir = path.join(__dirname, '..', 'prototype');
+const siteDir = path.join(__dirname, '..', 'site');
 const screensDir = path.join(__dirname, '..', 'screens');
 
 if (!fs.existsSync(screensDir)) {
@@ -30,7 +30,7 @@ function createStaticServer() {
   return http.createServer((req, res) => {
     let reqPath = decodeURI(req.url.split('?')[0]);
     if (reqPath === '/') reqPath = '/index.html';
-    const filePath = path.join(prototypeDir, reqPath);
+    const filePath = path.join(siteDir, reqPath);
 
     if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
       const ext = path.extname(filePath).toLowerCase();

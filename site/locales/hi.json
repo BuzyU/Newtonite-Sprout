@@ -1,177 +1,5 @@
-/**
- * Sprout Localisation Engine
- * Loads en and hi string dictionaries with zero CDN, zero external requests.
- */
-
-window.SproutLocales = {
-  en: null,
-  hi: null
-};
-
-// Embed directly for offline / file:// safety while preserving 1-to-1 sync with locales/*.json
-const enStrings = {
-  "nav": {
-    "brand": "Sprout",
-    "howItWorks": "How it works",
-    "faq": "FAQ",
-    "startBtn": "Start with ₹100",
-    "langToggle": "हिंदी"
-  },
-  "hero": {
-    "headline": "Start small. Learn as you grow.",
-    "subline": "Invest your first ₹100 in diversified funds. No minimum lock-ins, no complicated jargon.",
-    "ctaPrimary": "Start with ₹100",
-    "ctaSecondary": "How Sprout works ↓",
-    "mascotAlt": "Ankur the Sprout mascot waving hello",
-    "disclaimer": "Investments in mutual funds and securities are subject to market risks and can lose value. Past performance is not an indicator of future returns. [verify with Compliance]"
-  },
-  "reassurance": {
-    "point1Title": "Start with just ₹100",
-    "point1Desc": "You do not need a lump sum. Begin with what you have in your pocket and build confidence at your own pace.",
-    "point2Title": "See what you own",
-    "point2Desc": "Full transparency on where every single rupee is allocated across India's leading enterprises.",
-    "point3Title": "Help in your language",
-    "point3Desc": "Clear, jargon-free explanations available in English and Hindi, designed for first-time investors."
-  },
-  "journey": {
-    "heading": "Your first ₹100, step by step",
-    "subheading": "Four simple milestones with zero surprise hurdles.",
-    "step1Title": "Tell us your goal",
-    "step1Time": "~1 min",
-    "step1Desc": "Select whether you are saving for a rainy day, a specific purchase, or just curious to learn.",
-    "step2Title": "Keep documents ready",
-    "step2Time": "~2 mins",
-    "step2Desc": "We tell you exactly what is needed (PAN, Aadhaar phone, bank details) before you start verification.",
-    "step3Title": "Simple verification",
-    "step3Time": "~3 mins",
-    "step3Desc": "Secure, paperless identity check. If there is a registry delay, we notify you so you never guess.",
-    "step4Title": "Invest your first ₹100",
-    "step4Time": "~1 min",
-    "step4Desc": "Confirm your starting amount and place your first order into a diversified portfolio."
-  },
-  "example": {
-    "badge": "Example only, not a prediction",
-    "heading": "How a small ₹100 habit works",
-    "desc": "When you invest ₹100, it is pooled with other investors to buy small fractional shares of large, diversified companies.",
-    "breakdownTitle": "Hypothetical ₹100 monthly allocation",
-    "item1": "Top Indian Companies (Nifty 50 Index): ₹50",
-    "item2": "Government & Corporate Bonds: ₹30",
-    "item3": "Emerging Growth Sectors: ₹20",
-    "riskNotice": "Market investments fluctuate. Your account balance can rise or fall based on everyday market movements. [verify with Compliance]"
-  },
-  "trust": {
-    "heading": "Built on regulated foundations",
-    "point1": "[verify with Compliance: Registered with SEBI as Mutual Fund Distributor ARN-XXXXX]",
-    "point2": "[verify with Compliance: Bank-grade 256-bit encryption for all identity documents]",
-    "point3": "[verify with Compliance: Regulated depository partner for automated clearing]"
-  },
-  "faq": {
-    "heading": "Frequently asked questions",
-    "q1": "What do I need to start investing on Sprout?",
-    "a1": "You only need three items: your PAN card number, a mobile number linked to your Aadhaar for OTP verification, and an active Indian bank account. All verification is completed digitally.",
-    "q2": "Why does verification take time?",
-    "a2": "By financial regulation, your details are cross-referenced with official government registries. This usually takes 45 to 90 seconds. If an agency registry is slow, we save your progress and send you an SMS alert as soon as it clears.",
-    "q3": "Can I withdraw my money whenever I want?",
-    "a3": "Yes. Sprout offers liquid and open-ended funds with no minimum lock-in periods. Redemption proceeds typically credit back to your verified bank account within 1 to 3 business days.",
-    "q4": "Is ₹100 really enough to start?",
-    "a4": "Yes. Regulatory micro-investing and systematic investment plans (SIPs) allow beginners to start with as little as ₹100 per month."
-  },
-  "referral": {
-    "text": "Know a friend starting their financial journey? Share Sprout after your first step."
-  },
-  "footer": {
-    "tagline": "Sprout - Patient financial growth for first-time investors.",
-    "complianceDisclaimer": "Investments in mutual funds and securities are subject to market risks and can lose value. Past performance is not an indicator of future returns. Please read all scheme-related documents carefully before investing. [verify with Compliance]",
-    "assignmentNotice": "Design prototype for an assignment. Not a real financial product."
-  },
-  "app": {
-    "screen1": {
-      "greeting": "Hi, I'm Ankur",
-      "intro": "I'm your guide at Sprout. We help you take your very first step in investing, starting with just ₹100.",
-      "whatsNextTitle": "What happens next:",
-      "step1": "1. Tell us your goal (~1 min)",
-      "step2": "2. Check your documents (~2 mins)",
-      "step3": "3. Simple identity check (~3 mins)",
-      "step4": "4. Invest your first ₹100 (~1 min)",
-      "timeEstimate": "Total time: about 7 minutes",
-      "cta": "Get Started",
-      "disclaimer": "Investments can lose value. No minimum lock-in. [verify with Compliance]"
-    },
-    "screen2": {
-      "heading": "What brings you here?",
-      "subheading": "Pick the option closest to your mind right now. You can change this anytime.",
-      "option1": "Building a rainy day fund",
-      "option1Sub": "A small safety cushion for unexpected needs",
-      "option2": "Learning how investing works",
-      "option2Sub": "Hands-on experience with ₹100",
-      "option3": "Saving for a specific goal",
-      "option3Sub": "A phone, course, or upcoming purchase",
-      "option4": "I'm just curious",
-      "option4Sub": "Exploring before making any decisions",
-      "reassurance": "It is completely normal to feel unsure when starting. We take things one step at a time.",
-      "cta": "Continue"
-    },
-    "screen3": {
-      "heading": "Keep these ready",
-      "subheading": "Identity verification is mandated by financial regulations. Having these three items nearby makes the process smooth.",
-      "timeTag": "Takes about 5 minutes",
-      "item1Title": "PAN Card",
-      "item1Desc": "Required by income tax rules to create your investment portfolio.",
-      "item2Title": "Mobile linked to Aadhaar",
-      "item2Desc": "You will receive a 6-digit OTP from the government UIDAI portal.",
-      "item3Title": "Bank Account Details",
-      "item3Desc": "Account number and IFSC to link where your ₹100 investments and withdrawals flow.",
-      "ctaReady": "I have them ready",
-      "ctaLater": "Remind me later",
-      "reminderNote": "We will only send a reminder notification when you are ready. We respect your privacy."
-    },
-    "screen4": {
-      "heading": "Verification",
-      "step1": "Phone & OTP",
-      "step2": "PAN Details",
-      "step3": "Aadhaar e-KYC",
-      "consentTitle": "Why we collect this information",
-      "consentBody": "Financial regulations require KYC verification to confirm your identity and prevent financial fraud. Your records are encrypted with 256-bit security and never shared with advertisers. [verify with Compliance/Legal]",
-      "consentCheckbox": "I authorize Sprout to fetch my verification records in compliance with SEBI and UIDAI guidelines.",
-      "privacyLink": "Read Privacy Notice",
-      "phoneLabel": "Mobile Number",
-      "otpLabel": "Enter 6-digit OTP sent to your phone",
-      "panLabel": "PAN Number",
-      "panPlaceholder": "e.g. ABCDE1234F",
-      "ctaVerify": "Verify & Continue",
-      "waitTitle": "Checking official records...",
-      "waitDesc": "Connecting securely with the verification registry. This typically takes about 45 seconds.",
-      "waitNote": "You do not need to stare at this screen. If the agency registry is slow, we will save your progress and notify you via SMS when complete.",
-      "otpDelayNotice": "OTP taking longer than usual?",
-      "resendOtp": "Resend OTP (available in 24s)",
-      "otpAlternative": "Receive OTP via WhatsApp or Call",
-      "errorTitle": "We couldn't verify this PAN",
-      "errorDesc": "The name or number entered did not match official records. Please double-check for typos or ensure the name matches your tax document.",
-      "errorHelp": "Need help? Contact support via chat.",
-      "offlineTitle": "You're offline",
-      "offlineDesc": "Your progress has been saved securely on your device. We will automatically reconnect when your signal returns.",
-      "successTitle": "Verification complete",
-      "successDesc": "Your investment account has been verified and registered. You are ready to invest."
-    },
-    "screen5": {
-      "heading": "Your first ₹100",
-      "subheading": "Your money is allocated into a diversified basket of top Indian enterprises.",
-      "amountLabel": "Choose your starting amount",
-      "riskWarning": "Market investments fluctuate. Your account balance can rise or fall with market movements. [verify with Compliance]",
-      "disclaimer": "Investments are subject to market risk and can lose value. [verify with Compliance]",
-      "ctaInvest": "Confirm and Invest ₹100",
-      "celebrationTitle": "Your first step is taken",
-      "celebrationDesc": "Your order for ₹100 is scheduled for the upcoming market cycle.",
-      "nextStepTitle": "What happens next?",
-      "nextStepDesc": "Funds are allocated to your mutual fund folio. Units will reflect in your portfolio within 2 business days.",
-      "referralTitle": "Learn together",
-      "referralDesc": "Know someone curious about investing? Share a ₹100 learning credit with a friend."
-    }
-  }
-};
-
-const hiStrings = {
-  "_note": "Natural conversational Hindi translation for prototype evaluation. Requires review by certified Hindi financial localization specialist before production deployment. [verify with Localization/Compliance]",
+{
+  "_note": "Natural conversational Hindi translation for evaluation. Requires review by certified Hindi financial localization specialist before production deployment. [verify with Localization/Compliance]",
   "nav": {
     "brand": "स्प्रॉउट (Sprout)",
     "howItWorks": "यह कैसे काम करता है",
@@ -244,12 +72,12 @@ const hiStrings = {
   "footer": {
     "tagline": "स्प्रॉउट - पहली बार निवेश करने वालों के लिए धैर्यवान वित्तीय विकास।",
     "complianceDisclaimer": "म्यूचुअल फंड और प्रतिभूतियों में निवेश बाजार जोखिमों के अधीन है और मूल्य घट सकता है। पिछला प्रदर्शन भविष्य के लाभ का संकेतक नहीं है। कृपया निवेश करने से पहले सभी योजना से जुड़े दस्तावेजों को ध्यान से पढ़ें। [verify with Compliance]",
-    "assignmentNotice": "असाइनमेंट के लिए बनाया गया डिज़ाइन प्रोटोटाइप। वास्तविक वित्तीय उत्पाद नहीं है।"
+    "assignmentNotice": "असाइनमेंट के लिए बनाया गया डिज़ाइन सबमिशन। वास्तविक वित्तीय उत्पाद नहीं है।"
   },
   "app": {
     "screen1": {
       "greeting": "नमस्ते, मैं अंकुर हूं",
-      "intro": "मैं स्प्रॉउट पर आपका मार्गदर्शक हूं। हम आपको सिर्फ ₹100 से निवेश की पहली सुरक्षित शुरुआत करने में मदद करते हैं।",
+      "intro": "मैं स्प्रॉउट पर आपका मार्गदर्शक हूं। हम आपको सिर्फ ₹100 से निवेश की पहली समझदारी भरी शुरुआत करने में मदद करते हैं।",
       "whatsNextTitle": "आगे क्या होगा:",
       "step1": "1. अपना उद्देश्य चुनें (~1 मिनट)",
       "step2": "2. ज़रूरी दस्तावेज़ जांचें (~2 मिनट)",
@@ -330,39 +158,4 @@ const hiStrings = {
       "referralDesc": "क्या आपका कोई परिचित निवेश सीखना चाहता है? किसी मित्र को ₹100 का लर्निंग क्रेडिट साझा करें।"
     }
   }
-};
-
-window.SproutLocales.en = enStrings;
-window.SproutLocales.hi = hiStrings;
-
-function getNestedValue(obj, path) {
-  return path.split('.').reduce((prev, curr) => (prev ? prev[curr] : null), obj);
 }
-
-window.applyTranslations = function(lang) {
-  const dictionary = window.SproutLocales[lang] || window.SproutLocales.en;
-  document.documentElement.lang = lang;
-  
-  const translatables = document.querySelectorAll('[data-i18n]');
-  translatables.forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    const val = getNestedValue(dictionary, key);
-    if (val !== null && val !== undefined) {
-      if (el.tagName === 'INPUT' && el.getAttribute('placeholder')) {
-        el.setAttribute('placeholder', val);
-      } else {
-        el.textContent = val;
-      }
-    }
-  });
-
-  const langToggles = document.querySelectorAll('.lang-toggle-btn');
-  langToggles.forEach(btn => {
-    btn.textContent = lang === 'en' ? 'हिंदी' : 'English';
-    btn.setAttribute('aria-label', lang === 'en' ? 'Switch interface to Hindi' : 'Switch interface to English');
-  });
-
-  try {
-    localStorage.setItem('sprout_lang', lang);
-  } catch(e) {}
-};

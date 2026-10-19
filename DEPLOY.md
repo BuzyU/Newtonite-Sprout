@@ -23,10 +23,10 @@ git push origin main
 In the **Configure Project** screen, configure the following settings:
 - **Project Name:** `sprout-design-system` (or your preferred name)
 - **Framework Preset:** `Other`
-- **Root Directory:** Click **Edit** and set to `prototype` *(Critical: This points Vercel to the `/prototype` folder)*
+- **Root Directory:** Click **Edit** and set to `site` *(Critical: This points Vercel to the `/site` folder containing index.html and vercel.json)*
 - **Build Command:** Leave EMPTY / Disabled (no build step is needed)
 - **Output Directory:** `.` (or leave blank)
-- **Install Command:** Leave EMPTY / Disabled (static prototype requires zero dependencies at runtime)
+- **Install Command:** Leave EMPTY / Disabled (static site requires zero dependencies at runtime)
 
 ### Step 4: Deploy & Acquire Production URL
 1. Click **Deploy**.
@@ -75,6 +75,6 @@ Open your deployed Vercel URL in an **Incognito / Private browser window** to by
 If GitHub Pages is preferred as an alternative host:
 1. Navigate to your repository on GitHub $\to$ **Settings** $\to$ **Pages**.
 2. Set **Source** to **GitHub Actions**.
-3. Go to **Actions** $\to$ Select **Deploy Prototype to GitHub Pages**.
+3. Go to **Actions** $\to$ Select **Deploy to GitHub Pages**.
 4. Click **Run workflow** (`workflow_dispatch`).
-5. Your prototype will be served at `https://<username>.github.io/<repo>/prototype/`. Because all URLs are strictly relative, the prototype works identically from this subpath.
+5. The application will be served at `https://<username>.github.io/<repo>/site/`. Because all URLs are strictly relative, the site works identically from this subpath.

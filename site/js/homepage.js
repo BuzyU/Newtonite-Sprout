@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p style="font-size: 0.9375rem; color: var(--color-text-secondary); max-width: 480px; margin: 0 auto 1rem;">
             "Starting with ₹100 is simple. We select your verified fund, verify your PAN in seconds, and show you exactly where your money grows."
           </p>
-          <a href="./app/index.html" class="btn-primary" style="display: inline-flex;">Try Interactive Prototype Instead →</a>
+          <a href="./app/index.html" class="btn-primary" style="display: inline-flex;">Launch App Experience →</a>
         </div>
       `;
     });

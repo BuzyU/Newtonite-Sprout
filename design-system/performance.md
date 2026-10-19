@@ -12,8 +12,8 @@
 
 | Page View | Transferred Assets | Total Weight | Budget Limit | Homepage Target | Status |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Homepage (Mobile & Desktop)** | 29 requests | **86.6 KB** (88633 B) | 1,500 KB | 400 KB | **PASS (Well Under Target)** |
-| **Onboarding App (5 Screens)** | 28 requests | **106.5 KB** (109074 B) | 1,500 KB | N/A | **PASS (Well Under Budget)** |
+| **Homepage (Mobile & Desktop)** | 29 requests | **86.8 KB** (88895 B) | 1,500 KB | 400 KB | **PASS (Well Under Target)** |
+| **Onboarding App (5 Screens)** | 28 requests | **109.5 KB** (112095 B) | 1,500 KB | N/A | **PASS (Well Under Budget)** |
 
 ---
 
@@ -21,18 +21,18 @@
 
 | Asset Type | File Path | Transferred Bytes |
 | :--- | :--- | :---: |
-| Document (HTML) | `index.html` | 20.56 KB (21058 B) |
+| Document (HTML) | `index.html` | 20.57 KB (21061 B) |
 | Stylesheet (CSS) | `./css/reset.css` | 1.07 KB (1098 B) |
 | Stylesheet (CSS) | `./css/tokens.css` | 3.34 KB (3419 B) |
-| Stylesheet (CSS) | `./css/homepage.css` | 14.81 KB (15161 B) |
-| Script (JS) | `./js/strings.js` | 30.67 KB (31408 B) |
-| Script (JS) | `./js/homepage.js` | 2.20 KB (2249 B) |
+| Stylesheet (CSS) | `./css/homepage.css` | 15.08 KB (15446 B) |
+| Script (JS) | `./js/strings.js` | 30.66 KB (31394 B) |
+| Script (JS) | `./js/homepage.js` | 2.18 KB (2237 B) |
 | Image/Vector (SVG) | `./assets/logo.svg` | 0.89 KB (912 B) |
 | Image/Vector (SVG) | `./assets/icons/globe.svg` | 0.36 KB (370 B) |
 | Image/Vector (SVG) | `./assets/mascot/ankur-waving.svg` | 1.66 KB (1695 B) |
+| Image/Vector (SVG) | `./assets/icons/shield.svg` | 0.24 KB (247 B) |
 | Image/Vector (SVG) | `./assets/icons/arrow-right.svg` | 0.26 KB (270 B) |
 | Image/Vector (SVG) | `./assets/mascot/ankur-neutral.svg` | 1.66 KB (1696 B) |
-| Image/Vector (SVG) | `./assets/icons/shield.svg` | 0.24 KB (247 B) |
 | Image/Vector (SVG) | `./assets/illustrations/start-tiny.svg` | 0.80 KB (819 B) |
 | Image/Vector (SVG) | `./assets/illustrations/see-what-you-own.svg` | 0.86 KB (881 B) |
 | Image/Vector (SVG) | `./assets/illustrations/help-in-language.svg` | 0.96 KB (983 B) |
@@ -57,11 +57,11 @@
 
 | Asset Type | File Path | Transferred Bytes |
 | :--- | :--- | :---: |
-| Document (HTML) | `app/index.html` | 32.01 KB (32777 B) |
+| Document (HTML) | `app/index.html` | 32.13 KB (32897 B) |
 | Stylesheet (CSS) | `../css/reset.css` | 1.07 KB (1098 B) |
 | Stylesheet (CSS) | `../css/tokens.css` | 3.34 KB (3419 B) |
-| Stylesheet (CSS) | `../css/app.css` | 13.37 KB (13686 B) |
-| Script (JS) | `../js/strings.js` | 30.67 KB (31408 B) |
+| Stylesheet (CSS) | `../css/app.css` | 16.21 KB (16601 B) |
+| Script (JS) | `../js/strings.js` | 30.66 KB (31394 B) |
 | Script (JS) | `../js/app.js` | 9.27 KB (9492 B) |
 | Image/Vector (SVG) | `../assets/icons/arrow-right.svg` | 0.26 KB (270 B) |
 | Image/Vector (SVG) | `../assets/icons/arrow-right.svg` | 0.26 KB (270 B) |

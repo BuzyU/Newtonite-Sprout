@@ -12,7 +12,7 @@ const { chromium } = require('playwright');
 const { AxeBuilder } = require('@axe-core/playwright');
 
 const PORT = 8089;
-const prototypeDir = path.join(__dirname, '..', 'prototype');
+const siteDir = path.join(__dirname, '..', 'site');
 
 const MIME_TYPES = {
   '.html': 'text/html',
@@ -27,7 +27,7 @@ function createStaticServer() {
   return http.createServer((req, res) => {
     let reqPath = decodeURI(req.url.split('?')[0]);
     if (reqPath === '/') reqPath = '/index.html';
-    const filePath = path.join(prototypeDir, reqPath);
+    const filePath = path.join(siteDir, reqPath);
 
     if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
       const ext = path.extname(filePath).toLowerCase();

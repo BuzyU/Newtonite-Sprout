@@ -2,13 +2,14 @@
   "name": "sprout-design-system",
   "version": "2.0.0",
   "private": true,
-  "description": "Sprout 2.0 - Design system, accessible prototype, and case study for first-time investors in India",
+  "description": "Sprout 2.0 - Design system, accessible final design screens, and case study for first-time investors in India",
   "scripts": {
     "lint:copy": "node tools/copy-lint.js",
     "check:contrast": "node tools/contrast-check.js",
     "check:weight": "node tools/weight-check.js",
     "check:html": "node tools/html-validate-check.js",
     "check:a11y": "node tools/a11y-check.js",
+    "check:subpath": "node tools/test-subpath.js",
     "screenshots": "node tools/screenshots.js",
     "build:pdf": "node tools/export-pdf.js",
     "test": "node tools/test-runner.js"

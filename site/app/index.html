@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <title>Sprout Onboarding - 5-Step Investor Journey Prototype</title>
+  <title>Sprout Onboarding - 5-Step Investor Journey Final Design</title>
   <meta name="description" content="Sprout first-time investor onboarding flow in a 360x800 viewport with comprehensive state switcher.">
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="stylesheet" href="../css/reset.css">
@@ -20,7 +20,7 @@
           <img src="../assets/icons/arrow-right.svg" alt="" width="16" height="16" style="transform: rotate(180deg);" aria-hidden="true">
           <span>Back to Homepage</span>
         </a>
-        <h1 class="simulator-title">Sprout Onboarding Prototype (360x800 Mobile Viewport)</h1>
+        <h1 class="simulator-title">Sprout Onboarding - Final Design (360x800 Mobile Experience)</h1>
       </div>
       <div style="font-size: 0.8125rem; color: var(--color-text-secondary);">
         Interactive states testing suite for design & code review
@@ -55,7 +55,7 @@
           </div>
 
           <!-- Language toggle on app header -->
-          <button type="button" class="btn-lang app-lang-toggle" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; min-height: 32px;" aria-label="Toggle language">
+          <button type="button" class="btn-lang app-lang-toggle" aria-label="Toggle language">
             <span data-i18n="nav.langToggle">हिंदी</span>
           </button>
         </nav>
@@ -249,7 +249,7 @@
               <div>
                 <strong data-i18n="app.screen4.errorTitle">We couldn't verify this PAN</strong>
                 <p data-i18n="app.screen4.errorDesc">The name or number entered did not match official records. Please double-check for typos or ensure the name matches your tax document.</p>
-                <a href="#help" style="text-decoration: underline; font-weight: var(--weight-semibold); display: inline-block; margin-top: 0.25rem;" data-i18n="app.screen4.errorHelp">Need help? Contact support via chat.</a>
+                <a href="#help" class="screen4-link" style="text-decoration: underline; font-weight: var(--weight-semibold); display: inline-flex; align-items: center; min-height: var(--touch-target-min); margin-top: 0.25rem;" data-i18n="app.screen4.errorHelp">Need help? Contact support via chat.</a>
               </div>
             </div>
 
@@ -282,7 +282,7 @@
                   <input type="checkbox" class="consent-checkbox" id="kyc-consent-cb" checked>
                   <span data-i18n="app.screen4.consentCheckbox">I authorize Sprout to fetch my verification records in compliance with SEBI and UIDAI guidelines.</span>
                 </label>
-                <a href="#privacy" style="color: var(--color-forest-primary); text-decoration: underline; font-weight: var(--weight-semibold);" data-i18n="app.screen4.privacyLink">Read Privacy Notice</a>
+                <a href="#privacy" class="screen4-link" style="color: var(--color-forest-primary); text-decoration: underline; font-weight: var(--weight-semibold); display: inline-flex; align-items: center; min-height: var(--touch-target-min);" data-i18n="app.screen4.privacyLink">Read Privacy Notice</a>
               </div>
 
               <!-- Input Form -->
@@ -295,8 +295,8 @@
               <div id="otp-delay-card" style="display: none; background: var(--color-cream-surface); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 0.75rem;">
                 <p style="font-size: 0.8125rem; font-weight: var(--weight-semibold); color: var(--color-forest-primary); margin-bottom: 0.35rem;" data-i18n="app.screen4.otpDelayNotice">OTP taking longer than usual?</p>
                 <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.75rem;">
-                  <button type="button" style="text-align: left; color: var(--color-text-secondary); cursor: pointer;" data-i18n="app.screen4.resendOtp">Resend OTP (available in 24s)</button>
-                  <button type="button" style="text-align: left; color: var(--color-forest-primary); font-weight: var(--weight-semibold); cursor: pointer;" data-i18n="app.screen4.otpAlternative">Receive OTP via WhatsApp or Call</button>
+                  <button type="button" class="otp-action-link" data-i18n="app.screen4.resendOtp">Resend OTP (available in 24s)</button>
+                  <button type="button" class="otp-action-link highlight" data-i18n="app.screen4.otpAlternative">Receive OTP via WhatsApp or Call</button>
                 </div>
               </div>
 
@@ -419,8 +419,8 @@
         </div>
 
         <!-- Phone Footer Line -->
-        <footer style="background: var(--color-cream-surface); border-top: 1px solid var(--color-border-subtle); padding: 0.4rem 0.75rem; text-align: center; font-size: 0.6875rem; color: var(--color-text-muted); flex-shrink: 0;">
-          Design prototype for an assignment. Not a real financial product.
+        <footer style="background: var(--color-cream-surface); border-top: 1px solid var(--color-border-subtle); padding: 0.5rem 0.75rem; text-align: center; font-size: 0.6875rem; color: var(--color-text-muted); flex-shrink: 0;">
+          Design submission for an assignment. Not a real financial product.
         </footer>
       </section>
 
@@ -432,39 +432,39 @@
         </p>
 
         <div>
-          <div class="control-group-title">Prototype States</div>
+          <div class="control-group-title">Experience States</div>
           <div class="control-btn-grid">
             <button type="button" class="control-btn state-ctrl-btn active" data-state="default">
               <span>Default Flow</span>
-              <span>✓</span>
+              <span class="ctrl-tag">Ready</span>
             </button>
             <button type="button" class="control-btn state-ctrl-btn" data-state="loading">
               <span>Wait / Registry</span>
-              <span>⏳</span>
+              <span class="ctrl-tag">Wait</span>
             </button>
             <button type="button" class="control-btn state-ctrl-btn" data-state="slow network">
               <span>Slow Network</span>
-              <span>📶</span>
+              <span class="ctrl-tag">Slow</span>
             </button>
             <button type="button" class="control-btn state-ctrl-btn" data-state="otp delay">
               <span>OTP Delay</span>
-              <span>⏱️</span>
+              <span class="ctrl-tag">Delay</span>
             </button>
             <button type="button" class="control-btn state-ctrl-btn" data-state="error">
               <span>Human Error</span>
-              <span>⚠️</span>
+              <span class="ctrl-tag">Alert</span>
             </button>
             <button type="button" class="control-btn state-ctrl-btn" data-state="offline">
               <span>Offline</span>
-              <span>🔌</span>
+              <span class="ctrl-tag">Off</span>
             </button>
             <button type="button" class="control-btn state-ctrl-btn" data-state="success">
               <span>Success State</span>
-              <span>🎉</span>
+              <span class="ctrl-tag">Done</span>
             </button>
             <button type="button" class="control-btn state-ctrl-btn" data-state="hindi">
               <span>Hindi Mode</span>
-              <span>हिं</span>
+              <span class="ctrl-tag">हिं</span>
             </button>
           </div>
         </div>

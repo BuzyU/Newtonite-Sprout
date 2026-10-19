@@ -103,7 +103,71 @@ While 65% of respondents stated "Investing feels scary", all 40 participants wer
 
 ---
 
-## 4. Product Design Principles
+---
+
+## 4. Target Personas [Explicitly Labelled as Research Assumptions]
+
+> [!IMPORTANT]
+> **Methodological Disclosure:** These personas are **unvalidated design assumptions** formulated from Tier-2/3 market realities and customer support inquiry patterns. They represent working archetypes that must be formally validated through structured qualitative interviews with 5 to 8 churned users.
+
+![Sprout User Personas (Labelled as Research Assumptions)](file:///c:/Users/umerz/OneDrive/Desktop/Newtonion/UIUX/case-study/personas.svg)
+
+### Persona Archetypes Summary
+1. **Rohit Verma (23, Junior ITI Technician, Bhopal) — Assumption 1:**
+   - *Hardware & Context:* Redmi 9A (₹7,499, 2GB RAM) on prepaid 4G. Hindi primary speaker.
+   - *Anxiety:* Earns ₹18,000/month; fears digital fraud and believes investing is only for wealthy metro elites.
+   - *Drop-off Cliff:* Unexplained loading spinners cause him to believe the app crashed or compromised his data.
+   - *Design Response:* Native Hindi toggle, "Keep ready" prep screen, steady wait state mascot, 86.8 KB ultra-lightweight page weight.
+
+2. **Priya Nair (20, College Student, Kochi) — Assumption 2:**
+   - *Hardware & Context:* Realme C21 (₹8,999, 3GB RAM). English and Malayalam speaker.
+   - *Anxiety:* Has ₹100–300 saved from monthly pocket money. Intrigued by financial literacy videos but intimidated by jargon.
+   - *Drop-off Cliff:* Abrupt demand for PAN and Aadhaar without an explanation of purpose.
+   - *Design Response:* Screen 2 "I'm just curious" entry, explicit regulatory consent card, ₹100 pre-selected default.
+
+3. **Ananya Sharma (27, Operations Associate, Jaipur) — Assumption 3:**
+   - *Hardware & Context:* Samsung Galaxy M04 (₹8,499, 3GB RAM). English and Hindi speaker.
+   - *Anxiety:* Cautious saver; fears sudden penalties or lock-ins preventing her from withdrawing emergency money.
+   - *Drop-off Cliff:* Inability to verify whether funds can be liquidated instantly.
+   - *Design Response:* Prominent "No minimum lock-in" badge, transparent portfolio breakdown, ₹100 micro-investing.
+
+---
+
+## 5. Usability Test Plan (Empirical Validation Protocol)
+
+To validate whether the Sprout 2.0 interface eradicates the evidenced customer support complaints and pre-KYC leakage, the following empirical test protocol is established:
+
+### Test Parameters
+- **Cohort:** 6 participants (3 English primary, 3 Hindi primary).
+- **Inclusion Criteria:** First-time investors (0 prior mutual fund folios), owning smartphones under ₹12,000, accessing via mobile 4G.
+- **Format:** 45-minute moderated remote or lab session using the Think-Aloud protocol on physical Android handsets.
+
+### Core Evaluative Tasks
+1. **First-Impression & Risk Comprehension (Homepage):**
+   - *Prompt:* "Look at this page for 15 seconds. In your own words, what is this app, how much do you need to start, and can you lose money?"
+   - *Target:* Immediate comprehension of ₹100 threshold and market risk notice without scrolling.
+2. **Goal Selection & Expectation Setting (Screens 1 & 2):**
+   - *Prompt:* "Start the process. Choose what matches your intention."
+   - *Target:* Seamless navigation through the 7-minute expectations card with zero hesitation.
+3. **Document Readiness & Fallback (Screen 3):**
+   - *Prompt:* "You arrive at this screen, but you realize your physical PAN card is in another room. What do you do?"
+   - *Target:* Spontaneous discovery and use of the "Remind me later" permission drawer without abandoning.
+4. **Verification Latency & Error States (Screen 4):**
+   - *Prompt:* "Enter your details and press verify. The screen is now loading."
+   - *Target:* Zero participants force-quitting or stating "the app crashed" during the 45-second animated registry check.
+5. **First Investment Settlement (Screen 5):**
+   - *Prompt:* "Review your starting order and complete the action."
+   - *Target:* Confidence in order placement without fear of hidden recurring debits.
+
+### Quantitative Success Benchmarks
+- **Task Completion Rate:** $\ge 85\%$ across all 5 screens without moderator intervention.
+- **Document Prep Comprehension:** $\ge 90\%$ understanding why PAN/Aadhaar are required.
+- **Crash Perception Reduction:** **0%** of participants believing the app crashed during registry wait states.
+- **Single Ease Question (SEQ):** Average score $\ge 6.2 / 7.0$ across all completed flows.
+
+---
+
+## 6. Product Design Principles
 
 1. **Honesty Over Hype**  
    Never promise guaranteed returns, never display synthetic growth tickers, and never use artificial countdown timers. Financial trust is built when an app is candid about market risks.
@@ -116,19 +180,19 @@ While 65% of respondents stated "Investing feels scary", all 40 participants wer
 
 ---
 
-## 5. Stakeholder Negotiation Table
+## 7. Stakeholder Negotiation Table
 
 | Stakeholder | What Was Asked | What is Valid | My Call as Designer | Trade-off / Compromise Rationale |
 | :--- | :--- | :--- | :--- | :--- |
 | **CEO** | "Minimal, Apple-like, no cartoon characters. Investors won't trust a cartoon." | Financial apps must convey institutional credibility and stability; childlike cartoons undermine serious trust. | **The mascot stays, but as a restrained geometric seedling.** Calm, grounded vector; flat colors; no 3D, no sparkles. | Humanizes cold financial onboarding without feeling like a children's game. Prohibited from appearing near legal risk text. |
 | **Head of Marketing** | Mascot, video, live ticker, 3 pop-up modals, and referral banner. | Social proof, clear product demonstration, and viral referral loops are proven acquisition levers. | **Cut the ticker and all pop-ups.** Video converted to a click-to-load poster. Referral placed as a quiet footer strip and after first investment. | Tickers induce anxiety for beginners; modals cause immediate mobile abandonment. Click-to-load video saves 4G data. |
 | **Compliance Officer**| Risk disclaimer $\ge$12px visible without scrolling in first viewport. Banned terms: "guaranteed", "safe", "risk-free". | Regulatory mandates under SEBI are non-negotiable; violations risk platform suspension. | **Implemented 13px disclaimer component in the first viewport** across all investment screens. Automated copy linter runs in CI. | Disclaimer placed right below the primary CTA so users see risk transparency immediately before acting. |
-| **Lead Developer** | Page weight $<1.5\text{ MB}$, CSS animations only, 1 front-end engineer for 3 weeks. | A single engineer cannot build complex state engines or debug heavy animation libraries within 21 days. | **Pure vanilla HTML/CSS/JS with zero build step.** System fonts with Devanagari fallback; total payload is **86.6 KB**. | 3-week delivery plan with strict cut list protects engineering sanity and guarantees lightning performance. |
+| **Lead Developer** | Page weight $<1.5\text{ MB}$, CSS animations only, 1 front-end engineer for 3 weeks. | A single engineer cannot build complex state engines or debug heavy animation libraries within 21 days. | **Pure vanilla HTML/CSS/JS with zero build step.** System fonts with Devanagari fallback; total payload is **86.8 KB**. | 3-week delivery plan with strict cut list protects engineering sanity and guarantees lightning performance. |
 | **Customer Support Lead** | Complaints: "Didn't know I needed documents ready" and "Thought app crashed during wait". | Unprepared users drop off permanently; blank loading spinners look like software deadlocks. | **Added "Keep these ready" prep screen** and an animated 45-second wait state with reassurance text. | Directly targets and eliminates the two largest evidenced sources of user friction and support churn. |
 
 ---
 
-## 6. End-to-End User Journey Map
+## 8. End-to-End User Journey Map
 
 The journey map below traces the emotional transition of a first-time investor from initial skepticism upon seeing an ad to confident ownership of their first ₹100 portfolio.
 
@@ -144,7 +208,7 @@ The journey map below traces the emotional transition of a first-time investor f
 
 ---
 
-## 7. Homepage Design Decisions
+## 9. Homepage Design Decisions
 
 The homepage is structured as a five-stage narrative: **Fear $\to$ Understanding $\to$ Small First Step $\to$ Trust $\to$ Action.**
 
@@ -155,7 +219,7 @@ The homepage is structured as a five-stage narrative: **Fear $\to$ Understanding
    - Compact brand header with an instant language toggle (`EN | हिंदी`).
    - One headline devoid of jargon: *"Start small. Learn as you grow."*
    - Primary CTA: *"Start with ₹100"* accompanied by Ankur waving in a small 44px badge.
-   - Compliance Risk Disclaimer: Rendered in high-contrast text (`#3F4E46` on `#FFFFFF`, 8.78:1 ratio) at **13px**, strictly exceeding the 12px legal threshold and fully visible on both a 360px mobile viewport and desktop without scrolling.
+   - Compliance Risk Disclaimer: Rendered in high-contrast text (`#3F4E46` on `#FFFFFF`, 8.78:1 ratio) at **13px**, strictly exceeding the 12px legal threshold and fully visible on both a 360px mobile viewport and desktop without scrolling (top offset 418.8px).
 2. **Three Reassurance Anchors:**
    - *Start with just ₹100:* Validates that small amounts matter.
    - *See what you own:* Promises complete portfolio transparency.
@@ -177,7 +241,7 @@ The homepage is structured as a five-stage narrative: **Fear $\to$ Understanding
 
 ---
 
-## 8. Onboarding Rationale Per Screen
+## 10. Onboarding Rationale Per Screen
 
 The onboarding flow runs in a 360x800 viewport with an external States Switcher to test edge cases.
 
@@ -222,7 +286,7 @@ The onboarding flow runs in a 360x800 viewport with an external States Switcher 
 
 ---
 
-## 9. Mascot Architecture & Rules: "Ankur" (अंकुर)
+## 11. Mascot Architecture & Rules: "Ankur" (अंकुर)
 
 ### Visual Anatomy
 - **Material:** Pure SVG vector code under 3 KB per file. Flat 3-4 palette colors: Forest Green (`#11382B`), Sprout Green (`#2E7D32`), Soft Leaf (`#4CAF50`), and Marigold (`#D97706`).
@@ -244,7 +308,7 @@ The onboarding flow runs in a 360x800 viewport with an external States Switcher 
 
 ---
 
-## 10. Measured Accessibility, Performance & Compliance Results
+## 12. Measured Accessibility, Performance & Compliance Results
 
 All metrics reported below were generated through automated scripts executed in the local repository environment.
 
@@ -259,25 +323,28 @@ All metrics reported below were generated through automated scripts executed in 
 - Terracotta Error Text (`#9C3218` on `#FDF1EE`): **6.58:1** (WCAG AA)
 
 ### 2. Asset Weight Audit (`tools/weight-check.js`)
-- **Homepage Total Transferred Weight:** **86.6 KB** (88,633 bytes)  
-  *Budget: 1.5 MB limit; Target: 400 KB.* **Passed at 21.6% of target budget.**
-- **Onboarding App Prototype Total Weight:** **106.5 KB** (109,074 bytes)  
-  *Budget: 1.5 MB limit.* **Passed at 7.1% of maximum budget.**
+- **Homepage Total Transferred Weight:** **86.8 KB** (88,883 bytes)  
+  *Budget: 1.5 MB limit; Target: 400 KB.* **Passed at 21.7% of target budget.**
+- **Onboarding App Screens Total Weight:** **109.5 KB** (112,130 bytes)  
+  *Budget: 1.5 MB limit.* **Passed at 7.3% of maximum budget.**
 - **External Network Requests:** **0** (Zero CDN calls, zero Google Fonts lookups).
 
 ### 3. Automated Accessibility Audit (`tools/a11y-check.js` via Axe-Core)
 - **Homepage Mobile (360px):** **0 violations**
 - **Homepage Desktop (1280px):** **0 violations**
 - **Onboarding App Screens (1 to 5):** **0 violations**
+- **Tap Targets < 44px:** **0** across all viewports (320px, 360px, 390px, 768px, 1280px).
+- **Horizontal Overflow:** **0 px** across all 5 viewports.
 - *Disclaimer:* Automated testing verifies markup and contrast but cannot guarantee full human accessibility. Manual testing with screen readers and keyboard navigation was conducted.
 
 ### 4. Regulatory Copy Audit (`tools/copy-lint.js`)
-- **Prohibited Marketing Claims Detected:** **0** (Scanned for guarantee/guaranteed, safe/safer, risk-free, assured, sure-shot, no-risk, can't lose across all HTML, CSS, JS, JSON, and SVG files).
+- **Prohibited Marketing Claims Detected:** **0** (Scanned for guarantee/guaranteed, safe/safer, risk-free, assured, sure-shot, no-risk, can't lose, and Hindi सुरक्षित across all HTML, CSS, JS, JSON, and SVG files).
 - **Disclaimer Font Floor:** Verified at **13px** (`0.8125rem`), safely above the 12px legal minimum.
+- **First-Viewport Visibility:** Verified true across all investment screens without scrolling.
 
 ---
 
-## 11. Localisation Architecture (English & Hindi)
+## 13. Localisation Architecture (English & Hindi)
 
 ### Devanagari Accommodations
 1. **Font Metric Stacks:** Uses system humanist typography with Devanagari companions:
@@ -290,7 +357,7 @@ All metrics reported below were generated through automated scripts executed in 
 
 ---
 
-## 12. Realistic 3-Week Engineering Plan & Cut List
+## 14. Realistic 3-Week Engineering Plan & Cut List
 
 *Resource constraint: 1 Front-End Developer for 3 Weeks.*
 
@@ -311,7 +378,7 @@ WEEK 2: Onboarding Stepper & Edge States
 
 WEEK 3: Hardening, Accessibility, QA & Deployment
 ├── Day 11: Keyboard navigation, focus visible rings, touch target validation (>= 44px)
-├── Day 12: Playwright automated test suite (copy lint, contrast, weight, axe a11y)
+├── Day 12: Automated test suite (copy lint, contrast, weight, axe a11y)
 ├── Day 13: Localisation review and Devanagari layout stress-testing at 320px/360px
 ├── Day 14: Headless screenshot generation and Vercel clean URL configuration
 └── Day 15: Cross-browser QA (Chrome, Safari, Firefox, Edge, Android WebView) & launch
@@ -326,12 +393,12 @@ WEEK 3: Hardening, Accessibility, QA & Deployment
    *Why:* Would consume 5-10 MB of mobile data on budget plans. Replaced with an 18 KB SVG poster that only loads on user interaction.
 4. **Cut: Complex Confetti / Physics Animations**  
    *Why:* Confetti trivializes real financial capital. Replaced with a lightweight, 600ms CSS botanical seedling growth animation.
-5. **Cut: Heavy Third-Party Analytics SDKs during Prototyping**  
-   *Why:* Prevents main-thread blocking and data leakage. To be replaced with server-side event tracking post-launch.
+5. **Cut: Heavy Third-Party Analytics SDKs during Initial Launch**  
+   *Why:* Prevents main-thread blocking and data leakage. To be replaced with lightweight privacy-first server-side event tracking post-launch.
 
 ---
 
-## 13. Metrics & Experimentation (A/B Testing Plan)
+## 15. Metrics & Experimentation (A/B Testing Plan)
 
 ### Proposed Post-Launch A/B Tests
 1. **Experiment 1: Document Prep Screen vs Direct KYC Entry**  
@@ -350,7 +417,7 @@ WEEK 3: Hardening, Accessibility, QA & Deployment
 
 ---
 
-## 14. Assumptions, Risks & Questions for Stakeholders
+## 16. Assumptions, Risks & Questions for Stakeholders
 
 ### Assumptions Log
 
