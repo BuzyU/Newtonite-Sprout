@@ -1,6 +1,6 @@
 /**
  * Sprout Design System - Accessibility (a11y) Automated Audit
- * Uses @axe-core/playwright to audit WCAG 2.1 AA rules against local prototype.
+ * Uses @axe-core/playwright to audit WCAG 2.1 AA rules against local site and application screens.
  * NOTE: Automated checks verify structural and rule compliance, but manual testing
  * (screen readers, cognitive load, user testing) is also required for true WCAG compliance.
  */
@@ -75,7 +75,7 @@ async function runAudit() {
     }
 
     // Audit 3: Onboarding App Screens (1 to 5)
-    console.log('\nAuditing: Onboarding App Prototype...');
+    console.log('\nAuditing: Onboarding App Screens...');
     await page.setViewportSize({ width: 1200, height: 900 });
     await page.goto(`http://localhost:${PORT}/app/index.html?screen=1`, { waitUntil: 'networkidle' });
     const appResults = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa']).analyze();

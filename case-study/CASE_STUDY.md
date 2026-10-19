@@ -16,7 +16,7 @@
    Marketing demanded a cartoon mascot, video, live ticker, and three pop-ups to drive viral engagement; the CEO insisted on an Apple-like minimal interface with zero cartoons to protect investor trust. I broke the deadlock by designing **"Ankur" (Hindi for sprout)**: a geometric, flat seedling that acts as a quiet, respectful companion at moments of emotional friction (such as verification wait states), but is strictly banned from appearing near legal risk disclaimers, high-stress errors, or promotional pop-ups. Marketing's live ticker was cut entirely to prevent market anxiety, pop-ups were eliminated, and the video was converted into a lightweight, click-to-load poster.
 
 3. **Engineered Hard Compliance and Low-End Performance Baselines**  
-   With 91% of users on mobile and 40% on smartphones under ₹10,000 facing 6.2-second average 4G loads, heavy JavaScript frameworks were rejected. The entire prototype is vanilla HTML/CSS/JS with zero external CDN dependencies, self-hosted system fonts with native Devanagari support, and sub-3 KB inline SVGs. Measured homepage payload is **86.6 KB** (well under the 400 KB target and 1.5 MB ceiling). Every screen featuring investment content presents a regulatory risk disclaimer rendered at **13px** (exceeding the 12px legal minimum) visible in the first viewport without scrolling.
+   With 91% of users on mobile and 40% on smartphones under ₹10,000 [brief data point, assuming sub-₹10k entry smartphone segment] facing 6.2-second average 4G loads [brief-cited unverified baseline], heavy JavaScript frameworks were rejected. The entire website and onboarding app is vanilla HTML/CSS/JS with zero external CDN dependencies, self-hosted system fonts with native Devanagari support, and sub-3 KB inline SVGs. Measured homepage payload is **86.8 KB** (well under the 400 KB target and 1.5 MB ceiling). Every screen featuring investment content presents a regulatory risk disclaimer rendered at **13px** (exceeding the 12px legal minimum) visible in the first viewport without scrolling.
 
 ---
 
@@ -110,7 +110,7 @@ While 65% of respondents stated "Investing feels scary", all 40 participants wer
 > [!IMPORTANT]
 > **Methodological Disclosure:** These personas are **unvalidated design assumptions** formulated from Tier-2/3 market realities and customer support inquiry patterns. They represent working archetypes that must be formally validated through structured qualitative interviews with 5 to 8 churned users.
 
-![Sprout User Personas (Labelled as Research Assumptions)](file:///c:/Users/umerz/OneDrive/Desktop/Newtonion/UIUX/case-study/personas.svg)
+![Sprout User Personas (Labelled as Research Assumptions)](./personas.svg)
 
 ### Persona Archetypes Summary
 1. **Rohit Verma (23, Junior ITI Technician, Bhopal) — Assumption 1:**
@@ -196,7 +196,7 @@ To validate whether the Sprout 2.0 interface eradicates the evidenced customer s
 
 The journey map below traces the emotional transition of a first-time investor from initial skepticism upon seeing an ad to confident ownership of their first ₹100 portfolio.
 
-![Sprout User Journey Map](file:///c:/Users/umerz/OneDrive/Desktop/Newtonion/UIUX/case-study/journey-map.svg)
+![Sprout User Journey Map](./journey-map.svg)
 
 ### Design Responses by Journey Stage
 1. **Ad Encounter:** Avoided hyperbolic claims; ad links directly to a plain-language landing page with pre-set parameters.
@@ -212,8 +212,8 @@ The journey map below traces the emotional transition of a first-time investor f
 
 The homepage is structured as a five-stage narrative: **Fear $\to$ Understanding $\to$ Small First Step $\to$ Trust $\to$ Action.**
 
-![Sprout Mobile Homepage Screenshot](file:///c:/Users/umerz/OneDrive/Desktop/Newtonion/UIUX/screens/homepage-mobile-360.png)
-![Sprout Desktop Homepage Screenshot](file:///c:/Users/umerz/OneDrive/Desktop/Newtonion/UIUX/screens/homepage-desktop-1280.png)
+![Sprout Mobile Homepage Screenshot](../screens/homepage-mobile-360.png)
+![Sprout Desktop Homepage Screenshot](../screens/homepage-desktop-1280.png)
 
 1. **First Viewport Architecture (Zero-Scroll Disclaimer Compliance):**
    - Compact brand header with an instant language toggle (`EN | हिंदी`).
@@ -245,7 +245,7 @@ The homepage is structured as a five-stage narrative: **Fear $\to$ Understanding
 
 The onboarding flow runs in a 360x800 viewport with an external States Switcher to test edge cases.
 
-![Sprout App Simulator Overview](file:///c:/Users/umerz/OneDrive/Desktop/Newtonion/UIUX/screens/app-simulator-overview.png)
+![Sprout App Simulator Overview](../screens/app-simulator-overview.png)
 
 ### Screen 1: Welcome ("Hi, I'm Ankur")
 - **The Job:** Introduce the companion, establish what Sprout is, and outline the exact roadmap and time commitment (~7 minutes).

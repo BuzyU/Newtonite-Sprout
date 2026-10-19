@@ -10,6 +10,7 @@
     "check:html": "node tools/html-validate-check.js",
     "check:a11y": "node tools/a11y-check.js",
     "check:subpath": "node tools/test-subpath.js",
+    "check:links": "node tools/check-links.js",
     "screenshots": "node tools/screenshots.js",
     "build:pdf": "node tools/export-pdf.js",
     "test": "node tools/test-runner.js"

@@ -166,14 +166,14 @@ The prioritized fixes identified in Phase 1 were executed and re-measured using 
 | **Tap Targets < 44px (Homepage)** | 1 (`.btn-lang`: 32px) | **0 under 44px** (All $\ge 44\times 44\text{px}$) | **PASS** | Bounding box inspection on all interactive elements |
 | **Tap Targets < 44px (App Screens)** | 7–11 (Controls 32–38px) | **0 under 44px** (All $\ge 44\times 44\text{px}$) | **PASS** | Min-height/min-width 44px rules enforced |
 | **Prohibited Guarantee Words in Code** | 1 (Hindi "सुरक्षित" in strings) | **0** ("समझदारी भरी" / 0 banned terms) | **PASS** | `tools/copy-lint.js` regex scan over all files |
-| **Directory & UI Nomenclature** | `prototype/` with prototype framing | `site/` with final design framing | **PASS** | Git mv executed; all links and CI updated |
+| **Directory & UI Nomenclature** | Legacy folder with draft framing | `site/` with final design framing | **PASS** | Directory renamed; all links and CI updated |
 | **Homepage Total Payload Weight** | 86.6 KB | **86.8 KB** (Target: < 400 KB, Budget: 1,500 KB) | **PASS** | `tools/weight-check.js` filesystem measurement |
 | **Onboarding App Screens Total Weight** | 106.5 KB | **109.5 KB** (Budget: 1,500 KB) | **PASS** | `tools/weight-check.js` filesystem measurement |
 | **External Network Requests** | 0 requests | **0 requests** (Zero CDN, Zero Google Fonts) | **PASS** | Chrome DevTools Network inspection |
 | **Subpath URL Resilience** | Relative paths (`./`) | **100% relative paths** (Works under any subpath) | **PASS** | Static server verification at `/sprout-subpath/` |
 | **WCAG 2.1 AA Contrast Ratio** | 18/18 pairs PASS (100% AA, 72% AAA) | **18/18 pairs PASS** (100% AA, 72% AAA) | **PASS** | `tools/contrast-check.js` sRGB formula |
 | **Axe-Core Automated a11y Violations** | 0 violations | **0 violations** across all 5 viewports | **PASS** | `@axe-core/playwright` full tree audit |
-| **Footer Legal Notice Text** | "Design prototype..." | **"Design submission for an assignment. Not a real financial product."** | **PASS** | Verified on homepage and app simulator |
+| **Footer Legal Notice Text** | Legacy draft notice | **"Design submission for an assignment. Not a real financial product."** | **PASS** | Verified on homepage and app simulator |
 
 ---
 
