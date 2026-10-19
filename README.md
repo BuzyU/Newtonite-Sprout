@@ -1,4 +1,5 @@
-# Sprout 2.0 - Product Design & Engineering Submission
+# Newtonite-Sprout
+### Sprout 2.0 - Product Design & Engineering Submission
 
 > **A connected, accessible micro-investing journey for first-time investors in India (starting with ₹100).**  
 > Built as a zero-framework, fully functional, responsive coded prototype with complete design tokens, a 14-section strategic case study, automated CI quality checks, and production deployment configuration.
