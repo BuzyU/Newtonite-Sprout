@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Sprout 2.0 - 60-Second Executive Review Board</title>
+  <meta name="description" content="One-page static design overview board showcasing Sprout 2.0 prototype, case study, design system, and measured results.">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./prototype/css/reset.css">
+  <link rel="stylesheet" href="./prototype/css/tokens.css">
+  <style>
+    body {
+      background-color: var(--color-cream-bg);
+      color: var(--color-text-primary);
+      padding: 2rem 1rem 4rem;
+      font-family: var(--font-body);
+    }
+    .board-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .board-header {
+      background: var(--color-surface-white);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .board-title {
+      font-family: var(--font-heading);
+      font-size: 2.25rem;
+      color: var(--color-forest-primary);
+      line-height: 1.2;
+    }
+    .board-subline {
+      font-size: 1.125rem;
+      color: var(--color-text-secondary);
+      max-width: 800px;
+      line-height: 1.6;
+    }
+    .quick-links-bar {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border-subtle);
+    }
+    .btn-action-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--color-forest-primary);
+      color: var(--color-surface-white);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-full);
+      font-weight: var(--weight-bold);
+      font-size: 0.9375rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-action-primary:hover {
+      background: var(--color-forest-light);
+    }
+    .btn-action-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--color-cream-surface);
+      color: var(--color-forest-primary);
+      border: 1px solid var(--color-border-default);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-full);
+      font-weight: var(--weight-semibold);
+      font-size: 0.9375rem;
+    }
+    .btn-action-secondary:hover {
+      background: var(--color-surface-white);
+      border-color: var(--color-forest-primary);
+    }
+
+    /* Board Sections */
+    .board-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .section-title-wrap {
+      border-left: 4px solid var(--color-forest-primary);
+      padding-left: 1rem;
+    }
+    .section-title-wrap h2 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      color: var(--color-forest-primary);
+    }
+    .section-title-wrap p {
+      font-size: 0.9375rem;
+      color: var(--color-text-secondary);
+    }
+
+    /* Grid cards */
+    .board-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .board-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .board-grid-2 { grid-template-columns: 1fr 1fr; }
+      .board-grid-3 { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .screenshot-card {
+      background: var(--color-surface-white);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+    }
+    .screenshot-img-wrap {
+      background: #F6F1EA;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+    .screenshot-img-wrap img {
+      max-height: 480px;
+      width: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .card-meta {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .card-meta h3 {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      color: var(--color-forest-primary);
+    }
+    .card-meta p {
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+    .badge-feature {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: var(--weight-bold);
+      color: var(--color-forest-primary);
+      background: #F0F6F2;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      width: fit-content;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Key Metrics Banner */
+    .metrics-banner {
+      background: var(--color-forest-primary);
+      color: var(--color-surface-white);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .metric-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .metric-val {
+      font-family: var(--font-heading);
+      font-size: 2.25rem;
+      font-weight: var(--weight-bold);
+      color: var(--color-marigold-subtle);
+    }
+    .metric-label {
+      font-size: 0.875rem;
+      color: #D1E0D7;
+    }
+
+    /* Footer */
+    .board-footer {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border-subtle);
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="board-container">
+    <!-- Header -->
+    <header class="board-header" role="banner">
+      <div class="header-top">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="./assets/logo.svg" alt="Sprout" width="140" height="36">
+          <span style="font-size: 0.8125rem; background: var(--color-marigold-subtle); color: var(--color-marigold-dark); font-weight: var(--weight-bold); padding: 0.2rem 0.6rem; border-radius: var(--radius-full);">
+            Sprout 2.0 Review Board
+          </span>
+        </div>
+        <div style="font-size: 0.8125rem; color: var(--color-text-muted);">
+          Review in 60 Seconds
+        </div>
+      </div>
+
+      <h1 class="board-title">Sprout 2.0: Designing for First-Time Indian Investors</h1>
+      <p class="board-subline">
+        A complete product redesign addressing high KYC friction (62% drop-off) and low-end mobile constraints (40% on devices &lt; ₹10,000). Built as a fully functional, zero-framework, accessible prototype with a connected narrative from website to first ₹100 investment.
+      </p>
+
+      <div class="quick-links-bar">
+        <a href="./prototype/index.html" class="btn-action-primary">
+          <span>Open Interactive Homepage</span>
+          <span>→</span>
+        </a>
+        <a href="./prototype/app/index.html" class="btn-action-secondary">
+          <span>Launch Onboarding Simulator (360x800)</span>
+          <span>→</span>
+        </a>
+        <a href="./case-study/CASE_STUDY.md" class="btn-action-secondary">
+          <span>Read Case Study</span>
+        </a>
+        <a href="./case-study/case-study.pdf" class="btn-action-secondary">
+          <span>Download PDF Export</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Key Verified Metrics Banner -->
+    <div class="metrics-banner" role="region" aria-label="Measured System Metrics">
+      <div class="metric-item">
+        <div class="metric-val">86.6 KB</div>
+        <div class="metric-label">Homepage Payload (Target: &lt; 400 KB)</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-val">0</div>
+        <div class="metric-label">Axe-Core a11y Violations (WCAG AA)</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-val">100%</div>
+        <div class="metric-label">Contrast Pass Rate (18/18 pairs)</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-val">13px</div>
+        <div class="metric-label">Disclaimer Floor (Legal min: 12px)</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-val">0</div>
+        <div class="metric-label">External Network Requests (Zero CDN)</div>
+      </div>
+    </div>
+
+    <!-- Section 1: Homepage Experience -->
+    <section class="board-section" aria-labelledby="section-homepage">
+      <div class="section-title-wrap">
+        <h2 id="section-homepage">1. The Homepage: Fear to Trust in Five Steps</h2>
+        <p>Responsive across 320px, 360px, 390px, 768px, and 1280px with mandatory visible risk disclaimers.</p>
+      </div>
+
+      <div class="board-grid-2">
+        <div class="screenshot-card">
+          <div class="screenshot-img-wrap">
+            <img src="./screens/homepage-mobile-360.png" alt="Sprout Mobile Homepage in 360px viewport" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="badge-feature">MOBILE FIRST (360px)</span>
+            <h3>Single-Column Narrative &amp; Zero-Scroll Disclaimer</h3>
+            <p>Risk disclaimer (13px) placed directly beneath hero CTA in the first viewport. No auto-playing videos, no deceptive growth tickers, no floating pop-ups.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-img-wrap">
+            <img src="./screens/homepage-desktop-1280.png" alt="Sprout Desktop Considered Homepage" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="badge-feature">DESKTOP CONSIDERED (1280px)</span>
+            <h3>Balanced 2-Column Grid &amp; Interactive Preview</h3>
+            <p>Thoughtful desktop layout rather than stretched mobile view. Accommodates the click-to-load video poster, reassurance grid, and native details FAQ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: 5-Step Onboarding App -->
+    <section class="board-section" aria-labelledby="section-onboarding">
+      <div class="section-title-wrap">
+        <h2 id="section-onboarding">2. The 5-Step Onboarding Flow</h2>
+        <p>One idea per screen, clear emotional pacing, and Ankur the geometric sprout as a respectful guide.</p>
+      </div>
+
+      <div class="board-grid-3">
+        <div class="screenshot-card">
+          <div class="screenshot-img-wrap">
+            <img src="./screens/app-screen-1-welcome.png" alt="Screen 1 Welcome" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="badge-feature">SCREEN 1: WELCOME</span>
+            <h3>Ankur Greeting &amp; Roadmap</h3>
+            <p>Sets expectations upfront with total time estimate (~7 mins) and clear breakdown of upcoming steps.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-img-wrap">
+            <img src="./screens/app-screen-2-goals.png" alt="Screen 2 Goals" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="badge-feature">SCREEN 2: INTENT</span>
+            <h3>Validating User Hesitation</h3>
+            <p>Offers "I'm just curious" and reassures first-time investors that feeling unsure is completely natural.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-img-wrap">
+            <img src="./screens/app-screen-3-keep-ready-en.png" alt="Screen 3 Keep Ready" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="badge-feature">SCREEN 3: DOC PREP</span>
+            <h3>Eliminating CS Complaint #1</h3>
+            <p>Lists PAN, Aadhaar phone, and bank details before verification begins, plus a "Remind me later" deferred push permission drawer.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-img-wrap">
+            <img src="./screens/app-screen-4-verification-default.png" alt="Screen 4 Verification Default" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="badge-feature">SCREEN 4: KYC VERIFICATION</span>
+            <h3>Consent &amp; Small Steps</h3>
+            <p>Explicit regulatory consent and privacy purpose statement before capturing identity numbers.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-img-wrap">
+            <img src="./screens/app-screen-5-first-100.png" alt="Screen 5 First ₹100" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="badge-feature">SCREEN 5: FIRST ₹100</span>
+            <h3>Plugging the 66.7% Leak</h3>
+            <p>Pre-selected ₹100 default button, plain-language risk notice, and visible first-viewport disclaimer.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-img-wrap">
+            <img src="./screens/app-screen-5-celebration.png" alt="Screen 5 Celebration" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="badge-feature">RESTRAINED CELEBRATION</span>
+            <h3>Botanical Sprout Growth</h3>
+            <p>Quiet CSS-only sprout growth animation instead of cheap gambling confetti, followed by non-blocking referral credit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Edge States & Localisation -->
+    <section class="board-section" aria-labelledby="section-states">
+      <div class="section-title-wrap">
+        <h2 id="section-states">3. Edge States, Error Handling &amp; Localisation</h2>
+        <p>Tested edge cases to safeguard users against drop-off during slow networks and registry delays.</p>
+      </div>
+
+      <div class="board-grid-3">
+        <div class="screenshot-card">
+          <div class="screenshot-img-wrap">
+            <img src="./screens/app-screen-4-wait-state.png" alt="Screen 4 Wait State" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="badge-feature">WAIT STATE (CS COMPLAINT #2)</span>
+            <h3>Eliminating "Thought It Crashed"</h3>
+            <p>Reassuring mascot with 45s timer and explicit copy: "You do not need to stare at this screen; we will notify you when complete."</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-img-wrap">
+            <img src="./screens/app-screen-4-otp-delay.png" alt="Screen 4 OTP Delay" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="badge-feature">OTP DELAY STATE</span>
+            <h3>Alternative Delivery Channels</h3>
+            <p>Countdown timer and WhatsApp/Call fallback options when SMS gateway latency occurs on government UIDAI portals.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="screenshot-img-wrap">
+            <img src="./screens/app-screen-3-keep-ready-hi.png" alt="Screen 3 Hindi Localisation" loading="lazy">
+          </div>
+          <div class="card-meta">
+            <span class="badge-feature">HINDI LOCALISATION DEMO</span>
+            <h3>Natural Conversational Hindi</h3>
+            <p>Tested Devanagari font stack with 30-40% length expansion tolerance, verified line-heights, and zero clipped matras.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="board-footer" role="contentinfo">
+      <p>Design prototype for an assignment. Not a real financial product.</p>
+      <p style="margin-top: 0.25rem;">&copy; 2026 Sprout. All measurements generated and audited with Playwright, axe-core, and html-validate.</p>
+    </footer>
+  </div>
+</body>
+</html>
