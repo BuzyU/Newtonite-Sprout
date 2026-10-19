@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none" role="img" aria-label="Illustration of starting with 100 rupees">
+  <circle cx="60" cy="60" r="54" fill="#F6F1EA"/>
+  <!-- Rupee note representation -->
+  <rect x="30" y="44" width="60" height="36" rx="4" fill="#11382B"/>
+  <rect x="34" y="48" width="52" height="28" rx="2" fill="#1B4D3E"/>
+  <circle cx="60" cy="62" r="9" fill="#11382B"/>
+  <!-- Currency symbol in center -->
+  <text x="60" y="66" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#D97706" text-anchor="middle">₹100</text>
+  <!-- Tiny sprout emerging from note corner -->
+  <path d="M78 44C78 38 83 34 88 34C88 39 84 44 78 44Z" fill="#2E7D32"/>
+  <path d="M78 44C74 40 73 34 78 30C82 32 82 38 78 44Z" fill="#4CAF50"/>
+</svg>

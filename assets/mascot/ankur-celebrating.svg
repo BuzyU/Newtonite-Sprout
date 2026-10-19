@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" fill="none" class="ankur-mascot ankur-celebrating" role="img" aria-label="Ankur the Sprout mascot celebrating first investment">
+  <g id="ankur-root">
+    <!-- Tiny budding flower / golden new leaf sprout above -->
+    <path id="flourish" d="M40 8C41.5 12 44 13 46 13C44 15 41.5 16 40 20C38.5 16 36 15 34 13C36 13 38.5 12 40 8Z" fill="#D97706"/>
+    
+    <!-- Base seed (lifted slightly in a tiny perky hop) -->
+    <path id="seed-base" d="M26 58C26 51.3726 31.3726 46 38 46H42C48.6274 46 54 51.3726 54 58C54 60.2091 52.2091 62 50 62H30C27.7909 62 26 60.2091 26 58Z" fill="#11382B"/>
+    
+    <!-- Short Stem -->
+    <path id="stem" d="M38 46V33C38 31.8954 38.8954 31 40 31C41.1046 31 42 31.8954 42 33V46H38Z" fill="#11382B"/>
+    
+    <!-- Left Leaf (upward perky) -->
+    <g id="leaf-left" class="ankur-part-leaf-cheer-left">
+      <path d="M40 33C28 29 18 16 23 7C31 7 38 20 40 33Z" fill="#2E7D32"/>
+      <path d="M38 30C30 22 25 14 26 10" stroke="#A3D9A5" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Right Leaf (upward perky) -->
+    <g id="leaf-right" class="ankur-part-leaf-cheer-right">
+      <path d="M40 33C52 29 62 16 57 7C49 7 42 20 40 33Z" fill="#4CAF50"/>
+      <path d="M42 30C50 22 55 14 54 10" stroke="#C8E6C9" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Face (happy celebratory expression) -->
+    <g id="face">
+      <!-- Cheerful crescent eyes -->
+      <path id="eye-left" d="M33 53C34 51 36 51 37 53" stroke="#FDFBF7" stroke-width="1.6" stroke-linecap="round"/>
+      <path id="eye-right" d="M43 53C44 51 46 51 47 53" stroke="#FDFBF7" stroke-width="1.6" stroke-linecap="round"/>
+      <!-- Cheeks -->
+      <circle id="cheek-left" cx="31" cy="56" r="1.8" fill="#D97706" opacity="0.8"/>
+      <circle id="cheek-right" cx="49" cy="56" r="1.8" fill="#D97706" opacity="0.8"/>
+      <!-- Happy open smile -->
+      <path id="mouth" d="M37 57C38.5 60 41.5 60 43 57" stroke="#FDFBF7" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

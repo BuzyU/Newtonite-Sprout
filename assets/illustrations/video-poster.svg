@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270" fill="none" role="img" aria-label="Sprout Product Walkthrough Poster - Click to Play">
+  <!-- Warm background -->
+  <rect width="480" height="270" rx="12" fill="#F6F1EA"/>
+  <rect x="2" y="2" width="476" height="266" rx="10" stroke="#D1C9BE" stroke-width="2"/>
+  
+  <!-- Subtle decorative background arches -->
+  <circle cx="240" cy="135" r="90" stroke="#E5DFD7" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="240" cy="135" r="115" stroke="#E5DFD7" stroke-width="1.5"/>
+
+  <!-- Mini phone silhouette in center -->
+  <rect x="180" y="35" width="120" height="200" rx="16" fill="#FFFFFF" stroke="#11382B" stroke-width="2.5"/>
+  <rect x="220" y="42" width="40" height="4" rx="2" fill="#D1C9BE"/>
+  
+  <!-- Content on mini phone -->
+  <rect x="195" y="60" width="90" height="18" rx="4" fill="#FDFBF7"/>
+  <circle cx="240" cy="115" r="22" fill="#F0FDF4"/>
+  <!-- Seedling inside mini phone -->
+  <path d="M240 120V110" stroke="#11382B" stroke-width="2" stroke-linecap="round"/>
+  <path d="M240 110C235 110 231 106 233 102C236 102 240 106 240 110Z" fill="#2E7D32"/>
+  <path d="M240 110C245 110 249 106 247 102C244 102 240 106 240 110Z" fill="#4CAF50"/>
+  <rect x="195" y="150" width="90" height="24" rx="6" fill="#11382B"/>
+  <text x="240" y="166" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Start with ₹100</text>
+
+  <!-- High-contrast Play button overlay -->
+  <g class="play-button-overlay">
+    <circle cx="240" cy="135" r="28" fill="#11382B"/>
+    <polygon points="234,123 252,135 234,147" fill="#FDFBF7"/>
+  </g>
+
+  <!-- Banner text at bottom -->
+  <rect x="130" y="224" width="220" height="26" rx="13" fill="#FFFFFF" stroke="#D1C9BE"/>
+  <text x="240" y="241" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#18221D" text-anchor="middle">60-sec Walkthrough (Click to play)</text>
+</svg>
